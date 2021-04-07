@@ -22,3 +22,13 @@
 @mixin form-input-focus {
   border: 2px solid $almost-black;
 }
+
+@mixin button-animation {
+  outline: none;
+  border: none;
+  width: 2rem;
+  height: 0.3rem;
+  background: $red;
+  border-radius: 5px;
+  box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.21);
+}

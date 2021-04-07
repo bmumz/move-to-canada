@@ -1,5 +1,5 @@
 // TEXT
-$poppins: 'Poppins', sans-serif;
+$poppins: "Poppins", sans-serif;
 
 $light: 300;
 $reg: 400;
@@ -11,3 +11,11 @@ $less-white: #f1f1f1;
 $mid-grey: #bcbcbc;
 $darker-grey: #818181;
 $almost-black: #3d3d3d;
+
+//SPACING
+$xs-size: 0.5rem;
+$s-size: 0.8rem;
+$m-size: 1.6rem;
+$l-size: 2.4rem;
+$xl-size: 3.6rem;
+$desktop-breakpoint: 48rem;

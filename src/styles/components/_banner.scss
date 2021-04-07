@@ -1,8 +1,38 @@
 .banner {
-  @include color-scheme($red, $less-white);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 5rem;
   font-size: 2rem;
+}
+
+.banner__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  height: 100vh;
+  width: 100vw;
+  @include color-scheme($red, $less-white);
+  transition: opacity 1s ease-in, opacity 0.5s ease-out,
+    transform 0.5s ease-in-out, visibility 0.1s;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .banner__nav {
+    visibility: visible;
+    opacity: 1;
+    height: 5rem;
+    justify-content: flex-end;
+
+    &.open {
+      visibility: hidden;
+    }
+  }
 }

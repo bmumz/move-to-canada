@@ -1,0 +1,55 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  @include color-scheme($red, $less-white);
+}
+
+.nav__item {
+  @include color-scheme(transparent, $less-white);
+  text-decoration: none;
+  padding: 3rem;
+  font-size: 2.5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__button.open .button__animation {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.navbar__button.open .button__animation::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background: $less-white;
+}
+
+.navbar__button.open .button__animation::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background: $less-white;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .nav {
+    flex-direction: row;
+    background: $red;
+  }
+
+  .nav__item {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+  }
+
+  .nav__item:hover {
+    -webkit-box-shadow: inset 0px -4px 0px 0px $less-white;
+    -moz-box-shadow: inset 0px -4px 0px 0px $less-white;
+    box-shadow: inset 0px -4px 0px 0px $less-white;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav__item {
+    font-size: 2rem;
+  }
+}
