@@ -1,15 +1,14 @@
-import React from 'react';
-import { Inquiry } from './inquiry';
+import React from "react";
 
-const Dropdown = ({ title, className, options, default }) => {
+const Dropdown = ({ title, className, options, placeholder }) => {
   return (
     <select aria-label={title} className={className}>
-      <option value='Inquiry Type' disabled selected>
-        Inquiry Type
+      <option value={placeholder} disabled selected>
+        {placeholder}
       </option>
-      {Inquiry.map((inquiry, index) => (
-        <option key={index} value={inquiry}>
-          {inquiry}
+      {options.map((option, index) => (
+        <option key={index} value={option}>
+          {option}
         </option>
       ))}
     </select>
