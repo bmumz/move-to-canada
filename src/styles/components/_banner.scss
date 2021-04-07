@@ -1,4 +1,3 @@
-// DEFAULT = CENTER
 .banner {
   display: flex;
   align-items: center;
@@ -18,21 +17,22 @@
   @include color-scheme($red, $less-white);
   transition: opacity 1s ease-in, opacity 0.5s ease-out,
     transform 0.5s ease-in-out, visibility 0.1s;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
-.banner__nav.clicked {
-  visibility: visible;
-  opacity: 1;
-}
 @media (min-width: $desktop-breakpoint) {
   .banner__nav {
     visibility: visible;
     opacity: 1;
     height: 5rem;
     justify-content: flex-end;
-  }
 
-  .banner__nav.clicked {
-    visibility: hidden;
+    &.open {
+      visibility: hidden;
+    }
   }
 }

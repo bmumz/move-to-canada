@@ -14,18 +14,18 @@
   align-items: center;
 }
 
-.navbar__button.clicked .button__animation {
+.navbar__button.open .button__animation {
   transform: translateX(-50px);
   background: transparent;
   box-shadow: none;
 }
 
-.navbar__button.clicked .button__animation::before {
+.navbar__button.open .button__animation::before {
   transform: rotate(45deg) translate(35px, -35px);
   background: $less-white;
 }
 
-.navbar__button.clicked .button__animation::after {
+.navbar__button.open .button__animation::after {
   transform: rotate(-45deg) translate(35px, 35px);
   background: $less-white;
 }

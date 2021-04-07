@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="button__hamburger">
-        <div className={`navbar__button ${navMenu ? "clicked" : "unclicked"}`}>
+        <div className={`navbar__button ${navMenu ? "open" : "closed"}`}>
           <Button
             title=""
             onClick={showNavMenu}
@@ -20,7 +20,7 @@ const Navbar = () => {
           />
         </div>
       </div>
-      <Banner className={`banner__nav ${navMenu ? "clicked" : "unclicked"}`}>
+      <Banner className={`banner__nav ${navMenu ? "open" : "closed"}`}>
         <nav className="nav">
           {Pages.map((page, index) => (
             <Link key={index} className="nav__item" to={page.path}>
