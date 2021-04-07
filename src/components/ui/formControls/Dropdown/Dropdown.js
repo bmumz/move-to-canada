@@ -1,7 +1,7 @@
 import React from 'react';
 import { Inquiry } from './inquiry';
 
-const Dropdown = ({ title, className }) => {
+const Dropdown = ({ title, className, options, default }) => {
   return (
     <select aria-label={title} className={className}>
       <option value='Inquiry Type' disabled selected>
