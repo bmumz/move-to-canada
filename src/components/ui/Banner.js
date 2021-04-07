@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Banner = ({ children }) => {
-  return <div className='banner'>{children}</div>;
+const Banner = ({ children, className }) => {
+  return <div className={className}>{children}</div>;
 };
 
 export default Banner;
