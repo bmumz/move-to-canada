@@ -1,0 +1,30 @@
+button {
+  border: none;
+  padding: 0.25rem 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.button__primary {
+  @include color-scheme($red, $less-white);
+  @include box-shadow($mid-grey);
+}
+
+.button__primary:hover {
+  background: #b90d0d;
+}
+
+.button__secondary {
+  background: transparent;
+  border: 1px solid $less-white;
+  color: $less-white;
+  transition: all 0.25s ease;
+}
+
+.button__secondary:hover {
+  background: darken($less-white, 2);
+  color: $red;
+}
