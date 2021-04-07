@@ -1,0 +1,25 @@
+input[type='text'],
+input[type='tel'] {
+  @include form-input;
+}
+
+input[type='text']:focus,
+input[type='tel']:focus {
+  @include form-input-focus;
+}
+
+textarea {
+  @include form-input;
+}
+
+textarea:focus {
+  box-shadow: 0 0 0 1px $almost-black;
+  -webkit-appearance: none;
+}
+
+select {
+  @include form-input;
+}
+select:focus {
+  @include form-input-focus;
+}

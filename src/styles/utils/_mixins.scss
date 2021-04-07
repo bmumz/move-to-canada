@@ -1,0 +1,24 @@
+@mixin box-shadow($color) {
+  -webkit-box-shadow: 0 5px 20px rgba($color, 0.19),
+    0 6px 6px rgba($color, 0.16);
+  -moz-box-shadow: 0 5px 20px rgba($mid-grey, 0.19),
+    0 6px 6px rgba($color, 0.16);
+  box-shadow: 0 5px 20px rgba($color, 0.19), 0 6px 6px rgba($color, 0.16);
+}
+
+@mixin color-scheme($primary, $secondary) {
+  background: $primary;
+  color: $secondary;
+}
+
+@mixin form-input {
+  padding: 0.25rem;
+  color: lighten($almost-black, 2);
+  width: 400px;
+  max-width: 400px;
+  margin: 0.25rem;
+}
+
+@mixin form-input-focus {
+  border: 2px solid $almost-black;
+}
