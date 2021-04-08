@@ -1,54 +1,37 @@
-import * as React from "react"
-import { Link } from "gatsby"
-
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import * as React from "react";
+import Banner from "../components/ui/Banner";
+import Layout from "../components/layout/Layout";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
+import Paragraph from "../components/layout/Paragraph";
+import Heading from "../components/ui/Heading";
 
 // markup
 const NotFoundPage = () => {
+  const title = "Error 404: Page Not Found!";
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+    <main>
+      <Header pageName={title} />
+      <Layout>
+        <Heading theme="dark" size="">
+          {title}
+        </Heading>
 
-export default NotFoundPage
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Id porta
+          nibh venenatis cras sed. Gravida quis blandit turpis cursus in. In
+          hendrerit gravida rutrum quisque non tellus. Turpis nunc eget lorem
+          dolor sed viverra ipsum nunc. Gravida cum sociis natoque penatibus et
+          magnis dis parturient montes. Consequat nisl vel pretium lectus quam
+          id leo in vitae. Fermentum dui faucibus in ornare. Proin libero nunc
+          consequat interdum varius sit amet. Et sollicitudin ac orci phasellus
+          egestas tellus rutrum. Id interdum velit laoreet id.
+        </Paragraph>
+      </Layout>
+      <Footer />
+    </main>
+  );
+};
+
+export default NotFoundPage;

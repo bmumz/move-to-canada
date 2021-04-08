@@ -1,0 +1,65 @@
+.layout {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 85vw;
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.heading {
+  text-align: center;
+  max-width: 70vw;
+  margin: 0 auto;
+  text-transform: capitalize;
+  font-size: 2rem;
+  &.heading__dark {
+    color: lighten($almost-black, 5);
+  }
+  &.heading__red {
+    color: $red;
+  }
+  &.heading__light {
+    color: $less-white;
+  }
+  &.heading__larger {
+    font-size: 3rem;
+  }
+}
+
+footer {
+  background: $mid-grey;
+  height: 20vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer {
+  p {
+    margin: 2rem;
+  }
+}
+// SMALLER SCREENS (IPHONE SE, GALAXY S5)
+@media (max-width: 360px) {
+  .heading {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .heading {
+    font-size: 2.5em;
+    &.heading__larger {
+      font-size: 3.5rem;
+    }
+  }
+
+  .layout {
+    width: 70vw;
+    p {
+      padding: 1rem 0;
+    }
+  }
+}

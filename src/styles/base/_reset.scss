@@ -1,4 +1,4 @@
-@import '../utils';
+@import "../utils";
 
 /* Box sizing rules */
 *,
@@ -11,6 +11,12 @@
 ul[class],
 ol[class] {
   padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  position: relative;
 }
 
 /* Remove default margin */
@@ -39,6 +45,12 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   color: $almost-black;
+  position: absolute;
+  p {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
