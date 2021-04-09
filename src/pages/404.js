@@ -8,13 +8,13 @@ import Heading from "../components/ui/Heading";
 
 // markup
 const NotFoundPage = () => {
-  const title = "Error 404: Page Not Found!";
+  const pageTitle = "Error 404: Page Not Found!";
   return (
     <main>
-      <Header pageName={title} />
+      <Header pageName={pageTitle} />
       <Layout>
-        <Heading theme="dark" size="">
-          {title}
+        <Heading theme='dark' size=''>
+          {pageTitle}
         </Heading>
 
         <Paragraph>
