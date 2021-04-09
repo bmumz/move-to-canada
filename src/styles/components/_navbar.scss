@@ -1,6 +1,7 @@
 .nav {
   display: flex;
   flex-direction: column;
+
   @include color-scheme($red, $less-white);
 }
 
@@ -9,7 +10,7 @@
   text-decoration: none;
   padding: 3rem;
   font-size: 2.5rem;
-  height: 5rem;
+  height: 8rem;
   display: flex;
   align-items: center;
 }
@@ -37,7 +38,7 @@
   }
 
   .nav__item {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     padding: 0 2rem;
   }
 
@@ -47,7 +48,7 @@
     box-shadow: inset 0px -4px 0px 0px $less-white;
   }
 }
-
+// SMALLER SCREENS (IPHONE SE, GALAXY S5)
 @media (max-width: 320px) {
   .nav__item {
     font-size: 2rem;

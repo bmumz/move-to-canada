@@ -1,27 +1,19 @@
-import * as React from "react";
+import React from "react";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import Layout from "../components/layout/Layout";
 import Paragraph from "../components/layout/Paragraph";
-import Banner from "../components/ui/Banner";
-import Button from "../components/ui/Button";
 import Heading from "../components/ui/Heading";
 
-import "../styles/app.scss";
-
-const IndexPage = () => {
+const About = () => {
+  const title = "About Us";
   return (
-    <main>
-      <title>Home Page</title>
-      <Header pageName="Home" />
+    <div>
+      <Header pageName={title} />
       <Layout>
         <Heading theme="dark" size="">
-          Full-Service Immigrantion Advisory
+          {title}
         </Heading>
-        <Heading theme="red" size="larger">
-          1-800-321-MOVE
-        </Heading>
-
         <Paragraph>
           Are you planning to move to Canada? You may need a dedicated team. Our
           full-service comprehensive team of Lawyers, Realtors, Bankers,
@@ -40,18 +32,9 @@ const IndexPage = () => {
           experience, The Move to Canada Team makes it simple.
         </Paragraph>
       </Layout>
-      <Banner className="banner">
-        <div className="banner__content">
-          Thinking about moving to Canada?{" "}
-          <Button className="button__secondary" onClick="">
-            Speak to us now!
-          </Button>
-        </div>
-      </Banner>
-
       <Footer />
-    </main>
+    </div>
   );
 };
 
-export default IndexPage;
+export default About;
