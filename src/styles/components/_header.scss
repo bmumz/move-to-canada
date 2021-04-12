@@ -1,24 +1,9 @@
 .header {
   display: flex;
   flex-direction: column;
-  h1 {
-    font-size: 3rem;
-    padding: 0;
-  }
-  span {
-    font-size: 2rem;
-    font-weight: 600;
-    color: $red;
-  }
   img {
     padding: 2rem;
   }
-}
-
-.header__logo {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
 }
 
 .header__tel {
@@ -26,32 +11,38 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h1,
+  h1 {
+    font-size: 2rem;
+    padding: 0;
+  }
   span {
     font-size: 2rem;
+    font-weight: 600;
+    color: $red;
   }
 }
 
 @media (min-width: $desktop-breakpoint) {
   .header__logo {
-    width: 50vw;
-    justify-content: flex-start;
+    img {
+      width: 375px;
+      padding: 0;
+    }
   }
   .header__company-info {
-    margin: 2rem;
+    margin: 1rem 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
   }
   .header {
     flex-direction: column-reverse;
-    img {
-      padding: 1rem;
-      margin: 0;
-    }
-    &.header__tel {
+    .header__tel {
       align-items: flex-end;
+      h1 {
+        font-size: 3rem;
+      }
     }
   }
 }

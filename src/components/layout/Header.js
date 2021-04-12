@@ -19,7 +19,6 @@ const Header = ({ pageName }) => {
             <StaticImage
               src='../../images/move-to-canada.png'
               alt='The Move to Canada Team Logo with maple leaf'
-              width={300}
             />
           </span>
 
