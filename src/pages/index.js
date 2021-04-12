@@ -6,20 +6,22 @@ import Paragraph from "../components/layout/Paragraph";
 import Banner from "../components/ui/Banner";
 import Button from "../components/ui/Button";
 import Heading from "../components/ui/Heading";
+import { useSiteMetadata } from "../hooks/use-site-metadata";
 
 import "../styles/app.scss";
 
 const IndexPage = () => {
+  const { phone, title } = useSiteMetadata();
   return (
     <main>
       <title>Home Page</title>
-      <Header pageName="Home" />
+      <Header pageName='Home' />
       <Layout>
-        <Heading theme="dark" size="">
-          Full-Service Immigrantion Advisory
+        <Heading theme='dark' size=''>
+          Full-Service Immigration Advisory
         </Heading>
-        <Heading theme="red" size="larger">
-          1-800-321-MOVE
+        <Heading theme='red' size='larger'>
+          {phone}
         </Heading>
 
         <Paragraph>
@@ -28,22 +30,22 @@ const IndexPage = () => {
           Accountants and everyone in between are here to ensure your relocation
           experience is seamless and stress-free.
         </Paragraph>
-        <img src="http://via.placeholder.com/640x360" alt="Placeholder" />
+        <img src='http://via.placeholder.com/640x360' alt='Placeholder' />
         <Paragraph>
-          The Move to Canada Team has served clients around the world from
-          almost every country. Our proven track record of helping individuals
-          and businesses relocate to Canada is second to none. We are committed
-          to customer service and personalized attention to ensure each client
-          receives custom tailored solutions that fit their needs. Every member
-          of our team has years of experience and is recognized as a leader in
-          their field. While relocating to another country can be a stressful
-          experience, The Move to Canada Team makes it simple.
+          The {title} Team has served clients around the world from almost every
+          country. Our proven track record of helping individuals and businesses
+          relocate to Canada is second to none. We are committed to customer
+          service and personalized attention to ensure each client receives
+          custom tailored solutions that fit their needs. Every member of our
+          team has years of experience and is recognized as a leader in their
+          field. While relocating to another country can be a stressful
+          experience, The {title} Team makes it simple.
         </Paragraph>
       </Layout>
-      <Banner className="banner">
-        <div className="banner__content">
+      <Banner className='banner'>
+        <div className='banner__content'>
           Thinking about moving to Canada?{" "}
-          <Button className="button__secondary" onClick="">
+          <Button className='button__secondary' onClick=''>
             Speak to us now!
           </Button>
         </div>

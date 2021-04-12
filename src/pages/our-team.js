@@ -5,17 +5,17 @@ import Layout from "../components/layout/Layout";
 import Heading from "../components/ui/Heading";
 
 const Team = () => {
-  const title = "Our Team";
+  const pageTitle = "Our Team";
   return (
     <div>
-      <Header pageName={title} />
+      <Header pageName={pageTitle} />
       <Layout>
-        <Heading theme="dark" size="">
-          {title}
+        <Heading theme='dark' size=''>
+          {pageTitle}
         </Heading>
         <img
-          src="https://img.freepik.com/free-vector/default-placeholder-avatar-profile-gray-background-man-woman_146706-350.jpg?size=626&ext=jpg&ga=GA1.2.418561836.1617148800"
-          alt="Team Placeholder"
+          src='https://img.freepik.com/free-vector/default-placeholder-avatar-profile-gray-background-man-woman_146706-350.jpg?size=626&ext=jpg&ga=GA1.2.418561836.1617148800'
+          alt='Team Placeholder'
         />
       </Layout>
       <Footer />
