@@ -3,6 +3,8 @@ import Navbar from "../nav/Navbar";
 import Seo from "../Seo";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
+import { StaticImage } from "gatsby-plugin-image";
+
 const Header = ({ pageName }) => {
   const { phone } = useSiteMetadata();
 
@@ -10,18 +12,22 @@ const Header = ({ pageName }) => {
     <div>
       <Seo pageName={pageName} />
       <div className='header'>
+        <Navbar />
+
         <div className='header__company-info'>
-          <img
-            src='https://sjfltc.com/wp-content/uploads/2016/10/logo-placeholder.jpg'
-            alt='Logo placeholder'
-          />
+          <span className='header__logo'>
+            <StaticImage
+              src='../../images/move-to-canada.png'
+              alt='The Move to Canada Team Logo with maple leaf'
+              width={300}
+            />
+          </span>
+
           <div className='header__tel'>
             <h1>{phone}</h1>
             <span>Call for a FREE consultation!</span>
           </div>
         </div>
-
-        <Navbar />
       </div>
     </div>
   );
