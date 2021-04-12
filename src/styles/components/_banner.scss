@@ -36,6 +36,10 @@
     visibility: visible;
     opacity: 1;
   }
+
+  &.closed {
+    height: 0;
+  }
 }
 
 // SMALLER SCREENS (IPHONE SE, GALAXY S5)
@@ -59,6 +63,10 @@
 
     &.open {
       visibility: hidden;
+    }
+
+    &.closed {
+      height: 100%;
     }
   }
 }
