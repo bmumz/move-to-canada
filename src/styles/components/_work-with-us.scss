@@ -1,0 +1,26 @@
+.work-with-us {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background: lighten($mid-grey, 2);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+.work-with-us__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.work-with-us__card {
+  width: 25vw;
+  padding: 2rem;
+  margin: 1rem;
+  background: lighten($mid-grey, 18);
+  h2 {
+    font-size: 1.8rem;
+  }
+  span {
+    font-size: 1.5rem;
+  }
+}

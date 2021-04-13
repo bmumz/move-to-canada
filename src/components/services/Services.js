@@ -5,7 +5,7 @@ import Heading from "../ui/Heading";
 
 const Services = () => {
   return (
-    <div className='grid'>
+    <div>
       <Heading theme='dark' size=''>
         How We Can Help
       </Heading>
