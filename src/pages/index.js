@@ -4,6 +4,7 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import Layout from "../components/layout/Layout";
 import Paragraph from "../components/layout/Paragraph";
+import Services from "../components/services/Services";
 import Banner from "../components/ui/Banner";
 import Button from "../components/ui/Button";
 import Heading from "../components/ui/Heading";
@@ -55,6 +56,9 @@ const IndexPage = () => {
           </Button>
         </div>
       </Banner>
+      <Layout>
+        <Services />
+      </Layout>
 
       <Footer />
     </main>
