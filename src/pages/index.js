@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
@@ -30,7 +31,11 @@ const IndexPage = () => {
           Accountants and everyone in between are here to ensure your relocation
           experience is seamless and stress-free.
         </Paragraph>
-        <img src='http://via.placeholder.com/640x360' alt='Placeholder' />
+        <StaticImage
+          src='../images/canada.jpeg'
+          alt='Skyscrapers in Canada forming a maple leaf.'
+          placeholder='dominantColor'
+        />
         <Paragraph>
           The {title} Team has served clients around the world from almost every
           country. Our proven track record of helping individuals and businesses
