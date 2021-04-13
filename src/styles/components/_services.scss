@@ -14,6 +14,11 @@
   color: $less-white;
 }
 
+@media (max-width: 1500px) {
+  .services__title {
+    font-size: 1.5rem;
+  }
+}
 @media (min-width: $desktop-breakpoint) {
   .services__container-desktop {
     visibility: visible;
