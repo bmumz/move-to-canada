@@ -1,7 +1,7 @@
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Paragraph from "../layout/Paragraph";
-import { Data } from "./work-with-us-data";
+import WorkWithUsData from "./work-with-us-data";
 import Heading from "../ui/Heading";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
@@ -20,59 +20,52 @@ const WorkWithUs = () => {
         <div className='work-with-us__card'>
           <StaticImage
             src='../../images/work-with-us/national-immigration.jpg'
-            alt={Data[0].title}
+            alt={WorkWithUsData.immigration.title}
           />
-          <h2>{Data[0].title}</h2>
-          <span>{Data[0].blurb}</span>
+          <h2>{WorkWithUsData.immigration.title}</h2>
+          <span>{WorkWithUsData.immigration.blurb}</span>
         </div>
         <div className='work-with-us__card'>
           <StaticImage
             src='../../images/work-with-us/thousands.jpg'
-            alt={Data[1].title}
+            alt={WorkWithUsData.trusted.title}
           />
-          <h2>{Data[1].title}</h2>
-          <span>{Data[1].blurb}</span>
+          <h2>{WorkWithUsData.trusted.title}</h2>
+          <span>{WorkWithUsData.trusted.blurb}</span>
         </div>{" "}
         <div className='work-with-us__card'>
           <StaticImage
             src='../../images/work-with-us/phone-call.jpg'
-            alt={Data[2].title}
+            alt={WorkWithUsData.attention.title}
           />
-          <h2>{Data[2].title}</h2>
-          <span>{Data[2].blurb}</span>
+          <h2>{WorkWithUsData.attention.title}</h2>
+          <span>{WorkWithUsData.attention.blurb}</span>
         </div>
         <div className='work-with-us__card'>
           <StaticImage
             src='../../images/work-with-us/save-time.jpg'
-            alt={Data[3].title}
+            alt={WorkWithUsData.time.title}
           />
-          <h2>{Data[3].title}</h2>
-          <span>{Data[3].blurb}</span>
+          <h2>{WorkWithUsData.time.title}</h2>
+          <span>{WorkWithUsData.time.blurb}</span>
         </div>
         <div className='work-with-us__card'>
           <StaticImage
             src='../../images/work-with-us/free-consult.jpg'
-            alt={Data[4].title}
+            alt={WorkWithUsData.consultation.title}
           />
-          <h2>{Data[4].title}</h2>
-          <span>{Data[4].blurb}</span>
+          <h2>{WorkWithUsData.consultation.title}</h2>
+          <span>{WorkWithUsData.consultation.blurb}</span>
         </div>{" "}
         <div className='work-with-us__card'>
           <StaticImage
             src='../../images/work-with-us/team.jpg'
-            alt={Data[5].title}
+            alt={WorkWithUsData.team.title}
           />
-          <h2>{Data[5].title}</h2>
-          <span>{Data[5].blurb}</span>
+          <h2>{WorkWithUsData.team.title}</h2>
+          <span>{WorkWithUsData.team.blurb}</span>
         </div>
       </div>
-
-      {/* {Data.map((work-with-us, index) => (
-        <div key={index}>
-          <h2>{work-with-us.title}</h2>
-          <span>{work-with-us.blurb}</span>
-        </div>
-      ))} */}
     </div>
   );
 };

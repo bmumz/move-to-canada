@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Data } from "./services-data";
+import ServicesData from "./services-data";
 import Heading from "../ui/Heading";
 
 const Services = () => {
@@ -12,74 +12,74 @@ const Services = () => {
 
       <div className='services__container-desktop'>
         <div className='services__img-container'>
-          <h1 className='services__title'>Buying a Home</h1>
+          <h1 className='services__title'>{ServicesData.home}</h1>
           <StaticImage
             src='../../images/services/buying-home.jpg'
-            alt='{Data[0].title}'
+            alt={ServicesData.home}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
-          <h1 className='services__title'>Personal/Family Immigration</h1>
+          <h1 className='services__title'>{ServicesData.immigration}</h1>
           <StaticImage
             src='../../images/services/immigration.jpg'
-            alt='{Data[1].title}'
+            alt={ServicesData.immigration}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
-          <h1 className='services__title'>Business Relocation</h1>
+          <h1 className='services__title'>{ServicesData.businessRelocation}</h1>
           <StaticImage
             src='../../images/services/business-relocation.jpg'
-            alt='{Data[2].title}'
+            alt={ServicesData.businessRelocation}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
-          <h1 className='services__title'>International Banking</h1>
+          <h1 className='services__title'>{ServicesData.banking}</h1>
           <StaticImage
             src='../../images/services/banking.jpg'
-            alt='{Data[3].title}'
+            alt={ServicesData.banking}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
-          <h1 className='services__title'>Mortgage Financing</h1>
+          <h1 className='services__title'>{ServicesData.mortgage}</h1>
           <StaticImage
             src='../../images/services/mortgage-financing.jpg'
-            alt='{Data[4].title}'
+            alt={ServicesData.mortgage}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
-          <h1 className='services__title'>Real Estate Law</h1>
+          <h1 className='services__title'>{ServicesData.realEstate}</h1>
           <StaticImage
             src='../../images/services/real-estate-law02.jpg'
-            alt='{Data[5].title}'
+            alt={ServicesData.realEstate}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
-          <h1 className='services__title'>International Taxation</h1>
+          <h1 className='services__title'>{ServicesData.taxation}</h1>
           <StaticImage
             src='../../images/services/international-taxation.jpg'
-            alt='{Data[6].title}'
+            alt={ServicesData.taxation}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
-          <h1 className='services__title'>Other Services</h1>
+          <h1 className='services__title'>{ServicesData.other}</h1>
           <StaticImage
             src='../../images/services/other.jpg'
-            alt='{Data[7].title}'
+            alt={ServicesData.other}
           />
           <span className='services__overlay'></span>
         </div>
       </div>
       <div className='services__container-mobile'>
         <ul>
-          {Data.map((service, index) => (
-            <li key={index}>{service.title}</li>
+          {Object.values(ServicesData).map((service, index) => (
+            <li key={index}>{service}</li>
           ))}
         </ul>
       </div>
