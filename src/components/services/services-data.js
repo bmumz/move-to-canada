@@ -1,10 +1,12 @@
-export const Data = [
-  { title: "Buying a Home" },
-  { title: "Personal/Family Immigration" },
-  { title: "Business Relocation" },
-  { title: "International Banking" },
-  { title: "Mortgage Financing" },
-  { title: "Real Estate Law" },
-  { title: "International Taxation" },
-  { title: "Other Services" },
-];
+const ServicesData = {
+  home: "Buying a Home",
+  immigration: "Personal/Family Immigration",
+  businessRelocation: "Business Relocation",
+  banking: "International Banking",
+  mortgage: "Mortgage Financing",
+  realEstate: "Real Estate Law",
+  taxation: "International Taxaction",
+  other: "Other Services",
+};
+
+export default ServicesData;
