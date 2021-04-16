@@ -4,18 +4,21 @@ import Paragraph from "../layout/Paragraph";
 import WorkWithUsData from "./work-with-us-data";
 import Heading from "../ui/Heading";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
+import Layout from "../layout/Layout";
 
 const WorkWithUs = () => {
   const { title } = useSiteMetadata();
   return (
     <div className='work-with-us'>
-      <Heading theme='dark' size=''>
-        Why Work With Us?
-      </Heading>
-      <Paragraph>
-        People from all around the world turn to the {title} Team because of our
-        talent, knowledge and ability to resolve difficult situations!
-      </Paragraph>
+      <Layout>
+        <Heading theme='dark' size=''>
+          Why Work With Us?
+        </Heading>
+        <Paragraph>
+          People from all around the world turn to the {title} Team because of
+          our talent, knowledge and ability to resolve difficult situations!
+        </Paragraph>
+      </Layout>
       <div className='work-with-us__cards'>
         <div className='work-with-us__card'>
           <StaticImage

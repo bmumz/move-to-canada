@@ -57,9 +57,9 @@ const IndexPage = () => {
           </Button>
         </div>
       </Banner>
-      <Layout>
-        <Services />
-      </Layout>
+
+      <Services />
+
       <WorkWithUs />
 
       <Footer />

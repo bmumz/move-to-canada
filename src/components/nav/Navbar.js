@@ -11,19 +11,15 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="button__hamburger">
+      <div className='button__hamburger'>
         <div className={`navbar__button ${navMenu ? "open" : "closed"}`}>
-          <Button
-            title=""
-            onClick={showNavMenu}
-            className="button__animation"
-          />
+          <button onClick={showNavMenu} className='button__animation' />
         </div>
       </div>
       <Banner className={`banner__nav ${navMenu ? "open" : "closed"}`}>
-        <nav className="nav">
+        <nav className='nav'>
           {Pages.map((page, index) => (
-            <Link key={index} className="nav__item" to={page.path}>
+            <Link key={index} className='nav__item' to={page.path}>
               {page.title}
             </Link>
           ))}

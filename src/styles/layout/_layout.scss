@@ -18,11 +18,14 @@
 .heading {
   text-align: center;
   max-width: 70vw;
-  margin: 0 auto;
+  margin: 0.5rem auto;
   text-transform: capitalize;
   font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
   &.heading__dark {
-    color: lighten($almost-black, 5);
+    color: darken($darker-grey, 3);
+    text-transform: uppercase;
   }
   &.heading__red {
     color: $red;
@@ -32,6 +35,9 @@
   }
   &.heading__larger {
     font-size: 2.5rem;
+  }
+  &.heading__smaller {
+    font-size: 1.5rem;
   }
 }
 

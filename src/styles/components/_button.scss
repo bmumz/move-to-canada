@@ -40,7 +40,10 @@ button {
   transition: all 0.3s ease-in-out;
   z-index: 2;
   position: absolute;
-  margin: $s-size;
+  background: $red;
+  border-radius: 100%;
+  margin: 1rem;
+  border: 1px solid $less-white;
 }
 
 .button__animation {
@@ -62,11 +65,11 @@ button {
 }
 
 .button__animation::before {
-  transform: translateY(-10px);
+  transform: translateY(-7px);
 }
 
 .button__animation::after {
-  transform: translateY(10px);
+  transform: translateY(7px);
 }
 
 @media (min-width: $desktop-breakpoint) {
