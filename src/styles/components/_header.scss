@@ -1,13 +1,9 @@
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-col-center;
 }
 
 .header__company-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-col-center;
   padding-top: 3.5rem;
 }
 
@@ -16,10 +12,7 @@
 }
 
 .header__tel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-col-center;
   background: $red;
   width: 100vw;
   h1 {
@@ -37,8 +30,7 @@
 @media (min-width: $desktop-breakpoint) {
   .header__company-info {
     margin: 1rem 5rem;
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     justify-content: space-between;
     align-items: center;
     padding-top: 0;

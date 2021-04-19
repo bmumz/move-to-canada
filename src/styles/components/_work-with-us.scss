@@ -1,13 +1,11 @@
 .work-with-us {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   margin: 0 auto;
   background: lighten($mid-grey, 2);
   margin: 0;
 }
 .work-with-us__cards {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
 }
 .work-with-us__card {
   padding: 2rem;

@@ -1,7 +1,5 @@
 .banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-row-center;
   margin: 2rem 0;
   font-weight: 600;
   height: 10rem;
@@ -22,9 +20,7 @@
 }
 
 .banner__nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-row-center;
   margin-bottom: 2rem;
   visibility: hidden;
   opacity: 0;
