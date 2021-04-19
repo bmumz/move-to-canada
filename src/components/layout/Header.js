@@ -15,12 +15,14 @@ const Header = ({ pageName }) => {
         <Navbar />
 
         <div className='header__company-info'>
-          <span className='header__logo'>
+          <div className='header__logo'>
             <StaticImage
               src='../../images/move-to-canada.png'
               alt='The Move to Canada Team Logo with maple leaf'
+              layout='fixed'
+              width={300}
             />
-          </span>
+          </div>
 
           <div className='header__tel'>
             <h1>{phone}</h1>

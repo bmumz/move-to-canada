@@ -26,9 +26,31 @@
 @mixin button-animation {
   outline: none;
   border: none;
-  width: 2rem;
-  height: 0.3rem;
-  background: $red;
+  width: 2.2rem;
+  height: 0.35rem;
+  background: $less-white;
   border-radius: 5px;
   box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.21);
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row-center {
+  @include flex-row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col-center {
+  @include flex-col;
+  justify-content: center;
+  align-items: center;
 }

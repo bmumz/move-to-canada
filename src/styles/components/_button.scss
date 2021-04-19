@@ -31,23 +31,22 @@ button {
 }
 
 .button__hamburger {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-row-center;
   width: 4rem;
   height: 4rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   z-index: 2;
   position: absolute;
-  margin: $s-size;
+  background: $red;
+  border-radius: 100%;
+  margin: 1rem;
+  border: 1px solid $less-white;
 }
 
 .button__animation {
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-row-center;
   position: relative;
   transition: all 0.2s ease-in-out;
   @include button-animation;
@@ -62,11 +61,11 @@ button {
 }
 
 .button__animation::before {
-  transform: translateY(-10px);
+  transform: translateY(-7px);
 }
 
 .button__animation::after {
-  transform: translateY(10px);
+  transform: translateY(7px);
 }
 
 @media (min-width: $desktop-breakpoint) {
