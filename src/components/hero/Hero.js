@@ -4,11 +4,11 @@ import Contact from "./contact-form/Contact";
 
 const Hero = () => {
   return (
-    <div className='slideshow'>
-      <div className='slideshow__container'>
+    <div className='hero'>
+      <div className='hero__container'>
         <StaticImage src='../../images/slideshow/road.jpg' alt='road' />
 
-        <div className='slideshow__overlay'> </div>
+        <div className='hero__overlay'> </div>
         <div>
           <Contact />
         </div>
