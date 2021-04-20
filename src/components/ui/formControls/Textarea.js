@@ -1,15 +1,17 @@
-import React from 'react';
+import React from "react";
 
 const Textarea = ({ title, className }) => {
   return (
-    <textarea
-      aria-label={title}
-      placeholder={title}
-      className={className}
-      spellCheck='true'
-      rows='10'
-      required
-    />
+    <span className='form-input'>
+      <textarea
+        aria-label={title}
+        placeholder={title}
+        className={className}
+        spellCheck='true'
+        rows={7}
+        required
+      />
+    </span>
   );
 };
 

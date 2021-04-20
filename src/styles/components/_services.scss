@@ -24,9 +24,7 @@
 
 .services__container-row1,
 .services__container-row2 {
-  @include flex-row;
-  justify-content: center;
-  align-items: center;
+  @include flex-row-center;
   flex-wrap: wrap;
   height: 100%;
 }

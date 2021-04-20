@@ -8,7 +8,7 @@
 }
 
 .header__logo {
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 0;
 }
 
 .header__tel {
@@ -29,7 +29,7 @@
 
 @media (min-width: $desktop-breakpoint) {
   .header__company-info {
-    margin: 1rem 5rem;
+    margin: 0 5rem;
     @include flex-row;
     justify-content: space-between;
     align-items: center;

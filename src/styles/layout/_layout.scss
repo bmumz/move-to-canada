@@ -20,7 +20,6 @@
   max-width: 70vw;
   margin: 0.5rem auto;
   text-transform: capitalize;
-  font-size: 2rem;
   font-weight: 500;
   line-height: 1;
   &.heading__dark {
@@ -53,20 +52,27 @@ footer {
     margin: 2rem;
   }
 }
-// SMALLER SCREENS (IPHONE SE, GALAXY S5)
-@media (max-width: 360px) {
-  .heading {
-    font-size: 2rem;
-  }
+
+.paragraph {
+  margin: 1rem 0;
 }
+// SMALLER SCREENS (IPHONE SE, GALAXY S5)
+// @media (max-width: 360px) {
+//   .heading {
+//     font-size: 2rem;
+//   }
+// }
 
 @media (min-width: $desktop-breakpoint) {
-  .heading {
-    font-size: 2.5em;
-    &.heading__larger {
-      font-size: 3.5rem;
-    }
-  }
+  // .heading {
+  //   font-size: 2.5em;
+  //   &.heading__larger {
+  //     font-size: 3.5rem;
+  //   }
+  //   &.heading__smaller {
+  //     font-size: 2rem;
+  //   }
+  // }
 
   .layout {
     width: 55vw;
