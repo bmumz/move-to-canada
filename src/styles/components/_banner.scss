@@ -1,7 +1,7 @@
 .banner {
   @include flex-row-center;
   margin: 2rem 0;
-  font-weight: 600;
+  font-weight: $bold;
   height: 10rem;
   font-size: 2rem;
   @include color-scheme($red, $less-white);
