@@ -13,9 +13,7 @@ const NotFoundPage = () => {
     <main>
       <Header pageName={pageTitle} />
       <Layout>
-        <Heading theme='dark' size=''>
-          {pageTitle}
-        </Heading>
+        <Heading color='grey'>{pageTitle}</Heading>
 
         <Paragraph>
           We're sorry, but it looks like the page you've requested doesn't exist

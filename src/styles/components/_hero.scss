@@ -1,6 +1,5 @@
 .hero__overlay {
   @include flex-col-center;
-  aspect-ratio: 2/2;
   width: 100vw;
   height: 100%;
   right: 0;
@@ -12,9 +11,7 @@
 }
 
 .hero__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-row-center;
   position: relative;
   img {
     height: 72vh;
@@ -24,5 +21,18 @@
 @media (min-width: 800px) {
   .hero__overlay {
     width: 45vw;
+  }
+}
+
+// SMALLER SCREENS (IPHONE SE, GALAXY S5)
+@media (max-width: 320px) {
+  .heading__overlay {
+    height: 100vh;
+  }
+
+  .hero__container {
+    img {
+      height: 100vh;
+    }
   }
 }
