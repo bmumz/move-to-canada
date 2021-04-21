@@ -1,6 +1,23 @@
-.nav {
-  @include flex-col;
+.navbar {
+  width: 100vw;
+}
+
+.navbar__menu {
   @include color-scheme($red, $less-white);
+
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  &.mobile {
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out,
+      transform 0.5s ease-in-out;
+    @include flex-col-center;
+    visibility: visible;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 .nav__item {
@@ -30,9 +47,20 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
-  .nav {
-    flex-direction: row;
-    background: $red;
+  .navbar__menu {
+    visibility: visible;
+    height: 8rem;
+    transition: none;
+    opacity: 1;
+    &.desktop {
+      width: 100vw;
+      height: 100%;
+
+      nav {
+        @include flex-row;
+        justify-content: flex-end;
+      }
+    }
   }
 
   .nav__item {
@@ -44,11 +72,5 @@
     -webkit-box-shadow: inset 0px -4px 0px 0px $less-white;
     -moz-box-shadow: inset 0px -4px 0px 0px $less-white;
     box-shadow: inset 0px -4px 0px 0px $less-white;
-  }
-}
-// SMALLER SCREENS (IPHONE SE, GALAXY S5)
-@media (max-width: 320px) {
-  .nav__item {
-    font-size: 2rem;
   }
 }

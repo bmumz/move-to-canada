@@ -31,15 +31,16 @@ button {
 
 .button__hamburger {
   @include flex-row-center;
+  visibility: visible;
   width: 4rem;
   height: 4rem;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   z-index: 2;
   position: absolute;
   background: $red;
   border-radius: 100%;
-  margin: 1rem;
+  margin: 2rem;
   border: 1px solid $less-white;
 }
 
@@ -47,7 +48,7 @@ button {
   padding: 0;
   @include flex-row-center;
   position: relative;
-  transition: all 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   @include button-animation;
 }
 
@@ -55,7 +56,7 @@ button {
 .button__animation::after {
   content: "";
   position: absolute;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   @include button-animation;
 }
 
@@ -68,7 +69,10 @@ button {
 }
 
 @media (min-width: $desktop-breakpoint) {
-  .button__hamburger {
-    display: none;
+  .button__hamburger,
+  .button__animation,
+  .button__animation::before,
+  .button__animation::after {
+    visibility: hidden;
   }
 }
