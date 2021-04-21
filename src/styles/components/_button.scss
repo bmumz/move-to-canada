@@ -11,7 +11,6 @@ button {
 
 .button__primary {
   @include color-scheme($red, $less-white);
-  @include box-shadow($mid-grey);
 }
 
 .button__primary:hover {

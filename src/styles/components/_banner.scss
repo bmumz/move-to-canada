@@ -1,7 +1,7 @@
 .banner {
   @include flex-row-center;
   margin: 2rem 0;
-  font-weight: 600;
+  font-weight: $bold;
   height: 10rem;
   font-size: 2rem;
   @include color-scheme($red, $less-white);
@@ -21,7 +21,6 @@
 
 .banner__nav {
   @include flex-row-center;
-  margin-bottom: 2rem;
   visibility: hidden;
   opacity: 0;
   height: 100vh;
@@ -34,21 +33,11 @@
     visibility: visible;
     opacity: 1;
   }
-
   &.closed {
     height: 0;
   }
 }
 
-// SMALLER SCREENS (IPHONE SE, GALAXY S5)
-@media (max-width: 375px) {
-  .banner__content {
-    font-size: 1.75rem;
-  }
-  .banner__footer {
-    font-size: 3.5rem;
-  }
-}
 @media (min-width: $desktop-breakpoint) {
   .banner__content {
     width: 65vw;
@@ -66,5 +55,15 @@
     &.closed {
       height: 100%;
     }
+  }
+}
+
+// SMALLER SCREENS (IPHONE SE, GALAXY S5)
+@media (max-width: 375px) {
+  .banner__content {
+    font-size: 1.75rem;
+  }
+  .banner__footer {
+    font-size: 3.5rem;
   }
 }

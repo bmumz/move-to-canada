@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 
-const Input = ({ label, type, title, className }) => {
+const Input = ({ type, title, className }) => {
   return (
-    <span>
-      <p>{label}</p>
+    <span className='form-input'>
       <input
         type={type}
         aria-label={title}

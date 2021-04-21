@@ -1,25 +1,32 @@
-input[type='text'],
-input[type='tel'] {
-  @include form-input;
+.form-input {
+  @include flex-col;
+  color: $less-white;
 }
 
-input[type='text']:focus,
-input[type='tel']:focus {
+input[type="text"],
+input[type="tel"],
+textarea,
+select {
+  @include form-input;
+  min-width: 80vw;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
   @include form-input-focus;
-}
-
-textarea {
-  @include form-input;
 }
 
 textarea:focus {
   box-shadow: 0 0 0 1px $almost-black;
-  -webkit-appearance: none;
+  // -webkit-appearance: none;
 }
 
-select {
-  @include form-input;
-}
-select:focus {
-  @include form-input-focus;
+@media (min-width: 800px) {
+  input[type="text"],
+  input[type="tel"],
+  textarea,
+  select {
+    min-width: 30vw;
+  }
 }

@@ -3,6 +3,7 @@ import * as React from "react";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import Layout from "../components/layout/Layout";
+import Hero from "../components/hero/Hero";
 import Paragraph from "../components/layout/Paragraph";
 import WorkWithUs from "../components/work-with-us/WorkWithUs";
 import Services from "../components/services/Services";
@@ -19,6 +20,7 @@ const IndexPage = () => {
     <main>
       <title>Home Page</title>
       <Header pageName='Home' />
+      <Hero />
       <Layout>
         <Heading theme='dark' size=''>
           Full-Service Immigration Advisory
