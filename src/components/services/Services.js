@@ -6,9 +6,7 @@ import Heading from "../ui/Heading";
 const Services = () => {
   return (
     <div className='services'>
-      <Heading theme='dark' size=''>
-        How We Can Help
-      </Heading>
+      <Heading color='grey'>How We Can Help</Heading>
       <div className='services__container-row1'>
         <div className='services__img-container'>
           <h1 className='services__title'>{ServicesData.firstRow.home}</h1>
@@ -86,7 +84,7 @@ const Services = () => {
       </div>
 
       <div className='services__container-mobile'>
-        <Heading theme='dark' size='smaller'>
+        <Heading color='grey' size='sm'>
           As well as...
         </Heading>
         <ul>

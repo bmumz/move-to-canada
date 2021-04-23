@@ -14,9 +14,7 @@ const About = () => {
     <div>
       <Header pageName={pageTitle} />
       <Layout>
-        <Heading theme='dark' size=''>
-          {pageTitle}
-        </Heading>
+        <Heading color='grey'>{pageTitle}</Heading>
         <Paragraph>
           Are you planning to move to Canada? You may need a dedicated team. Our
           full-service comprehensive team of Lawyers, Realtors, Bankers,

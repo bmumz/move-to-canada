@@ -7,13 +7,15 @@ const Footer = () => {
   const { phone } = useSiteMetadata();
   return (
     <div className='footer'>
-      <Heading theme='dark' size=''>
-        Get the help you deserve!
-      </Heading>
-      <Banner className='banner banner__footer'>{phone}</Banner>
-      <Heading theme='dark' size=''>
-        Call now for a free consultation!
-      </Heading>
+      <Heading color='grey'>Get the help you deserve!</Heading>
+      <Banner>
+        <span>
+          <Heading color='white' size='xl'>
+            {phone}
+          </Heading>
+        </span>
+      </Banner>
+      <Heading color='grey'>Call now for a free consultation!</Heading>
       <p>
         We might not be able to handle all types of cases due to expertise and
         other various reasons.{" "}

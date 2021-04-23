@@ -9,9 +9,8 @@ const Hero = () => {
         <StaticImage src='../../images/slideshow/road.jpg' alt='road' />
 
         <div className='hero__overlay'> </div>
-        <div>
-          <Contact />
-        </div>
+
+        <Contact />
       </div>
     </div>
   );

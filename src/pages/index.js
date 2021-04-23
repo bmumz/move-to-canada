@@ -16,16 +16,17 @@ import "../styles/app.scss";
 
 const IndexPage = () => {
   const { phone, title } = useSiteMetadata();
+  const handleClick = () => {
+    alert("clicked");
+  };
   return (
     <main>
       <title>Home Page</title>
       <Header pageName='Home' />
       <Hero />
       <Layout>
-        <Heading theme='dark' size=''>
-          Full-Service Immigration Advisory
-        </Heading>
-        <Heading theme='red' size='larger'>
+        <Heading color='grey'>Full-Service Immigration Advisory</Heading>
+        <Heading color='red' size='lg'>
           {phone}
         </Heading>
 
@@ -51,13 +52,14 @@ const IndexPage = () => {
           experience, The {title} Team makes it simple.
         </Paragraph>
       </Layout>
-      <Banner className='banner'>
-        <div className='banner__content'>
+      <Banner className='banner__col'>
+        <Heading color='white' size='sm' weight='bold'>
           Thinking about moving to Canada?{" "}
-          <Button className='button__secondary' onClick=''>
-            Speak to us now!
-          </Button>
-        </div>
+        </Heading>
+
+        <Button className='button__secondary' onClick={handleClick}>
+          Speak to us now!
+        </Button>
       </Banner>
 
       <Services />

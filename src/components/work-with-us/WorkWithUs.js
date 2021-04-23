@@ -11,9 +11,7 @@ const WorkWithUs = () => {
   return (
     <div className='work-with-us'>
       <Layout>
-        <Heading theme='dark' size=''>
-          Why Work With Us?
-        </Heading>
+        <Heading color='grey'>Why Work With Us?</Heading>
         <Paragraph>
           People from all around the world turn to the {title} Team because of
           our talent, knowledge and ability to resolve difficult situations!

@@ -12,23 +12,22 @@ const Contact = () => {
   };
   return (
     <div className='contact'>
-      <Heading theme='light' size=''>
+      <Heading color='white' weight='bold'>
         Contact Us!
       </Heading>
-      <Heading theme='light' size='smaller'>
+      <Heading color='white' size='sm' weight='reg'>
         for a free case evaluation!
       </Heading>
-      <Input type='text' title='Full Name' className='' />
-      <Input type='text' title='Email Address' className='' />
-      <Input type='tel' title='Phone Number' className='' />
-      <Input type='text' title='Country' className='' />
+      <Input type='text' title='Full Name' />
+      <Input type='text' title='Email Address' />
+      <Input type='tel' title='Phone Number' />
+      <Input type='text' title='Country' />
       <Dropdown
         title='Inquiry Type'
         options={Inquiry}
         placeholder='Inquiry Type'
-        className=''
       />
-      <Textarea title='Message' className='' />
+      <Textarea title='Message' />
       <Button onClick={handleSubmit} className='button__primary'>
         Submit!
       </Button>
