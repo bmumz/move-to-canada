@@ -2,9 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Banner = ({ children, className }) => {
-  return (
-    <div className={!className ? "banner" : `${className}`}>{children}</div>
-  );
+  return <div className={className || "banner"}>{children}</div>;
 };
 
 Banner.propTypes = {
