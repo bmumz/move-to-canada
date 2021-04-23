@@ -1,69 +1,9 @@
 .banner {
   @include flex-row-center;
-  margin: 2rem 0;
-  font-weight: $bold;
-  height: 10rem;
-  font-size: 2rem;
-  @include color-scheme($red, $less-white);
+  @include banner;
 }
 
-.banner__footer {
-  font-size: 4rem;
-  margin: 1rem 0;
-}
-
-.banner__content {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.banner__nav {
-  @include flex-row-center;
-  visibility: hidden;
-  opacity: 0;
-  height: 100vh;
-  width: 100vw;
-  @include color-scheme($red, $less-white);
-  transition: opacity 1s ease-in, opacity 0.5s ease-out,
-    transform 0.5s ease-in-out, visibility 0.1s;
-
-  &.open {
-    visibility: visible;
-    opacity: 1;
-  }
-  &.closed {
-    height: 0;
-  }
-}
-
-@media (min-width: $desktop-breakpoint) {
-  .banner__content {
-    width: 65vw;
-  }
-  .banner__nav {
-    visibility: visible;
-    opacity: 1;
-    height: 8rem;
-    justify-content: flex-end;
-
-    &.open {
-      visibility: hidden;
-    }
-
-    &.closed {
-      height: 100%;
-    }
-  }
-}
-
-// SMALLER SCREENS (IPHONE SE, GALAXY S5)
-@media (max-width: 375px) {
-  .banner__content {
-    font-size: 1.75rem;
-  }
-  .banner__footer {
-    font-size: 3.5rem;
-  }
+.banner__col {
+  @include flex-col-center;
+  @include banner;
 }
