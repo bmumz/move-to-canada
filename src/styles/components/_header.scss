@@ -13,6 +13,7 @@
 
 .header__tel {
   @include flex-col-center;
+  line-height: 1;
   background: $red;
   width: 100vw;
   padding: 1rem 0;

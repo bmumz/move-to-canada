@@ -4,7 +4,7 @@
 
 .navbar__menu {
   @include color-scheme($red, $less-white);
-
+  font-size: 2.5rem;
   visibility: hidden;
   height: 0;
   width: 0;
@@ -23,11 +23,10 @@
 .nav__item {
   @include color-scheme(transparent, $less-white);
   text-decoration: none;
-  padding: 3rem;
-  font-size: 2.5rem;
-  height: 8rem;
-  display: flex;
-  align-items: center;
+  padding: 2rem;
+  letter-spacing: 1.5px;
+  font-size: 2rem;
+  @include flex-row-center;
 }
 
 .navbar__button.open .button__animation {
@@ -63,14 +62,9 @@
     }
   }
 
-  .nav__item {
-    font-size: 2.25rem;
-    padding: 0 2rem;
-  }
-
   .nav__item:hover {
-    -webkit-box-shadow: inset 0px -4px 0px 0px $less-white;
-    -moz-box-shadow: inset 0px -4px 0px 0px $less-white;
-    box-shadow: inset 0px -4px 0px 0px $less-white;
+    -webkit-box-shadow: inset 0px -2px 0px 0px $less-white;
+    -moz-box-shadow: inset 0px -2px 0px 0px $less-white;
+    box-shadow: inset 0px -2px 0px 0px $less-white;
   }
 }
