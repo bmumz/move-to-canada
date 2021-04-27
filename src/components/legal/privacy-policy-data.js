@@ -1,8 +1,9 @@
 const PrivacyPolicyData = (title) => {
   return {
     privacyPolicy: {
-      title: "Privacy Notice",
-      paragraph: `The ${title} Inc. (referred to herein as “MTC”) 
+      title: 'Privacy Notice',
+      paragraphs: [
+        `The ${title} Inc. (referred to herein as “MTC”) 
       and our related affiliates and subsidiaries want to ensure that our clients, 
       their employees, and any affected data subjects ("you") are informed 
       about the security and use of the personal information that we receive 
@@ -12,11 +13,13 @@ const PrivacyPolicyData = (title) => {
       MTC’s privacy practices. It describes the types of personal information we collect, 
       how we may use that information, with whom it may be shared and the measures taken 
       to ensure its security.`,
+      ],
     },
     personalInfo: {
-      heading: "Personal Information We Collect and How We Use It",
-      title: "Personal Information We Collect About You",
-      paragraph: `MTC collects certain personal information about you and, if required, 
+      heading: 'Personal Information We Collect and How We Use It',
+      title: 'Personal Information We Collect About You',
+      paragraphs: [
+        `MTC collects certain personal information about you and, if required, 
       your family members and employer for the purposes of providing immigration consulting 
       and legal services.  We will not be able to provide the services requested if we are not 
       provided with all relevant personal information.  Below are set forth the purposes for 
@@ -25,10 +28,11 @@ const PrivacyPolicyData = (title) => {
       request additional services, such as visa extensions, permanent residency applications 
       and changes in employment, we may be required to collect additional types of personal
        information to provide the requested services.`,
+      ],
     },
 
     clientServices: {
-      title: "Client Services",
+      title: 'Client Services',
       paragraphs: [
         `For purposes of providing client services, including the applicable
        legal services, and/or immigration consulting services you and/or your
@@ -82,14 +86,16 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     informationRequests: {
-      title: "Information Requests",
-      paragraph: ` If you request information about our services directly, you may choose
+      title: 'Information Requests',
+      paragraphs: [
+        ` If you request information about our services directly, you may choose
             to provide personal information such as your name, address, email
             address and telephone number.  We use your information to respond to
             your request.`,
+      ],
     },
     otherUses: {
-      title: "Other Uses of Information",
+      title: 'Other Uses of Information',
       paragraphs: [
         `Where it is in our legitimate interests and not outweighed by your
       data protection rights, we use personal information we collect and
@@ -103,8 +109,8 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     sensativePersonalInfo: {
-      heading: "Sensitive Personal Information",
-      title: "Immigration Services",
+      heading: 'Sensitive Personal Information',
+      title: 'Immigration Services',
       paragraphs: [
         `Governments worldwide require the collection and processing of a wide
       variety of personal information from foreign nationals seeking to
@@ -137,8 +143,9 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     legalServices: {
-      title: "Legal Services",
-      paragraph: `In the course of our client services, we may represent you and/or your
+      title: 'Legal Services',
+      paragraphs: [
+        `In the course of our client services, we may represent you and/or your
         employer in legal matters that require us to collect and use sensitive
         personal information relating to you. Where we process sensitive
         personal information in the course of these and other similar client
@@ -146,17 +153,21 @@ const PrivacyPolicyData = (title) => {
         exercise or defend legal claims or to assist you and/or your employer
         in fulfilling the rights and obligations of applicable employment or
         social security laws.`,
+      ],
     },
     infoCollected: {
-      title: "Information We Collect By Automated Means",
-      paragraph: `We use cookies and related technologies on our websites and other web-
+      title: 'Information We Collect By Automated Means',
+      paragraphs: [
+        `We use cookies and related technologies on our websites and other web-
         based interfaces. We use these technologies to understand how many
         users visited our sites and the pages they accessed so that we can
         best tailor our web services to our visitors.`,
+      ],
     },
     cookies: {
-      title: "Cookies",
-      paragraph: `Cookies are small text files that are placed on your computer’s hard
+      title: 'Cookies',
+      paragraphs: [
+        `Cookies are small text files that are placed on your computer’s hard
         drive when you visit certain websites that help collect data. We may
         use cookies to tell us, for example, whether you have visited us
         before or if you are a new visitor and to help us identify site
@@ -167,10 +178,12 @@ const PrivacyPolicyData = (title) => {
         cookie, and how to disable existing cookies. Please note, however,
         that without cookies, you may not be able to take advantage of all our
         website features.`,
+      ],
     },
     logFiles: {
       title: `Log Files, Usage Data and IP Addresses`,
-      paragraph: ` Log files are web server files (containing information such as domain
+      paragraphs: [
+        ` Log files are web server files (containing information such as domain
             name or IP address, URL, http response code, or the date and duration
             of your visit) that are automatically created when an Internet user
             visits a website. An IP address is an identifier that certain
@@ -181,9 +194,10 @@ const PrivacyPolicyData = (title) => {
             regions of the world where these visitors are located. In addition,
             log files help detect disruptions that may interfere with the
             provision of our website.`,
+      ],
     },
     sharedInfo: {
-      title: "Info We Share",
+      title: 'Info We Share',
       paraghraphs: [
         ` We will not sell, share, transfer, rent, use, or distribute your
       information for purposes other than those disclosed here unless
@@ -226,7 +240,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     protectedInfo: {
-      title: "How We Protect Personal Information",
+      title: 'How We Protect Personal Information',
       paragraphs: [
         `We seek to ensure that any personal information that we hold about you
       is accurate, complete, current and otherwise reliable based on data
@@ -255,9 +269,10 @@ const PrivacyPolicyData = (title) => {
     },
 
     transfers: {
-      heading: "Information We Transfer",
-      title: "Transfers Required for the Services",
-      paragraph: `When we transfer your information to other countries, we will use,
+      heading: 'Information We Transfer',
+      title: 'Transfers Required for the Services',
+      paragraphs: [
+        `When we transfer your information to other countries, we will use,
         share and safeguard that information as described in this Privacy
         Notice.  We transfer personal information to third countries where it
         is necessary to provide you the service you (or your employer)
@@ -267,9 +282,10 @@ const PrivacyPolicyData = (title) => {
         provide your personal information to local advisors, translators and
         other service providers where it is necessary to provide the service
         you requested.`,
+      ],
     },
     officeTransfers: {
-      title: "Transfers to other MTC offices",
+      title: 'Transfers to other MTC offices',
       paragraphs: [
         `We share some of your personal information with other MTC offices to
       administer and manage group functions and provide international
@@ -285,7 +301,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     yourRights: {
-      title: "Your Choices and Rights",
+      title: 'Your Choices and Rights',
       paragraphs: [
         ` As set out above, MTC may collect certain information about you in
         conjunction with providing immigration consulting and legal services.
@@ -328,27 +344,33 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     updatesToPolicy: {
-      title: "Updates to Our Privacy Notice",
-      paragraph: `This Privacy Notice may be updated periodically without prior notice
+      title: 'Updates to Our Privacy Notice',
+      paragraphs: [
+        `This Privacy Notice may be updated periodically without prior notice
         to you to reflect changes in our information practices. We will post a
         notice on our applicable websites or materials to advise of any
         significant changes to our Privacy Notice and indicate in the notice
         when it was most recently updated. In certain countries, additional or
         different procedures not inconsistent with this Privacy Notice may
         apply as necessary to satisfy local legal requirements.`,
+      ],
     },
     privacyOfficer: {
       title: `The ${title} Team Inc.'s Data Privacy Officer`,
-      paragraph: ` MTC Inc.'s Data Privacy Officer is Nicholas Zarlenga. He can be
+      paragraphs: [
+        ` MTC Inc.'s Data Privacy Officer is Nicholas Zarlenga. He can be
         reached at info@movetocanada.com.`,
+      ],
     },
     contactUs: {
-      title: "How to Contact Us",
-      paragraph: `The controllers for your personal information are The ${title}
+      title: 'How to Contact Us',
+      paragraphs: [
+        `The controllers for your personal information are The ${title}
         Team Inc. and the MTC team member providing the services to you. If
         you have any questions or comments about this Privacy Notice directed
         at any of the data controllers listed above, please contact our data
         protection officer by email at info@movetocanada.com.`,
+      ],
     },
   };
 };
