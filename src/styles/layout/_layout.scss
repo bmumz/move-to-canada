@@ -15,7 +15,9 @@
     }
   }
 }
-
+.heading__black {
+  @include heading(#444);
+}
 .heading__grey {
   @include heading(darken($darker-grey, 4));
 }
@@ -55,6 +57,11 @@
 
 .heading__xl {
   font-size: 3.5rem;
+}
+
+.heading__center {
+  @include flex-col-center;
+  margin: 0 auto;
 }
 
 footer {
