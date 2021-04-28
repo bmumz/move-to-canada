@@ -1,8 +1,3 @@
-.services {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
 .services__container-mobile {
   visibility: visible;
   @include flex-col;
@@ -20,6 +15,9 @@
   position: absolute;
   z-index: 2;
   color: $less-white;
+}
+.services__container-row1 {
+  margin-top: 2rem;
 }
 
 .services__container-row1,

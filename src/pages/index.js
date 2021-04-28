@@ -25,8 +25,10 @@ const IndexPage = () => {
       <Header pageName='Home' />
       <Hero />
       <Layout>
-        <Heading color='grey'>Full-Service Immigration Advisory</Heading>
-        <Heading color='red' size='lg'>
+        <Heading color='grey' align='center'>
+          Full-Service Immigration Advisory
+        </Heading>
+        <Heading color='red' size='lg' align='center'>
           {phone}
         </Heading>
 

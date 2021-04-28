@@ -6,7 +6,10 @@ import Heading from "../ui/Heading";
 const Services = () => {
   return (
     <div className='services'>
-      <Heading color='grey'>How We Can Help</Heading>
+      <Heading color='grey' align='center'>
+        How We Can Help
+      </Heading>
+
       <div className='services__container-row1'>
         <div className='services__img-container'>
           <h1 className='services__title'>{ServicesData.firstRow.home}</h1>
