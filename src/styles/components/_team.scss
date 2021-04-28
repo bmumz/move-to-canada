@@ -1,0 +1,56 @@
+.team {
+  border: 1px solid red;
+}
+
+.team__cards {
+  @include flex-col;
+}
+
+.team__card {
+  @include flex-col-center;
+  margin: $xl-size 0;
+  width: 80vw;
+  button {
+    letter-spacing: 0;
+    font-size: 1.5rem;
+  }
+  button:hover {
+    background: $mid-grey;
+  }
+  img {
+    width: 140px;
+    height: auto;
+    border-radius: 100%;
+  }
+  h2,
+  h3 {
+    font-weight: $reg;
+    text-transform: uppercase;
+  }
+  h3 {
+    color: $darker-grey;
+    letter-spacing: 1px;
+  }
+}
+
+.team__info {
+  @include flex-col-center;
+  margin: 1rem;
+  color: $red;
+}
+
+.team__img-container {
+  margin: 1rem;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .team__cards {
+    @include flex-row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .team__card {
+    @include flex-row;
+    width: 26vw;
+  }
+}
