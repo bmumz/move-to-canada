@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 
 const FooterCol = ({ children, title }) => (
   <div className='footer__col'>
-    <h4>{title}</h4>
+    {title ? <h4>{title}</h4> : ""}
+
     {children}
   </div>
 );

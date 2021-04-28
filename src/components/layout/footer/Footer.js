@@ -36,17 +36,20 @@ const Footer = () => {
 
       <footer>
         <FooterCol>
-          <StaticImage
-            src='../../images/move-to-canada.png'
-            alt='The Move to Canada Team Logo with maple leaf'
-            layout='fixed'
-            width={250}
-            className='footer__img'
-          />
-          <span className='footer__copyright'>
-            © {copyright} {title} Inc.
+          <span className='footer__img--container'>
+            <StaticImage
+              src='../../../images/move-to-canada.png'
+              alt='The Move to Canada Team Logo with maple leaf'
+              layout='fixed'
+              width={200}
+              className='footer__img'
+            />
+
+            <span className='footer__copyright'>
+              © {copyright} {title} Inc.
+              <span>All Rights Reserved</span>
+            </span>
           </span>
-          <span className='footer__copyright'>All Rights Reserved</span>
         </FooterCol>
 
         <FooterCol title='More about our company'>
