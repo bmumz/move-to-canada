@@ -15,8 +15,8 @@ const WorkWithUs = () => {
           Why Work With Us?
         </Heading>
         <Paragraph>
-          People from all around the world turn to the {title} Team because of
-          our talent, knowledge and ability to resolve difficult situations!
+          People from all around the world turn to {title} because of our
+          talent, knowledge and ability to resolve difficult situations!
         </Paragraph>
       </Layout>
       <div className='work-with-us__cards'>

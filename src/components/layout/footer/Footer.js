@@ -9,7 +9,8 @@ import Paragraph from "../Paragraph";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Footer = () => {
-  const { phone, title, email, website } = useSiteMetadata();
+  const { phone, title, email, website, copyright } = useSiteMetadata();
+
   return (
     <div className='footer'>
       <Heading color='grey' align='center' size='sm'>
@@ -40,19 +41,23 @@ const Footer = () => {
             alt='The Move to Canada Team Logo with maple leaf'
             layout='fixed'
             width={250}
-            className='footer__col'
+            className='footer__img'
           />
+          <span className='footer__copyright'>
+            © {copyright} {title} Inc.
+          </span>
+          <span className='footer__copyright'>All Rights Reserved</span>
         </FooterCol>
 
         <FooterCol title='More about our company'>
           {" "}
           <Paragraph>
-            The {title} Team offers comprehensive, full service to help people
-            from all around the world buy real estate and move to Canada.{" "}
+            {title} offers comprehensive, full service to help people from all
+            around the world buy real estate and move to Canada.{" "}
           </Paragraph>
         </FooterCol>
 
-        <FooterCol title={`The ${title} Team`}>
+        <FooterCol title={`${title}`}>
           <Paragraph>{phone}</Paragraph>
           <Paragraph>1-800-321-6683</Paragraph>
           <Paragraph> {email}</Paragraph>
