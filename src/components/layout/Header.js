@@ -20,7 +20,7 @@ const Header = ({ pageName }) => {
               src='../../images/move-to-canada.png'
               alt='The Move to Canada Team Logo with maple leaf'
               layout='fixed'
-              width={300}
+              width={250}
             />
           </div>
 
