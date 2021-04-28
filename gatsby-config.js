@@ -3,6 +3,7 @@ module.exports = {
     title: "Move to Canada",
     phone: "1-800-321-MOVE",
     email: "info@movetocanada.com",
+    website: "www.movetocanada.com",
     language: "English",
     description:
       "Planning to move to Canada? The Move to Canada Team can help make it easy and stress free!",

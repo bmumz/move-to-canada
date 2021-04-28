@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import Footer from "../components/layout/Footer";
+import Footer from "../components/layout/footer/Footer";
 import Header from "../components/layout/Header";
 import Layout from "../components/layout/Layout";
 import Hero from "../components/hero/Hero";

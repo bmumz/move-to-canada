@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/layout/Layout";
 import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
+import Footer from "../components/layout/footer/Footer";
 import Paragraph from "../components/layout/Paragraph";
 import Heading from "../components/ui/Heading";
 import { Link } from "gatsby";

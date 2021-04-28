@@ -46,14 +46,15 @@ body {
   line-height: 1.5;
   color: $almost-black;
   position: absolute;
-  p {
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-  }
-  li {
-    font-size: 1.5rem;
-  }
+}
+
+div,
+p,
+ul,
+ol,
+input,
+textarea {
+  font-size: 1.5rem;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
