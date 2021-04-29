@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import Footer from "../components/layout/Footer";
+import Footer from "../components/layout/footer/Footer";
 import Header from "../components/layout/Header";
 import Layout from "../components/layout/Layout";
 import Hero from "../components/hero/Hero";
@@ -44,14 +44,14 @@ const IndexPage = () => {
           placeholder='dominantColor'
         />
         <Paragraph>
-          The {title} Team has served clients around the world from almost every
-          country. Our proven track record of helping individuals and businesses
-          relocate to Canada is second to none. We are committed to customer
-          service and personalized attention to ensure each client receives
-          custom tailored solutions that fit their needs. Every member of our
-          team has years of experience and is recognized as a leader in their
-          field. While relocating to another country can be a stressful
-          experience, The {title} Team makes it simple.
+          {title} has served clients around the world from almost every country.
+          Our proven track record of helping individuals and businesses relocate
+          to Canada is second to none. We are committed to customer service and
+          personalized attention to ensure each client receives custom tailored
+          solutions that fit their needs. Every member of our team has years of
+          experience and is recognized as a leader in their field. While
+          relocating to another country can be a stressful experience, {title}{" "}
+          makes it simple.
         </Paragraph>
       </Layout>
       <Banner className='banner__col'>

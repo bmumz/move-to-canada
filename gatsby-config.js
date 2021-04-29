@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Move to Canada",
+    title: "The Move to Canada Team",
     phone: "1-800-321-MOVE",
     email: "info@movetocanada.com",
+    website: "www.movetocanada.com",
+    copyright: 2021,
     language: "English",
     description:
       "Planning to move to Canada? The Move to Canada Team can help make it easy and stress free!",
