@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import ServicesData from "./services-data";
+import ServicesData from "../../data/services-data";
 import Heading from "../ui/Heading";
 
 const Services = () => {

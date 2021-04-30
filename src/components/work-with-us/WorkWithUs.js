@@ -1,7 +1,7 @@
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import Paragraph from "../layout/Paragraph";
-import WorkWithUsData from "./work-with-us-data";
+import WorkWithUsData from "../../data/work-with-us-data";
 import Heading from "../ui/Heading";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 import Layout from "../layout/Layout";
@@ -35,7 +35,7 @@ const WorkWithUs = () => {
           />
           <h2>{WorkWithUsData.trusted.title}</h2>
           <span>{WorkWithUsData.trusted.blurb}</span>
-        </div>{" "}
+        </div>
         <div className='work-with-us__card'>
           <StaticImage
             src='../../images/work-with-us/phone-call.jpg'
@@ -59,7 +59,7 @@ const WorkWithUs = () => {
           />
           <h2>{WorkWithUsData.consultation.title}</h2>
           <span>{WorkWithUsData.consultation.blurb}</span>
-        </div>{" "}
+        </div>
         <div className='work-with-us__card'>
           <StaticImage
             src='../../images/work-with-us/team.jpg'

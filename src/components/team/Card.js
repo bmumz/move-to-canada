@@ -11,7 +11,7 @@ const Card = ({ name, title, location }) => (
     />
     <div className='team__info'>
       <Heading size='sm' color='grey' weight='bold'>
-        {name}{" "}
+        {name}
       </Heading>
       <h2>{title}</h2>
       <hr />

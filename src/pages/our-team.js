@@ -29,7 +29,6 @@ const Team = () => {
             title='Real Estate Broker'
             location='Toronto, ON'
           >
-            {" "}
             <StaticImage
               src='../images/headshots/nick.jpeg'
               alt='Nick Zarlenga'
@@ -41,7 +40,6 @@ const Team = () => {
             title='Real Estate Broker'
             location='Toronto, ON'
           >
-            {" "}
             <StaticImage
               src='../images/headshots/nick.jpeg'
               alt='Nick Zarlenga'
@@ -53,7 +51,6 @@ const Team = () => {
             title='Real Estate Broker'
             location='Toronto, ON'
           >
-            {" "}
             <StaticImage
               src='../images/headshots/nick.jpeg'
               alt='Nick Zarlenga'
@@ -65,7 +62,6 @@ const Team = () => {
             title='Real Estate Broker'
             location='Toronto, ON'
           >
-            {" "}
             <StaticImage
               src='../images/headshots/nick.jpeg'
               alt='Nick Zarlenga'

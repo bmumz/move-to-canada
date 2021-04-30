@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Pages } from "./pages";
 import Banner from "../ui/Banner";
-import { Link } from "gatsby";
+import BuildLinks from "./BuildLinks";
 
 const Navbar = () => {
   const [navMenu, setNavMenu] = useState(false);
@@ -9,7 +9,7 @@ const Navbar = () => {
   const showNavMenu = () => setNavMenu(!navMenu);
 
   return (
-    <div className='navbar'>
+    <>
       <div className='button__hamburger'>
         <div className={`navbar__button ${navMenu ? "open" : "closed"}`}>
           <button onClick={showNavMenu} className='button__animation' />
@@ -17,14 +17,10 @@ const Navbar = () => {
       </div>
       <Banner className={`navbar__menu ${navMenu ? "mobile" : "desktop"}`}>
         <nav>
-          {Pages.map((page, index) => (
-            <Link key={index} className='nav__item' to={page.path}>
-              {page.title}
-            </Link>
-          ))}
+          <BuildLinks collection={Pages} />
         </nav>
       </Banner>
-    </div>
+    </>
   );
 };
 

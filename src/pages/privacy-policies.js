@@ -5,7 +5,7 @@ import Layout from "../components/layout/Layout";
 import Heading from "../components/ui/Heading";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import Legal from "../components/legal/Legal";
-import PrivacyPolicyData from "../components/legal/privacy-policy-data";
+import PrivacyPolicyData from "../data/legal/privacy-policy-data";
 
 const LegalNoticesPage = () => {
   const pageTitle = "Privacy Policies";

@@ -1,7 +1,3 @@
-.team {
-  border: 1px solid red;
-}
-
 .team__cards {
   @include flex-col;
 }
