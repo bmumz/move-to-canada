@@ -1,25 +1,19 @@
-import React from 'react';
-import Paragraph from '../layout/Paragraph';
-import Heading from '../ui/Heading';
+import React from "react";
 
 const Legal = ({ data }) => {
   return (
     <>
       {Object.values(data).map((clause, index) => (
         <div key={index}>
-          <Heading size='md' color='black'>
-            {clause.heading}
-          </Heading>
-          <Heading size='sm' color='grey'>
-            {clause.title}
-          </Heading>
+          <h2>{clause.heading}</h2>
+          <h3>{clause.title}</h3>
           {clause.paragraphs &&
-            clause.paragraphs.map((p, i) => <Paragraph key={i}>{p}</Paragraph>)}
-          <Paragraph>
+            clause.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
+          <p>
             <a href='#privacy-policy' className='legal__link'>
-              Back to top↑{' '}
+              Back to top↑{" "}
             </a>
-          </Paragraph>
+          </p>
         </div>
       ))}
     </>

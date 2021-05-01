@@ -3,6 +3,13 @@
   margin: 0 auto;
   background: lighten($mid-grey, 2);
   margin: 0;
+  h2 {
+    color: $almost-black;
+    span {
+      border-bottom: 1px solid $darker-grey;
+      color: $red;
+    }
+  }
 }
 .work-with-us__cards {
   @include flex-col;
@@ -11,11 +18,13 @@
   padding: 2rem;
   margin: 1rem;
   background: lighten($mid-grey, 18);
-  h2 {
-    font-size: 1.8rem;
+  h4 {
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
   }
-  span {
-    font-size: 1.5rem;
+  p {
+    line-height: 1.25;
+    color: $almost-black;
   }
 }
 

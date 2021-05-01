@@ -1,21 +1,20 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
-import Heading from "../ui/Heading";
 
-const Card = ({ name, title, location }) => (
+const Card = ({ name, title, location, children }) => (
   <div className='team__card'>
-    <StaticImage
-      src='../../images/headshots/nick.jpeg'
-      alt={name}
-      className='team__img-container'
-    />
+    {children}
     <div className='team__info'>
-      <Heading size='sm' color='grey' weight='bold'>
-        {name}
-      </Heading>
-      <h2>{title}</h2>
-      <hr />
-      <h3>📍 {location}</h3>
+      <h2>{name}</h2>
+      <h4 className='team__title'>
+        <span>{title}</span>
+      </h4>
+
+      <h4 className='team__location'>
+        <span role='img' aria-label='location pin'>
+          📍
+        </span>{" "}
+        {location}
+      </h4>
       <button>More info...</button>
     </div>
   </div>

@@ -1,38 +1,30 @@
 import React from "react";
 import Banner from "../../ui/Banner";
-import Heading from "../../ui/Heading";
 import FooterCol from "./FooterCol";
-import Paragraph from "../Paragraph";
-import BuildLinks from "../../nav/BuildLinks";
+import BuildLinks from "../nav/BuildLinks";
 import { useSiteMetadata } from "../../../hooks/use-site-metadata";
-import { LegalPages, Pages } from "../../nav/pages";
+import { LegalPages, Pages } from "../nav/pages";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Footer = () => {
   const { phone, title, email, website, copyright } = useSiteMetadata();
 
   return (
-    <div className='footer'>
-      <Heading color='grey' align='center' size='sm'>
-        Get the help you deserve!
-      </Heading>
+    <section>
+      <h2 className='heading__black '>Get the help you deserve!</h2>
 
       <Banner>
-        <span>
-          <Heading color='white' size='xl'>
-            {phone}
-          </Heading>
-        </span>
+        <h1 className='heading__bold'>{phone}</h1>
       </Banner>
 
-      <Heading color='grey' align='center' size='sm'>
+      <h2 className='heading__center heading__black '>
         Call now for a free consultation!
-      </Heading>
+      </h2>
 
-      <Paragraph>
+      <p className='footer__disclaimer'>
         We might not be able to handle all types of cases due to expertise and
         other various reasons.
-      </Paragraph>
+      </p>
 
       <footer>
         <div className='footer__content'>
@@ -47,17 +39,17 @@ const Footer = () => {
           </FooterCol>
 
           <FooterCol title='More about our company'>
-            <Paragraph>
+            <p>
               {title} offers comprehensive, full service to help people from all
               around the world buy real estate and move to Canada.
-            </Paragraph>
+            </p>
           </FooterCol>
 
           <FooterCol title={`${title}`}>
-            <Paragraph>{phone}</Paragraph>
-            <Paragraph>1-800-321-6683</Paragraph>
-            <Paragraph> {email}</Paragraph>
-            <Paragraph> {website}</Paragraph>
+            <p>{phone}</p>
+            <p>1-800-321-6683</p>
+            <p> {email}</p>
+            <p> {website}</p>
           </FooterCol>
 
           <FooterCol title='Page Directory'>
@@ -76,7 +68,7 @@ const Footer = () => {
           © {copyright} {title} Inc., All Rights Reserved
         </span>
       </footer>
-    </div>
+    </section>
   );
 };
 

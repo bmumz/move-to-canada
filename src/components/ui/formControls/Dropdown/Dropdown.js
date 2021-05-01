@@ -4,10 +4,8 @@ import PropTypes from "prop-types";
 const Dropdown = ({ title, options, placeholder }) => {
   return (
     <span className='form-input'>
-      <select aria-label={title}>
-        <option value={placeholder} disabled>
-          {placeholder}
-        </option>
+      <select aria-label={title} defaultValue={placeholder}>
+        <option disabled>{placeholder}</option>
         {options.map((option, index) => (
           <option key={index} value={option}>
             {option}

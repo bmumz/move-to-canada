@@ -1,15 +1,13 @@
 //OVERALL LAYOUT
 .layout {
-  padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   margin: 0 auto;
   width: 85vw;
   p {
-    @include flex-col;
-    button {
-      margin: 2rem;
-    }
+    padding: $xs-size 0;
+  }
+  p:last-child {
+    padding-bottom: $m-size;
   }
 }
 
@@ -19,6 +17,12 @@
 }
 .heading__grey {
   @include heading(darken($darker-grey, 4));
+}
+
+.heading__underline {
+  @include heading-underline($mid-grey);
+  padding-bottom: $s-size;
+  font-size: 1rem;
 }
 
 .heading__bold {
@@ -67,109 +71,12 @@
   margin: 0 auto;
 }
 
-// FOOTER
-.footer {
-  margin-top: $l-size;
-  .banner {
-    margin: 0.75rem 0;
-  }
-  p {
-    font-size: 1.2rem;
-    @include flex-row-center;
-  }
-}
-
-footer {
-  padding: $xl-size 0;
-  background: $less-grey;
-  border-top: 1px solid darken($less-grey, 4);
-  min-height: 20vh;
-  @include flex-col-center;
-  div,
-  span {
-    @include flex-col;
-    a {
-      color: $darker-grey;
-      text-decoration: none;
-      line-height: 2;
-    }
-    a:hover {
-      color: $almost-black;
-    }
-  }
-}
-
-.footer__col {
-  @include flex-col;
-  align-items: flex-start;
-  height: 100%;
-  width: 80vw;
-  margin: 2rem 0;
-  h4 {
-    margin-bottom: $s-size;
-    color: $red;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  p,
-  a {
-    font-size: 1.35rem;
-    margin: 0;
-  }
-}
-
-.footer__directory {
-  @include flex-row;
-}
-
-.footer__legal {
-  margin-left: $l-size;
-  padding-left: $l-size;
-  border-left: 1px solid darken($less-grey, 4);
-}
-
-.footer__img--container {
-}
-
-.footer__copyright {
-  margin: 0 auto;
-  border-top: 1px solid darken($less-grey, 4);
-  margin-top: $l-size;
-  padding-top: $l-size;
-  @include flex-row-center;
-  align-items: center;
-  width: 50vw;
-  font-size: 1.2rem;
-  color: lighten($darker-grey, 3);
-}
-
-// PARAGRAPHS
-.paragraph {
-  margin: 1rem 0;
-  line-height: 2;
-}
-
 @media (min-width: $desktop-breakpoint) {
-  .footer__content {
-    @include flex-row;
-    justify-content: space-evenly;
-  }
-
-  .footer__col {
-    max-width: 18vw;
-    margin: 0 4rem;
+  .heading__underline {
+    font-size: 1.5rem;
   }
 
   .layout {
-    width: 55vw;
-    p {
-      padding: 1rem 0;
-    }
-  }
-}
-
-@media (min-width: 2560px) {
-  .layout {
-    width: 35vw;
+    width: 70vw;
   }
 }

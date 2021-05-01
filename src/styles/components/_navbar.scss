@@ -1,21 +1,21 @@
 nav {
   width: 100vw;
+  font-size: 1.25rem;
   a {
     @include color-scheme(transparent, $less-white);
     text-decoration: none;
     padding: 2rem;
     letter-spacing: 1.5px;
-    font-size: 2rem;
     @include flex-row-center;
   }
 }
 .navbar__menu {
   @include color-scheme($red, $less-white);
-  font-size: 2.5rem;
   visibility: hidden;
   height: 0;
   width: 0;
   opacity: 0;
+
   &.mobile {
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out,
       transform 0.5s ease-in-out;
@@ -46,12 +46,16 @@ nav {
 @media (min-width: $desktop-breakpoint) {
   .navbar__menu {
     visibility: visible;
-    height: 8rem;
     transition: none;
-    opacity: 1;
     &.desktop {
+      visibility: visible;
       width: 100vw;
-      height: 100%;
+      height: auto;
+      opacity: 1;
+    }
+    &.mobile {
+      width: 100vw;
+      height: auto;
     }
     nav {
       @include flex-row;

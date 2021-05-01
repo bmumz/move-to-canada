@@ -1,65 +1,50 @@
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+
 import Footer from "../components/layout/footer/Footer";
 import Header from "../components/layout/Header";
 import Layout from "../components/layout/Layout";
-import Hero from "../components/hero/Hero";
-import Paragraph from "../components/layout/Paragraph";
+import Hero from "../components/contact/Hero";
 import WorkWithUs from "../components/work-with-us/WorkWithUs";
 import Services from "../components/services/Services";
 import Banner from "../components/ui/Banner";
 import Button from "../components/ui/Button";
-import Heading from "../components/ui/Heading";
+
 import { useSiteMetadata } from "../hooks/use-site-metadata";
+import homeData from "../data/home-data";
 
 import "../styles/app.scss";
+import Heading from "../components/ui/Heading";
 
 const IndexPage = () => {
   const { phone, title } = useSiteMetadata();
+  const pageTitle = "Home";
+
   const handleClick = () => {
     alert("clicked");
   };
   return (
     <main>
-      <title>Home Page</title>
-      <Header pageName='Home' />
+      <title>{pageTitle}</title>
+      <Header pageName={pageTitle} />
       <Hero />
       <Layout>
-        <Heading color='grey' align='center'>
-          Full-Service Immigration Advisory
-        </Heading>
-        <Heading color='red' size='lg' align='center'>
-          {phone}
-        </Heading>
+        <section>
+          <Heading title='Full-Service Immigration Advisory'>{phone}</Heading>
 
-        <Paragraph>
-          Are you planning to move to Canada? You may need a dedicated team. Our
-          full-service comprehensive team of Lawyers, Realtors, Bankers,
-          Accountants and everyone in between are here to ensure your relocation
-          experience is seamless and stress-free.
-        </Paragraph>
-        <StaticImage
-          src='../images/canada.jpeg'
-          alt='Skyscrapers in Canada forming a maple leaf.'
-          placeholder='dominantColor'
-        />
-        <Paragraph>
-          {title} has served clients around the world from almost every country.
-          Our proven track record of helping individuals and businesses relocate
-          to Canada is second to none. We are committed to customer service and
-          personalized attention to ensure each client receives custom tailored
-          solutions that fit their needs. Every member of our team has years of
-          experience and is recognized as a leader in their field. While
-          relocating to another country can be a stressful experience, {title}
-          makes it simple.
-        </Paragraph>
+          <StaticImage
+            src='../images/canada.jpeg'
+            alt='Skyscrapers in Canada forming a maple leaf.'
+            placeholder='dominantColor'
+          />
+
+          <p>{homeData.paragraphs}</p>
+        </section>
       </Layout>
       <Banner className='banner__col'>
-        <Heading color='white' size='sm' weight='bold'>
-          Thinking about moving to Canada?
-        </Heading>
+        <h2>...thinking about moving to Canada?</h2>
 
-        <Button className='button__secondary' onClick={handleClick}>
+        <Button className='button__white' onClick={handleClick}>
           Speak to us now!
         </Button>
       </Banner>
