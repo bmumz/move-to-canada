@@ -1,7 +1,14 @@
-.navbar {
+nav {
   width: 100vw;
+  a {
+    @include color-scheme(transparent, $less-white);
+    text-decoration: none;
+    padding: 2rem;
+    letter-spacing: 1.5px;
+    font-size: 2rem;
+    @include flex-row-center;
+  }
 }
-
 .navbar__menu {
   @include color-scheme($red, $less-white);
   font-size: 2.5rem;
@@ -18,15 +25,6 @@
     width: 100vw;
     height: 100vh;
   }
-}
-
-.nav__item {
-  @include color-scheme(transparent, $less-white);
-  text-decoration: none;
-  padding: 2rem;
-  letter-spacing: 1.5px;
-  font-size: 2rem;
-  @include flex-row-center;
 }
 
 .navbar__button.open .button__animation {
@@ -54,17 +52,15 @@
     &.desktop {
       width: 100vw;
       height: 100%;
-
-      nav {
-        @include flex-row;
-        justify-content: flex-end;
+    }
+    nav {
+      @include flex-row;
+      justify-content: flex-end;
+      a:hover {
+        -webkit-box-shadow: inset 0px -2px 0px 0px $less-white;
+        -moz-box-shadow: inset 0px -2px 0px 0px $less-white;
+        box-shadow: inset 0px -2px 0px 0px $less-white;
       }
     }
-  }
-
-  .nav__item:hover {
-    -webkit-box-shadow: inset 0px -2px 0px 0px $less-white;
-    -moz-box-shadow: inset 0px -2px 0px 0px $less-white;
-    box-shadow: inset 0px -2px 0px 0px $less-white;
   }
 }

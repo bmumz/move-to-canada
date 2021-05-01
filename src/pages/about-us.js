@@ -29,7 +29,7 @@ const About = () => {
           personalized attention to ensure each client receives custom tailored
           solutions that fit their needs. Every member of our team has years of
           experience and is recognized as a leader in their field. While
-          relocating to another country can be a stressful experience, {title}{" "}
+          relocating to another country can be a stressful experience, {title}
           makes it simple.
         </Paragraph>
       </Layout>
