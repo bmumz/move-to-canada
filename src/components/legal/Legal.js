@@ -11,7 +11,7 @@ const Legal = ({ data }) => {
             clause.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
           <p>
             <a href='#privacy-policy' className='legal__link'>
-              Back to top↑{" "}
+              Back to top↑
             </a>
           </p>
         </div>

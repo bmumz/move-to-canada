@@ -12,7 +12,7 @@ const Card = ({ name, title, location, children }) => (
       <h4 className='team__location'>
         <span role='img' aria-label='location pin'>
           📍
-        </span>{" "}
+        </span>
         {location}
       </h4>
       <button>More info...</button>

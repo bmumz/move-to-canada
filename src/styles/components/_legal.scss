@@ -4,13 +4,12 @@
   }
   a {
     color: $darker-grey;
-  }
-  a:hover {
-    color: $almost-black;
-  }
-
-  a:visited {
-    color: $mid-grey;
+    &:hover {
+      color: $almost-black;
+    }
+    &:visited {
+      color: $mid-grey;
+    }
   }
 
   h2:first-child {

@@ -11,9 +11,9 @@ footer {
       color: $darker-grey;
       text-decoration: none;
       line-height: 2;
-    }
-    a:hover {
-      color: $almost-black;
+      &:hover {
+        color: $almost-black;
+      }
     }
   }
 }

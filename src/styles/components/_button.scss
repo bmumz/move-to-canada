@@ -8,10 +8,9 @@ button {
 
 .button__red {
   @include color-scheme($red, $less-white);
-}
-
-.button__red:hover {
-  background: #b90d0d;
+  &:hover {
+    background: #b90d0d;
+  }
 }
 
 .button__white {
@@ -19,11 +18,13 @@ button {
   border: 1px solid $less-white;
   color: $less-white;
   transition: all 0.25s ease;
+  &:hover {
+    background: darken($less-white, 2);
+    color: $red;
+  }
 }
 
 .button__white:hover {
-  background: darken($less-white, 2);
-  color: $red;
 }
 
 .button__hamburger {
