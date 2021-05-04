@@ -1,9 +1,9 @@
 .banner {
-  @include flex-row-center;
+  @include flex-row(center);
   @include banner;
 }
 
 .banner__col {
-  @include flex-col-center;
+  @include flex-col(center);
   @include banner;
 }

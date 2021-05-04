@@ -1,0 +1,72 @@
+.about__sectionCulture,
+.about__details {
+  min-height: 70vh;
+  @include flex-col(center);
+  justify-content: center;
+}
+
+.about__sectionCulture {
+  padding: $xl-size 0;
+  background: $less-grey;
+  border: 1px solid darken($less-grey, 4);
+  line-height: 1.5;
+  h1 {
+    letter-spacing: 1px;
+    margin-bottom: $s-size;
+  }
+  h4 {
+    margin-bottom: $s-size;
+  }
+}
+
+.about__paragraphs {
+  margin: $s-size 0;
+}
+
+.about__point {
+  font-weight: $bold;
+  font-size: 1.25rem;
+}
+
+.about__examples {
+  width: 100%;
+  @include flex-col(center);
+  h4 {
+    font-weight: $bold;
+  }
+}
+
+.about__icon--container {
+  text-align: center;
+  @include flex-col(center);
+  margin: $m-size 0;
+}
+
+.about__icon {
+  @include flex-row(center);
+  align-items: center;
+  background: $mid-grey;
+  color: $almost-black;
+  margin: $m-size 0;
+  padding: $s-size;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 200%;
+}
+.about__details {
+  @include flex-col(flex-start);
+  justify-content: center;
+  line-height: 2;
+  div {
+    padding: $s-size 0;
+  }
+}
+@media (min-width: $desktop-breakpoint) {
+  .about__examples {
+    @include flex-row(center);
+  }
+  .about__icon--container {
+    @include flex-col(center);
+    margin: 0 $xl-size;
+  }
+}

@@ -1,11 +1,11 @@
 .hero {
   width: 100vw;
-  @include flex-row-center;
+  @include flex-row(center);
   position: relative;
 }
 
 .hero__overlay {
-  @include flex-col-center;
+  @include flex-col(center);
   width: 100vw;
   height: 100%;
   right: 0;

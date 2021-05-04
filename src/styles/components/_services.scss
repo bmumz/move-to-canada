@@ -1,6 +1,6 @@
 .services__container-mobile {
   visibility: visible;
-  @include flex-col-center;
+  @include flex-col(center);
   padding: 1rem;
   h3 {
     text-decoration: underline;
@@ -26,7 +26,7 @@
 
 .services__container-row1,
 .services__container-row2 {
-  @include flex-row-center;
+  @include flex-row(center);
   flex-wrap: wrap;
   height: 100%;
 }
@@ -37,7 +37,7 @@
 }
 
 .services__overlay {
-  @include flex-col-center;
+  @include flex-col(center);
   text-align: center;
   background: lighten(black, 5);
   width: 100%;
@@ -48,17 +48,14 @@
 }
 
 .services__img-container {
-  @include flex-col-center;
+  @include flex-col(center);
+  justify-content: center;
   position: relative;
   img {
     aspect-ratio: 16/9;
   }
 }
 
-@media (max-width: 1000px) {
-  .services__title {
-  }
-}
 @media (min-width: $desktop-breakpoint) {
   .services__container-row1 {
     flex-direction: row;
