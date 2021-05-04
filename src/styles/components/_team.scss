@@ -4,39 +4,37 @@
 
 .team__card {
   @include flex-col-center;
-  margin: $xl-size 0;
+  margin: $l-size 0;
   width: 80vw;
-  button {
-    letter-spacing: 0;
-    font-size: 1.5rem;
+  text-transform: uppercase;
+  h4 {
+    color: $darker-grey;
+    letter-spacing: 1px;
   }
   button:hover {
     background: $mid-grey;
   }
-  img {
-    width: 140px;
-    height: auto;
-    border-radius: 100%;
-  }
-  h2,
-  h3 {
-    font-weight: $reg;
-    text-transform: uppercase;
-  }
-  h3 {
-    color: $darker-grey;
-    letter-spacing: 1px;
-  }
+}
+
+.team__title {
+  @include heading-underline($mid-grey);
+}
+
+.team__location {
+  margin-top: $m-size;
 }
 
 .team__info {
   @include flex-col-center;
-  margin: 1rem;
   color: $red;
 }
 
 .team__img-container {
-  margin: 1rem;
+  margin-right: $xl-size;
+  border-radius: 100%;
+  min-width: 140px;
+  width: 140px;
+  height: auto;
 }
 
 @media (min-width: $desktop-breakpoint) {
@@ -47,6 +45,6 @@
   }
   .team__card {
     @include flex-row;
-    width: 26vw;
+    width: 30vw;
   }
 }

@@ -6,11 +6,28 @@
   right: 0;
   top: 0;
   z-index: 2;
-  font-size: 1.5rem;
+
+  h2 {
+    font-weight: $bold;
+  }
+
+  select,
+  textarea,
+  input {
+    width: 80vw;
+    @include form-input;
+    outline: none;
+  }
 }
 
-@media (min-width: 800px) {
+@media (min-width: $desktop-breakpoint) {
   .contact {
     width: 45vw;
+
+    select,
+    textarea,
+    input {
+      width: 30vw;
+    }
   }
 }

@@ -1,7 +1,21 @@
-.legal__link {
-  color: blue;
-}
+.legal {
+  h1 {
+    @include heading-underline($mid-grey);
+  }
+  a {
+    color: $darker-grey;
+    &:hover {
+      color: $almost-black;
+    }
+    &:visited {
+      color: $mid-grey;
+    }
+  }
 
-.legal__link:visited {
-  color: $darker-grey;
+  h2:first-child {
+    margin-top: $xl-size;
+  }
+  h3:not(:first-child) {
+    margin-top: $s-size;
+  }
 }

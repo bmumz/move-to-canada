@@ -1,103 +1,104 @@
-@import "../utils";
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default padding */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-  height: 100%;
-  position: relative;
-}
-
-/* Remove default margin */
+html,
 body,
+div,
+span,
+applet,
+object,
+iframe,
 h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-  font-family: $poppins;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  color: $almost-black;
-  position: absolute;
-}
-
-div,
-p,
-ul,
+a,
+img,
 ol,
+ul,
+li,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+footer,
+header,
+menu,
+nav,
+textarea,
+input {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  padding-top: $m-size;
+}
+
+p {
+  line-height: 2;
+  color: #121212;
+}
+
 input,
+select,
 textarea {
-  font-size: 1.5rem;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
-/* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
-  list-style: none;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img {
-  max-width: 100%;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
-
-/* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1em;
+body {
+  line-height: 1;
+  font-weight: 400;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 button,
-textarea,
-select {
-  font: inherit;
-  outline: none;
-}
-
-button {
+a {
   cursor: pointer;
-}
-
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }

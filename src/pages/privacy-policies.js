@@ -8,16 +8,18 @@ import Legal from "../components/legal/Legal";
 import PrivacyPolicyData from "../data/legal/privacy-policy-data";
 
 const LegalNoticesPage = () => {
-  const pageTitle = "Privacy Policies";
+  const pageTitle = "Privacy Policies, Notices and Statements";
   const { title } = useSiteMetadata();
   return (
     <div id='privacy-policy'>
       <Header pageName={pageTitle} />
       <Layout>
-        <Heading size='lg' color='black'>
-          Privacy Policies, Notices and Statements
-        </Heading>
-        <Legal data={PrivacyPolicyData(title)} />
+        <section className='legal'>
+          <h1>
+            <span>{pageTitle}</span>
+          </h1>
+          <Legal data={PrivacyPolicyData(title)} />
+        </section>
       </Layout>
 
       <Footer />

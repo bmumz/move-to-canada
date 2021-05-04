@@ -8,7 +8,7 @@ const ServicesData = {
   secondRow: {
     mortgage: "Mortgage Financing",
     realEstate: "Real Estate Law",
-    taxation: "International Taxaction",
+    taxation: "International Taxation",
     other: "Other Services",
   },
 };

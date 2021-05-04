@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Heading = ({ children, color, size, weight, align }) => {
+const Heading = ({ children, title }) => {
   return (
-    <h1
-      className={`heading__${color} heading__${size} heading__${weight} heading__${align}`}
-    >
-      {children}
-    </h1>
+    <div className='heading__center'>
+      <h2 className='heading__grey'>{title}</h2>
+      <h2 className='heading__red heading__bold heading__underline'>
+        <span>{children}</span>
+      </h2>
+    </div>
   );
 };
 

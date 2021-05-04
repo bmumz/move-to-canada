@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../nav/Navbar";
+import Navbar from "./nav/Navbar";
 import Seo from "../Seo";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
@@ -9,7 +9,7 @@ const Header = ({ pageName }) => {
   const { phone } = useSiteMetadata();
 
   return (
-    <div>
+    <>
       <Seo pageName={pageName} />
       <div className='header'>
         <Navbar />
@@ -26,11 +26,11 @@ const Header = ({ pageName }) => {
 
           <div className='header__tel'>
             <h1>{phone}</h1>
-            <span>Call for a FREE consultation!</span>
+            <h3>Call for a FREE consultation!</h3>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

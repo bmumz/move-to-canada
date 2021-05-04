@@ -1,7 +1,7 @@
 const PrivacyPolicyData = (title) => {
   return {
     privacyPolicy: {
-      title: 'Privacy Notice',
+      title: "Privacy Notice",
       paragraphs: [
         `The ${title} Inc. (referred to herein as “MTC”) 
       and our related affiliates and subsidiaries want to ensure that our clients, 
@@ -16,8 +16,8 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     personalInfo: {
-      heading: 'Personal Information We Collect and How We Use It',
-      title: 'Personal Information We Collect About You',
+      heading: "Personal Information We Collect and How We Use It",
+      title: "Personal Information We Collect About You",
       paragraphs: [
         `MTC collects certain personal information about you and, if required, 
       your family members and employer for the purposes of providing immigration consulting 
@@ -32,7 +32,7 @@ const PrivacyPolicyData = (title) => {
     },
 
     clientServices: {
-      title: 'Client Services',
+      title: "Client Services",
       paragraphs: [
         `For purposes of providing client services, including the applicable
        legal services, and/or immigration consulting services you and/or your
@@ -86,7 +86,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     informationRequests: {
-      title: 'Information Requests',
+      title: "Information Requests",
       paragraphs: [
         ` If you request information about our services directly, you may choose
             to provide personal information such as your name, address, email
@@ -95,7 +95,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     otherUses: {
-      title: 'Other Uses of Information',
+      title: "Other Uses of Information",
       paragraphs: [
         `Where it is in our legitimate interests and not outweighed by your
       data protection rights, we use personal information we collect and
@@ -109,8 +109,8 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     sensativePersonalInfo: {
-      heading: 'Sensitive Personal Information',
-      title: 'Immigration Services',
+      heading: "Sensitive Personal Information",
+      title: "Immigration Services",
       paragraphs: [
         `Governments worldwide require the collection and processing of a wide
       variety of personal information from foreign nationals seeking to
@@ -143,7 +143,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     legalServices: {
-      title: 'Legal Services',
+      title: "Legal Services",
       paragraphs: [
         `In the course of our client services, we may represent you and/or your
         employer in legal matters that require us to collect and use sensitive
@@ -156,7 +156,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     infoCollected: {
-      title: 'Information We Collect By Automated Means',
+      title: "Information We Collect By Automated Means",
       paragraphs: [
         `We use cookies and related technologies on our websites and other web-
         based interfaces. We use these technologies to understand how many
@@ -165,10 +165,9 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     cookies: {
-      title: 'Cookies',
+      title: "Cookies",
       paragraphs: [
-        `Cookies are small text files that are placed on your computer’s hard
-        drive when you visit certain websites that help collect data. We may
+        `Cookies are small text files that are stored on your computer's browser when you visit certain websites that help collect data. We may
         use cookies to tell us, for example, whether you have visited us
         before or if you are a new visitor and to help us identify site
         features in which you may have the greatest interest. Cookies may
@@ -197,7 +196,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     sharedInfo: {
-      title: 'Info We Share',
+      title: "Info We Share",
       paraghraphs: [
         ` We will not sell, share, transfer, rent, use, or distribute your
       information for purposes other than those disclosed here unless
@@ -240,7 +239,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     protectedInfo: {
-      title: 'How We Protect Personal Information',
+      title: "How We Protect Personal Information",
       paragraphs: [
         `We seek to ensure that any personal information that we hold about you
       is accurate, complete, current and otherwise reliable based on data
@@ -269,8 +268,8 @@ const PrivacyPolicyData = (title) => {
     },
 
     transfers: {
-      heading: 'Information We Transfer',
-      title: 'Transfers Required for the Services',
+      heading: "Information We Transfer",
+      title: "Transfers Required for the Services",
       paragraphs: [
         `When we transfer your information to other countries, we will use,
         share and safeguard that information as described in this Privacy
@@ -285,7 +284,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     officeTransfers: {
-      title: 'Transfers to other MTC offices',
+      title: "Transfers to other MTC offices",
       paragraphs: [
         `We share some of your personal information with other MTC offices to
       administer and manage group functions and provide international
@@ -301,7 +300,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     yourRights: {
-      title: 'Your Choices and Rights',
+      title: "Your Choices and Rights",
       paragraphs: [
         ` As set out above, MTC may collect certain information about you in
         conjunction with providing immigration consulting and legal services.
@@ -344,7 +343,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     updatesToPolicy: {
-      title: 'Updates to Our Privacy Notice',
+      title: "Updates to Our Privacy Notice",
       paragraphs: [
         `This Privacy Notice may be updated periodically without prior notice
         to you to reflect changes in our information practices. We will post a
@@ -363,7 +362,7 @@ const PrivacyPolicyData = (title) => {
       ],
     },
     contactUs: {
-      title: 'How to Contact Us',
+      title: "How to Contact Us",
       paragraphs: [
         `The controllers for your personal information are The ${title}
         Team Inc. and the MTC team member providing the services to you. If

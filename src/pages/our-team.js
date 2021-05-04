@@ -4,74 +4,41 @@ import Header from "../components/layout/Header";
 import Layout from "../components/layout/Layout";
 import Card from "../components/team/Card";
 import Heading from "../components/ui/Heading";
-import Paragraph from "../components/layout/Paragraph";
 import { StaticImage } from "gatsby-plugin-image";
+import teamData from "../data/team-data";
 
 const Team = () => {
   const pageTitle = "Our Team";
 
   return (
-    <div className='team'>
+    <>
       <Header pageName={pageTitle} />
       <Layout>
-        <Heading color='grey' align='center'>
-          {pageTitle}
-        </Heading>
-        <Paragraph>
-          Partner with a professional who knows your goals, your culture and how
-          you do business. Our experienced team is on-the-ground, in all cities
-          across Canada!
-        </Paragraph>
+        <section>
+          <Heading title={`Meet ${pageTitle}`}>of Professionals</Heading>
+          <p>
+            Partner with a professional who knows your goals, your culture and
+            how you do business. Our experienced team is on-the-ground, in all
+            cities across Canada!
+          </p>
 
-        <div className='team__cards'>
-          <Card
-            name='Nick Zarlenga'
-            title='Real Estate Broker'
-            location='Toronto, ON'
-          >
-            <StaticImage
-              src='../images/headshots/nick.jpeg'
-              alt='Nick Zarlenga'
-              className='team__img'
-            />
-          </Card>
-          <Card
-            name='Nick Zarlenga'
-            title='Real Estate Broker'
-            location='Toronto, ON'
-          >
-            <StaticImage
-              src='../images/headshots/nick.jpeg'
-              alt='Nick Zarlenga'
-              className='team__img'
-            />
-          </Card>
-          <Card
-            name='Nick Zarlenga'
-            title='Real Estate Broker'
-            location='Toronto, ON'
-          >
-            <StaticImage
-              src='../images/headshots/nick.jpeg'
-              alt='Nick Zarlenga'
-              className='team__img'
-            />
-          </Card>
-          <Card
-            name='Nick Zarlenga'
-            title='Real Estate Broker'
-            location='Toronto, ON'
-          >
-            <StaticImage
-              src='../images/headshots/nick.jpeg'
-              alt='Nick Zarlenga'
-              className='team__img'
-            />
-          </Card>
-        </div>
+          <div className='team__cards'>
+            <Card
+              name={teamData.member.name}
+              title={teamData.member.title}
+              location={teamData.member.location}
+            >
+              <StaticImage
+                src='../images/headshots/nick.jpeg'
+                alt={teamData.member.name}
+                className='team__img-container'
+              />
+            </Card>
+          </div>
+        </section>
       </Layout>
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -7,18 +7,23 @@
 }
 
 @mixin heading($color) {
-  max-width: 80vw;
-  margin: 0.5rem 0;
-  line-height: 1;
-  font-size: 2.5rem;
+  line-height: 1.25;
   color: $color;
+  text-align: center;
+}
+
+@mixin heading-underline($color) {
+  span {
+    border-bottom: 1px solid $color;
+    margin-bottom: $xs-size;
+    padding-bottom: $xs-size;
+  }
 }
 
 @mixin banner {
-  margin: 2rem 0;
+  margin: $xs-size 0;
+  padding: $m-size;
   font-weight: $bold;
-  height: 10rem;
-  font-size: 2rem;
   @include color-scheme($red, $less-white);
 }
 
@@ -29,20 +34,20 @@
 
 @mixin form-input {
   padding: 0.25rem;
-  color: lighten($almost-black, 2);
   margin: 0.25rem;
+  color: lighten($almost-black, 2);
 }
 
 @mixin form-input-focus {
-  border: 2px solid $almost-black;
+  border: 1px solid $almost-black;
 }
 
 @mixin button-animation {
   outline: none;
   border: none;
-  width: 2.2rem;
-  height: 0.35rem;
-  background: $less-white;
+  width: 1.75rem;
+  height: 0.25rem;
+  background: $red;
   border-radius: 5px;
   box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.21);
 }
@@ -71,6 +76,5 @@
 
 @media (max-width: 320px) {
   @mixin heading($color) {
-    font-size: 2rem;
   }
 }
