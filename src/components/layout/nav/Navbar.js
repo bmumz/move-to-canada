@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Pages } from "./pages";
+import { Pages } from "../../../data/pages-data";
 import Banner from "../../ui/Banner";
 import BuildLinks from "./BuildLinks";
 

@@ -1,87 +1,98 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import ServicesData from "../../data/services-data";
 import Heading from "../ui/Heading";
+import servicesData from "../../data/services-data";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
+import { StaticImage } from "gatsby-plugin-image";
+import PropTypes from "prop-types";
 
-const ServicesSection = () => {
+const ServicesSection = ({ heading }) => {
   const { title } = useSiteMetadata();
 
   return (
     <section className='services'>
-      <Heading title={title}>Services</Heading>
+      {heading && <Heading title={title}>Services</Heading>}
 
       <div className='services__container-row1'>
         <div className='services__img-container'>
-          <h3 className='services__title'>{ServicesData.firstRow.home}</h3>
+          <h3 className='services__title'>
+            {servicesData.images.firstRow.home}
+          </h3>
           <StaticImage
             src='../../images/services/buying-home.jpg'
-            alt={ServicesData.firstRow.home}
+            alt={servicesData.images.firstRow.home}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
           <h3 className='services__title'>
-            {ServicesData.firstRow.immigration}
+            {servicesData.images.firstRow.immigration}
           </h3>
           <StaticImage
             src='../../images/services/immigration.jpg'
-            alt={ServicesData.firstRow.immigration}
+            alt={servicesData.images.firstRow.immigration}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
           <h3 className='services__title'>
-            {ServicesData.firstRow.businessRelocation}
+            {servicesData.images.firstRow.businessRelocation}
           </h3>
           <StaticImage
             src='../../images/services/business-relocation.jpg'
-            alt={ServicesData.firstRow.businessRelocation}
+            alt={servicesData.images.firstRow.businessRelocation}
           />
           <span className='services__overlay'></span>
         </div>
 
         <div className='services__img-container'>
-          <h3 className='services__title'>{ServicesData.firstRow.banking}</h3>
+          <h3 className='services__title'>
+            {servicesData.images.firstRow.banking}
+          </h3>
           <StaticImage
             src='../../images/services/banking.jpg'
-            alt={ServicesData.firstRow.banking}
+            alt={servicesData.images.firstRow.banking}
           />
           <span className='services__overlay'></span>
         </div>
       </div>
       <div className='services__container-row2'>
         <div className='services__img-container'>
-          <h3 className='services__title'>{ServicesData.secondRow.mortgage}</h3>
+          <h3 className='services__title'>
+            {servicesData.images.secondRow.mortgage}
+          </h3>
           <StaticImage
             src='../../images/services/mortgage-financing.jpg'
-            alt={ServicesData.secondRow.mortgage}
+            alt={servicesData.images.secondRow.mortgage}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
           <h3 className='services__title'>
-            {ServicesData.secondRow.realEstate}
+            {servicesData.images.secondRow.realEstate}
           </h3>
           <StaticImage
             src='../../images/services/real-estate-law02.jpg'
-            alt={ServicesData.secondRow.realEstate}
+            alt={servicesData.images.secondRow.realEstate}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
-          <h3 className='services__title'>{ServicesData.secondRow.taxation}</h3>
+          <h3 className='services__title'>
+            {servicesData.images.secondRow.taxation}
+          </h3>
           <StaticImage
             src='../../images/services/international-taxation.jpg'
-            alt={ServicesData.secondRow.taxation}
+            alt={servicesData.images.secondRow.taxation}
           />
           <span className='services__overlay'></span>
         </div>
         <div className='services__img-container'>
-          <h3 className='services__title'>{ServicesData.secondRow.other}</h3>
+          <h3 className='services__title'>
+            {servicesData.images.secondRow.other}
+          </h3>
           <StaticImage
             src='../../images/services/other.jpg'
-            alt={ServicesData.secondRow.other}
+            alt={servicesData.images.secondRow.other}
           />
           <span className='services__overlay'></span>
         </div>
@@ -90,13 +101,19 @@ const ServicesSection = () => {
       <div className='services__container-mobile'>
         <h3>As well as...</h3>
         <ul>
-          {Object.values(ServicesData.secondRow).map((service, index) => (
-            <li key={index}>{service}</li>
-          ))}
+          {Object.values(servicesData.images.secondRow).map(
+            (service, index) => (
+              <li key={index}>{service}</li>
+            )
+          )}
         </ul>
       </div>
     </section>
   );
+};
+
+ServicesSection.propTypes = {
+  heading: PropTypes.bool,
 };
 
 export default ServicesSection;
