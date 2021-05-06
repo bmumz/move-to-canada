@@ -3,7 +3,7 @@ module.exports = {
     title: "The Move to Canada Team",
     phone: "1-800-321-MOVE",
     email: "info@movetocanada.com",
-    website: "www.movetocanada.com",
+    siteUrl: "https://movetocanada.com",
     copyright: 2021,
     language: "English",
     description:
@@ -31,6 +31,20 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /\.inline\.svg/,
+          options: {
+            name: "myIcons",
+            props: {
+              className: "svg",
+            },
+          },
+        },
+      },
     },
   ],
 };

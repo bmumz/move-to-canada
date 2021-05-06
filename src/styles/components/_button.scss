@@ -13,11 +13,7 @@
 }
 
 .button__white {
-  @include button-solid(
-    darken($less-white, 3),
-    $red,
-    RGBA(255, 250, 250, 0.15)
-  );
+  @include button-solid($less-white, $red, RGBA(255, 250, 250, 0.15));
   font-weight: $bold;
 }
 

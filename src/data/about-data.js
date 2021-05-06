@@ -1,3 +1,9 @@
+import { countryWide } from "../components/about/svg/CountryWide";
+import { tailoredService } from "../components/about/svg/TailoredService";
+import flag from "../images/about/01.png";
+import lang from "../images/about/02.png";
+import team from "../images/about/03.png";
+
 const aboutData = {
   blurb: `The Move to Canada Team is Canada’s only immigration consultancy that combines the services of real-estate brokerage, immigration law, real estate law, corporate law, employment services, international banking and tax.`,
   culture: {
@@ -6,15 +12,15 @@ const aboutData = {
     examples: {
       canadaWide: {
         title: `Operations Canada-wide`,
-        icon: ``,
+        icon: flag,
       },
       multilingual: {
         title: `We Speak Over Six Languages`,
-        icon: ``,
+        icon: lang,
       },
       comprehensive: {
         title: `Comprehensive Service`,
-        icon: ``,
+        icon: team,
       },
     },
     paragraphs: {
@@ -36,6 +42,7 @@ const aboutData = {
   details: {
     section1: {
       heading: `Our Services Are Tailored to You`,
+      svg: tailoredService,
       paragraphs: [
         `Offering our services in every city across Canada, we provide high-value
       advice and advocacy to assist our clients with whatever their goals in Canada
@@ -52,6 +59,7 @@ const aboutData = {
 
     section2: {
       heading: `We Have Professionals All Across the Country!`,
+      svg: countryWide,
       paragraphs: [
         `The Move to Canada Team is a collective of the very best professionals in their
       respective fields. Some of our team work in large firms, while others, own their own
