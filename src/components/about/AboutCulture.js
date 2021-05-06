@@ -24,7 +24,7 @@ const AboutCulture = () => {
 
           {Object.values(aboutData.culture.paragraphs).map((p, i) => (
             <div key={i} className='about__paragraphs'>
-              <span className='about__point'>{p.example}</span>{" "}
+              <span className='about__point'>{p.example}</span>
               <span>{p.sentence}</span>
             </div>
           ))}
