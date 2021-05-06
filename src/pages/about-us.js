@@ -35,9 +35,6 @@ const About = () => {
         <AboutCulture />
         <Layout>
           <AboutDetails data={aboutData.details.section1} />
-        </Layout>
-
-        <Layout>
           <AboutDetails data={aboutData.details.section2} />
           <AboutCerts />
         </Layout>
