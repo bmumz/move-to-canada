@@ -14,7 +14,7 @@ const AboutCulture = () => {
             {Object.values(aboutData.culture.examples).map((e, i) => (
               <div key={i} className='about__icon--container'>
                 <span className='about__icon'>
-                  <img src={e.icon} />
+                  <img src={e.icon} alt={e.title} />
                 </span>
 
                 <h4>{e.title}</h4>
