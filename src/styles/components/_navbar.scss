@@ -1,6 +1,5 @@
 nav {
   width: 100vw;
-  font-size: 1.25rem;
   a {
     @include color-scheme(transparent, $less-white);
     text-decoration: none;
