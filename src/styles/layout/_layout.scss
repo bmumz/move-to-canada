@@ -46,26 +46,6 @@
   @include heading($less-white);
 }
 
-.heading__xs {
-  font-size: 1.6rem;
-}
-
-.heading__sm {
-  font-size: 2rem;
-}
-
-.heading__md {
-  font-size: 2.5rem;
-}
-
-.heading__lg {
-  font-size: 3rem;
-}
-
-.heading__xl {
-  font-size: 3.5rem;
-}
-
 .heading__center {
   @include flex-col(center);
   margin: 0 auto;
@@ -75,12 +55,17 @@
   @include flex-col(flex-start);
 }
 
+.svg__container {
+  width: 100%;
+  @include flex-row(center);
+}
+
 @media (min-width: $desktop-breakpoint) {
   .heading__underline {
     font-size: 1.5rem;
   }
 
   .layout {
-    width: 70vw;
+    width: 60vw;
   }
 }

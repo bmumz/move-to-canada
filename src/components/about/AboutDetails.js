@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const AboutDetails = ({ data }) => {
   return (
     <section className='about__details'>
-      <span className='about__svg'>{data.svg}</span>
+      <span className='svg__container'>{data.svg}</span>
       <h2>{data.heading}</h2>
 
       {Object.values(data.paragraphs).map((p, i) => (

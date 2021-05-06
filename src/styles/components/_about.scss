@@ -17,24 +17,6 @@
 
 .about__details {
   min-height: 100vh;
-  // h2 {
-  //   font-size: 1.35rem;
-  // }
-}
-
-.about__svg {
-  @include flex-row(center);
-  width: 100%;
-  margin: $s-size 0;
-  svg {
-    width: 42%;
-    min-width: 300px;
-  }
-}
-
-.about__culture--svg {
-  @include flex-row(center);
-  margin: $s-size 0;
 }
 
 .about__certs {
@@ -109,10 +91,6 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
-  .about__svg {
-    // justify-content: flex-start;
-  }
-
   .about__examples {
     @include flex-row(space-evenly);
   }
