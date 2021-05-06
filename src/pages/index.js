@@ -6,7 +6,7 @@ import Header from "../components/layout/Header";
 import Layout from "../components/layout/Layout";
 import Hero from "../components/contact/Hero";
 import WorkWithUs from "../components/work-with-us/WorkWithUs";
-import Services from "../components/services/Services";
+import Services from "../components/services/ServicesSection";
 import Banner from "../components/ui/Banner";
 import Button from "../components/ui/Button";
 

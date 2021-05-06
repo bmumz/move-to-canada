@@ -15,7 +15,7 @@ const Card = ({ name, title, location, children }) => (
         </span>
         {location}
       </h4>
-      <button>More info...</button>
+      <button className='button__grey'>More info...</button>
     </div>
   </div>
 );

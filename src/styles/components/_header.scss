@@ -1,5 +1,5 @@
 .header__company-info {
-  @include flex-col-center;
+  @include flex-col(center);
   // padding-top: 3.5rem;
 }
 
@@ -8,7 +8,7 @@
 }
 
 .header__tel {
-  @include flex-col-center;
+  @include flex-col(center);
   line-height: 1;
   background: $red;
   width: 100vw;
@@ -27,13 +27,12 @@
 @media (min-width: $desktop-breakpoint) {
   .header__company-info {
     margin: 0 5rem;
-    @include flex-row;
-    justify-content: space-between;
+    @include flex-row(space-between);
     align-items: center;
     padding-top: 0;
   }
   .header {
-    @include flex-col-center;
+    @include flex-col(center);
     flex-direction: column-reverse;
     align-items: inherit;
     .header__tel {

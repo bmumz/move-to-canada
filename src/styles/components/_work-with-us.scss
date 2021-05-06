@@ -1,5 +1,5 @@
 .work-with-us {
-  @include flex-col;
+  @include flex-col(center);
   margin: 0 auto;
   background: lighten($mid-grey, 2);
   margin: 0;
@@ -12,7 +12,7 @@
   }
 }
 .work-with-us__cards {
-  @include flex-col;
+  @include flex-col(center);
 }
 .work-with-us__card {
   padding: 2rem;

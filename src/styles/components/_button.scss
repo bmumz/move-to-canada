@@ -1,35 +1,30 @@
-button {
-  border: none;
-  padding: 0.25rem 1rem;
-  margin: 0.5rem;
-  text-transform: uppercase;
-  border-radius: 5px;
+.button__red {
+  @include button-solid($red, $less-white, RGBA(191, 0, 0, 0.15));
 }
 
-.button__red {
-  @include color-scheme($red, $less-white);
+.button__ghost {
+  @include button-ghost($less-white, RGBA(255, 250, 250, 0.15));
+  padding: $xs-size $l-size;
+  background: transparent;
+  border: 1px solid $less-white;
   &:hover {
-    background: #b90d0d;
+    background: lighten($red, 3);
   }
 }
 
 .button__white {
-  background: transparent;
-  border: 1px solid $less-white;
-  color: $less-white;
-  transition: all 0.25s ease;
-  &:hover {
-    background: darken($less-white, 2);
-    color: $red;
-  }
+  @include button-solid($less-white, $red, RGBA(255, 250, 250, 0.15));
+  font-weight: $bold;
 }
 
-.button__white:hover {
+.button__grey {
+  @include button-solid($less-grey, $almost-black, RGBA(0, 0, 0, 0.075));
+  padding: 0.25rem 0.75rem;
+  text-transform: uppercase;
 }
 
 .button__hamburger {
-  @include flex-row;
-  justify-content: flex-end;
+  @include flex-row(flex-end);
   position: absolute;
   top: 0;
   left: 0;
@@ -42,7 +37,7 @@ button {
 
 .button__animation {
   padding: 0;
-  @include flex-row-center;
+  @include flex-row(center);
   position: relative;
   transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   @include button-animation;

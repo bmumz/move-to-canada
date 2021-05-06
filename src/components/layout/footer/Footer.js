@@ -3,11 +3,11 @@ import Banner from "../../ui/Banner";
 import FooterCol from "./FooterCol";
 import BuildLinks from "../nav/BuildLinks";
 import { useSiteMetadata } from "../../../hooks/use-site-metadata";
-import { LegalPages, Pages } from "../nav/pages";
+import { LegalPages, Pages } from "../../../data/pages-data";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Footer = () => {
-  const { phone, title, email, website, copyright } = useSiteMetadata();
+  const { phone, title, email, siteUrl, copyright } = useSiteMetadata();
 
   return (
     <section>
@@ -49,7 +49,9 @@ const Footer = () => {
             <p>{phone}</p>
             <p>1-800-321-6683</p>
             <p> {email}</p>
-            <p> {website}</p>
+            <p>
+              <a href={siteUrl}>movetocanada.com</a>
+            </p>
           </FooterCol>
 
           <FooterCol title='Page Directory'>

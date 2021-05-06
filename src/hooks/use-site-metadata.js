@@ -9,7 +9,7 @@ export const useSiteMetadata = () => {
             title
             phone
             email
-            website
+            siteUrl
             copyright
             description
           }

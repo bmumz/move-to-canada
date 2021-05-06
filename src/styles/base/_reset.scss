@@ -37,11 +37,9 @@ input {
   vertical-align: baseline;
   font-family: "Poppins", sans-serif;
 }
-
 section {
   padding-top: $m-size;
 }
-
 p {
   line-height: 2;
   color: #121212;
@@ -74,9 +72,12 @@ footer,
 header,
 hgroup,
 menu,
-nav,
-section {
+nav {
   display: block;
+}
+
+section {
+  height: auto;
 }
 body {
   line-height: 1;
@@ -101,4 +102,9 @@ table {
 button,
 a {
   cursor: pointer;
+}
+
+svg {
+  width: 50%;
+  height: auto;
 }

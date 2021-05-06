@@ -6,7 +6,7 @@ nav {
     text-decoration: none;
     padding: 2rem;
     letter-spacing: 1.5px;
-    @include flex-row-center;
+    @include flex-row(center);
   }
 }
 .navbar__menu {
@@ -19,7 +19,8 @@ nav {
   &.mobile {
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out,
       transform 0.5s ease-in-out;
-    @include flex-col-center;
+    @include flex-col(center);
+    justify-content: center;
     visibility: visible;
     opacity: 1;
     width: 100vw;
@@ -34,7 +35,7 @@ nav {
 }
 
 .navbar__button.open .button__animation::before {
-  transform: rotate(45deg) translate(35px, -35px);
+  transform: rotate(45deg) translate(35px, -3px5px);
   background: $less-white;
 }
 
@@ -58,12 +59,11 @@ nav {
       height: auto;
     }
     nav {
-      @include flex-row;
-      justify-content: flex-end;
+      @include flex-row(flex-end);
       a:hover {
-        -webkit-box-shadow: inset 0px -2px 0px 0px $less-white;
-        -moz-box-shadow: inset 0px -2px 0px 0px $less-white;
-        box-shadow: inset 0px -2px 0px 0px $less-white;
+        -webkit-box-shadow: inset 0px -3px 0px 0px $less-white;
+        -moz-box-shadow: inset 0px -3px 0px 0px $less-white;
+        box-shadow: inset 0px -3px 0px 0px $less-white;
       }
     }
   }

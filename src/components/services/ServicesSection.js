@@ -4,7 +4,7 @@ import ServicesData from "../../data/services-data";
 import Heading from "../ui/Heading";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
-const Services = () => {
+const ServicesSection = () => {
   const { title } = useSiteMetadata();
 
   return (
@@ -99,4 +99,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesSection;

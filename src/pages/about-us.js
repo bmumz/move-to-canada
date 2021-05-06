@@ -1,42 +1,47 @@
 import React from "react";
 import Footer from "../components/layout/footer/Footer";
 import Header from "../components/layout/Header";
-import Layout from "../components/layout/Layout";
+import PageIntro from "../components/layout/PageIntro";
 import Heading from "../components/ui/Heading";
+import Layout from "../components/layout/Layout";
+import AboutCulture from "../components/about/AboutCulture";
+import AboutDetails from "../components/about/AboutDetails";
+import AboutCerts from "../components/about/AboutCerts";
+import aboutData from "../data/about-data";
+import { StaticImage } from "gatsby-plugin-image";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 
 const About = () => {
   const pageTitle = "About";
   const { title } = useSiteMetadata();
 
+  const heading = (
+    <Heading title={pageTitle} className='heading__start'>
+      {title}
+    </Heading>
+  );
+
   return (
-    <div>
+    <>
       <Header pageName={pageTitle} />
-      <Layout>
-        <section>
-          <Heading title={pageTitle}>{title}</Heading>
-          <p>
-            Are you planning to move to Canada? You may need a dedicated team.
-            Our full-service comprehensive team of Lawyers, Realtors, Bankers,
-            Accountants and everyone in between are here to ensure your
-            relocation experience is seamless and stress-free.
-          </p>
-          <img src='http://via.placeholder.com/640x360' alt='Placeholder' />
-          <p>
-            {title} has served clients around the world from almost every
-            country. Our proven track record of helping individuals and
-            businesses relocate to Canada is second to none. We are committed to
-            customer service and personalized attention to ensure each client
-            receives custom tailored solutions that fit their needs. Every
-            member of our team has years of experience and is recognized as a
-            leader in their field. While relocating to another country can be a
-            stressful experience, {title}
-            makes it simple.
-          </p>
-        </section>
-      </Layout>
+      <PageIntro heading={heading} blurb={aboutData.blurb} path='#about'>
+        <StaticImage
+          src='../images/slideshow/toronto.jpg'
+          alt='CN Tower, Toronto'
+          className='pageIntro__img'
+        />
+      </PageIntro>
+      <section className='about'>
+        <AboutCulture />
+        <Layout>
+          <AboutDetails data={aboutData.details.section1} />
+          <AboutDetails data={aboutData.details.section2} />
+          <AboutCerts />
+        </Layout>
+      </section>
+
       <Footer />
-    </div>
+    </>
   );
 };
 

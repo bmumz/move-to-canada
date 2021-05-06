@@ -3,10 +3,10 @@ footer {
   background: $less-grey;
   border-top: 1px solid darken($less-grey, 4);
   min-height: 20vh;
-  @include flex-col-center;
+  @include flex-col(center);
   div,
   span {
-    @include flex-col;
+    @include flex-col(flex-start);
     a {
       color: $darker-grey;
       text-decoration: none;
@@ -26,8 +26,7 @@ footer {
 }
 
 .footer__col {
-  @include flex-col;
-  align-items: flex-start;
+  @include flex-col(flex-start);
   height: 100%;
   width: 80vw;
   margin: 2rem 0;
@@ -51,7 +50,7 @@ footer {
 }
 
 .footer__directory {
-  @include flex-row;
+  @include flex-row(flex-start);
 }
 
 .footer__copyright {
@@ -60,7 +59,7 @@ footer {
   border-top: 1px solid darken($less-grey, 4);
   margin-top: $l-size;
   padding-top: $l-size;
-  @include flex-row-center;
+  @include flex-row(center);
   align-items: center;
   width: 50vw;
   color: lighten($darker-grey, 3);
@@ -68,7 +67,7 @@ footer {
 
 @media (min-width: 1000px) {
   .footer__content {
-    @include flex-row;
+    @include flex-row(flex-start);
   }
 
   .footer__col {

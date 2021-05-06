@@ -5,6 +5,37 @@
     0 6px 6px rgba($color, 0.16);
   box-shadow: 0 5px 20px rgba($color, 0.19), 0 6px 6px rgba($color, 0.16);
 }
+@mixin button {
+  text-decoration: none;
+  width: auto;
+  padding: 0.25rem 1rem;
+  border-radius: 50px;
+  font-weight: 300;
+  transition: all 0.25s ease;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  margin-top: $s-size;
+  letter-spacing: 0.5px;
+}
+
+@mixin button-solid($color, $fontColor, $boxShadow) {
+  @include button;
+  background: $color;
+  color: $fontColor;
+  box-shadow: 0 6px 8px $boxShadow;
+  &:hover {
+    background: darken($color, 3);
+  }
+}
+
+@mixin button-ghost($color, $boxShadow) {
+  @include button;
+  background: transparent;
+  color: $color;
+  border: 2px solid $color;
+  box-shadow: 0 6px 8px $boxShadow;
+}
 
 @mixin heading($color) {
   line-height: 1.25;
@@ -20,16 +51,17 @@
   }
 }
 
+@mixin color-scheme($primary, $secondary) {
+  background: $primary;
+  color: $secondary;
+}
+
 @mixin banner {
+  height: auto;
   margin: $xs-size 0;
   padding: $m-size;
   font-weight: $bold;
   @include color-scheme($red, $less-white);
-}
-
-@mixin color-scheme($primary, $secondary) {
-  background: $primary;
-  color: $secondary;
 }
 
 @mixin form-input {
@@ -52,26 +84,16 @@
   box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.21);
 }
 
-@mixin flex-row {
+@mixin flex-row($align) {
   display: flex;
   flex-direction: row;
+  justify-content: $align;
 }
 
-@mixin flex-col {
+@mixin flex-col($align) {
   display: flex;
   flex-direction: column;
-}
-
-@mixin flex-row-center {
-  @include flex-row;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-col-center {
-  @include flex-col;
-  justify-content: center;
-  align-items: center;
+  align-items: $align;
 }
 
 @media (max-width: 320px) {
