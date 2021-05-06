@@ -31,12 +31,15 @@ const IndexPage = () => {
       <Layout>
         <section>
           <Heading title='Full-Service Immigration Advisory'>{phone}</Heading>
+          <span className='svg__container'>{homeData.svg}</span>
 
-          <StaticImage
+          {/* <StaticImage
             src='../images/canada.jpeg'
             alt='Skyscrapers in Canada forming a maple leaf.'
             placeholder='dominantColor'
-          />
+            className='placeholder__img'
+            layout='constrained'
+          /> */}
 
           <p>{homeData.paragraphs}</p>
         </section>

@@ -1,4 +1,7 @@
+import { map } from "../components/home/svg/map";
+
 const homeData = {
+  svg: map,
   paragraphs: `The Move to Canada Team has served clients around the world from almost
     every country. Our proven track record of helping individuals and businesses
     relocate to Canada is second to none. We are committed to customer service
