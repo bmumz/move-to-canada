@@ -17,6 +17,7 @@ const servicesData = {
       other: "Other Services",
     },
   },
+  details: `We are committed to customer service and personalized attention to ensure each client receives custom tailored solutions that fit their needs.`,
 };
 
 export default servicesData;

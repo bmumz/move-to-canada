@@ -42,11 +42,7 @@ const Services = () => {
           <div className='service'>
             <World />
             <span>
-              <h2>
-                We are committed to customer service and personalized attention
-                to ensure each client receives custom tailored solutions that
-                fit their needs.
-              </h2>
+              <h2>{servicesData.details}</h2>
             </span>
           </div>
         </Layout>
