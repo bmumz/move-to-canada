@@ -1,0 +1,27 @@
+.home__blurb {
+  line-height: 2;
+  background: $less-grey;
+  padding: $m-size;
+  border-bottom: 1px solid darken($less-grey, 4);
+
+  div:last-child {
+    h2 {
+      color: $red;
+    }
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .home__blurb {
+    @include flex-row(center);
+    padding: $xl-size $l-size;
+    div:first-child {
+      width: 65vw;
+      color: $almost-black;
+      font-weight: $bold;
+    }
+    div:last-child {
+      width: 50vw;
+    }
+  }
+}

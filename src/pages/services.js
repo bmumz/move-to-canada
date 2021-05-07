@@ -40,7 +40,7 @@ const Services = () => {
           className='pageIntro__img'
         />
       </PageIntro>
-      <section className='services__details'>
+      <section className='services__details' id='services'>
         <Layout>
           <div className='service'>
             <World />

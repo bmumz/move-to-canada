@@ -64,6 +64,9 @@ footer {
   width: 50vw;
   color: lighten($darker-grey, 3);
 }
+.footer__banner {
+  padding-top: $l-size;
+}
 
 .footer__contact {
   span {
