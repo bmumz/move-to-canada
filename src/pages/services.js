@@ -22,14 +22,17 @@ const Services = () => {
     </Heading>
   );
 
+  const blurb = <p>{servicesData.blurb} </p>;
+
   return (
     <div className='servicesPg'>
       <Header pageName={pageTitle} />
       <PageIntro
         heading={heading}
         blurbHeading={servicesData.blurbHeading}
-        blurb={servicesData.blurb}
+        blurb={blurb}
         path='#services'
+        cta='Learn more'
       >
         <StaticImage
           src='../images/lake-louise.jpeg'
@@ -48,7 +51,7 @@ const Services = () => {
         </Layout>
       </section>
       <ServicesSection />
-      <Footer />
+      <Footer banner={true} />
     </div>
   );
 };
