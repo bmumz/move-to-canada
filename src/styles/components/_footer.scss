@@ -65,6 +65,22 @@ footer {
   color: lighten($darker-grey, 3);
 }
 
+.footer__contact {
+  span {
+    @include flex-row(flex-start);
+    align-items: center;
+  }
+
+  .footer__icon {
+    color: lighten($almost-black, 10);
+    height: $s-size;
+    width: $s-size;
+    margin: 0;
+    margin-right: $xs-size;
+    min-width: $s-size;
+  }
+}
+
 @media (min-width: 1000px) {
   .footer__content {
     @include flex-row(flex-start);
