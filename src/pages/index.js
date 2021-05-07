@@ -17,7 +17,7 @@ import "../styles/app.scss";
 import Heading from "../components/ui/Heading";
 
 const IndexPage = () => {
-  const { phone, title } = useSiteMetadata();
+  const { phone } = useSiteMetadata();
   const pageTitle = "Home";
 
   const handleClick = () => {

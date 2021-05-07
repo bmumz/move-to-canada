@@ -5,10 +5,21 @@ import BuildLinks from "../nav/BuildLinks";
 import { useSiteMetadata } from "../../../hooks/use-site-metadata";
 import { LegalPages, Pages } from "../../../data/pages-data";
 import { StaticImage } from "gatsby-plugin-image";
+import footerData from "../../../data/footer-data";
 
 const Footer = () => {
-  const { phone, title, email, siteUrl, copyright } = useSiteMetadata();
+  const { phone, title, copyright } = useSiteMetadata();
 
+  const contactData = (
+    <div className='footer__contact'>
+      {Object.values(footerData).map((m, i) => (
+        <span key={i}>
+          {m.icon}
+          {m.path ? <a href={m.path}>{m.title}</a> : <p>{m.title}</p>}
+        </span>
+      ))}
+    </div>
+  );
   return (
     <section>
       <h2 className='heading__black '>Get the help you deserve!</h2>
@@ -44,15 +55,7 @@ const Footer = () => {
               around the world buy real estate and move to Canada.
             </p>
           </FooterCol>
-
-          <FooterCol title={`${title}`}>
-            <p>{phone}</p>
-            <p>1-800-321-6683</p>
-            <p> {email}</p>
-            <p>
-              <a href={siteUrl}>movetocanada.com</a>
-            </p>
-          </FooterCol>
+          <FooterCol title={title}>{contactData}</FooterCol>
 
           <FooterCol title='Page Directory'>
             <div className='footer__directory'>

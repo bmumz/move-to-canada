@@ -8,6 +8,7 @@ nav {
     @include flex-row(center);
   }
 }
+
 .navbar__menu {
   @include color-scheme($red, $less-white);
   visibility: hidden;
@@ -16,6 +17,7 @@ nav {
   opacity: 0;
 
   &.mobile {
+    overflow: hidden;
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out,
       transform 0.5s ease-in-out;
     @include flex-col(center);
@@ -34,7 +36,7 @@ nav {
 }
 
 .navbar__button.open .button__animation::before {
-  transform: rotate(45deg) translate(35px, -3px5px);
+  transform: rotate(45deg) translate(35px, -35px);
   background: $less-white;
 }
 
