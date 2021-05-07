@@ -1,14 +1,15 @@
 import React from "react";
-import Banner from "../../ui/Banner";
+import FooterBanner from "./FooterBanner";
 import FooterCol from "./FooterCol";
 import BuildLinks from "../nav/BuildLinks";
 import { useSiteMetadata } from "../../../hooks/use-site-metadata";
 import { LegalPages, Pages } from "../../../data/pages-data";
 import { StaticImage } from "gatsby-plugin-image";
 import footerData from "../../../data/footer-data";
+import PropTypes from "prop-types";
 
-const Footer = () => {
-  const { phone, title, copyright } = useSiteMetadata();
+const Footer = ({ banner }) => {
+  const { title, copyright } = useSiteMetadata();
 
   const contactData = (
     <div className='footer__contact'>
@@ -22,21 +23,7 @@ const Footer = () => {
   );
   return (
     <section>
-      <h2 className='heading__black '>Get the help you deserve!</h2>
-
-      <Banner>
-        <h1 className='heading__bold'>{phone}</h1>
-      </Banner>
-
-      <h2 className='heading__center heading__black '>
-        Call now for a free consultation!
-      </h2>
-
-      <p className='footer__disclaimer'>
-        We might not be able to handle all types of cases due to expertise and
-        other various reasons.
-      </p>
-
+      {banner && <FooterBanner />}
       <footer>
         <div className='footer__content'>
           <FooterCol>
@@ -75,6 +62,10 @@ const Footer = () => {
       </footer>
     </section>
   );
+};
+
+Footer.propTypes = {
+  banner: PropTypes.bool.isRequired,
 };
 
 export default Footer;

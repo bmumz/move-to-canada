@@ -21,10 +21,16 @@ const About = () => {
     </Heading>
   );
 
+  const blurb = (
+    <div>
+      <p>{aboutData.blurb}</p>
+    </div>
+  );
+
   return (
     <>
       <Header pageName={pageTitle} />
-      <PageIntro heading={heading} blurb={aboutData.blurb} path='#about'>
+      <PageIntro heading={heading} blurb={blurb} path='#about' cta='Learn more'>
         <StaticImage
           src='../images/slideshow/toronto.jpg'
           alt='CN Tower, Toronto'
@@ -40,7 +46,7 @@ const About = () => {
         </Layout>
       </section>
 
-      <Footer />
+      <Footer banner={true} />
     </>
   );
 };

@@ -1,16 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const PageIntro = ({ blurb, blurbHeading, heading, path, children }) => (
+const PageIntro = ({ blurb, heading, path, cta, children }) => (
   <div className='page-intro'>
     <div className='page-intro__blurb'>
       {heading}
-      <span>
-        {blurbHeading && <h4>{blurbHeading}</h4>}
-        <p>{blurb}</p>
-      </span>
+
+      {blurb}
+
       <a className='button__red' href={path}>
-        Learn more
+        {cta}
       </a>
     </div>
     {children}
@@ -18,7 +17,7 @@ const PageIntro = ({ blurb, blurbHeading, heading, path, children }) => (
 );
 
 PageIntro.propTypes = {
-  blurb: PropTypes.string.isRequired,
+  blurb: PropTypes.element.isRequired,
   blurbHeading: PropTypes.string,
   heading: PropTypes.element.isRequired,
   path: PropTypes.string.isRequired,

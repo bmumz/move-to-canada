@@ -22,7 +22,7 @@ const NotFoundPage = () => {
           </Link>
         </p>
       </Layout>
-      <Footer />
+      <Footer banner={true} />
     </main>
   );
 };

@@ -1,3 +1,9 @@
+.team {
+  section {
+    padding-top: 0;
+  }
+}
+
 .team__cards {
   @include flex-col(flex-start);
 }
@@ -15,7 +21,14 @@
     background: $mid-grey;
   }
 }
-
+.team__bio {
+  h3 {
+    @include flex-row(center);
+    text-transform: uppercase;
+    color: $darker-grey;
+    margin-bottom: $s-size;
+  }
+}
 .team__title {
   @include heading-underline($mid-grey);
 }

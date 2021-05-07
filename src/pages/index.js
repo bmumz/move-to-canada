@@ -56,7 +56,7 @@ const IndexPage = () => {
 
       <WorkWithUs />
 
-      <Footer />
+      <Footer banner={true} />
     </main>
   );
 };

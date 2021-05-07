@@ -1,11 +1,11 @@
 import React from "react";
-import Footer from "../components/layout/footer/Footer";
-import Header from "../components/layout/Header";
-import Layout from "../components/layout/Layout";
-import Card from "../components/team/Card";
-import Heading from "../components/ui/Heading";
+import Footer from "../../components/layout/footer/Footer";
+import Header from "../../components/layout/Header";
+import Layout from "../../components/layout/Layout";
+import Card from "../../components/team/Card";
+import Heading from "../../components/ui/Heading";
 import { StaticImage } from "gatsby-plugin-image";
-import teamData from "../data/team-data";
+import teamData from "../../data/team-data";
 
 const Team = () => {
   const pageTitle = "Our Team";
@@ -29,7 +29,7 @@ const Team = () => {
               location={teamData.member.location}
             >
               <StaticImage
-                src='../images/headshots/nick.jpeg'
+                src='../../images/headshots/nick.jpeg'
                 alt={teamData.member.name}
                 className='team__img-container'
               />
@@ -37,7 +37,7 @@ const Team = () => {
           </div>
         </section>
       </Layout>
-      <Footer />
+      <Footer banner={true} />
     </>
   );
 };

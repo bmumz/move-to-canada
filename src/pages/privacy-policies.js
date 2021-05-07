@@ -21,7 +21,7 @@ const LegalNoticesPage = () => {
         </section>
       </Layout>
 
-      <Footer />
+      <Footer banner={true} />
     </div>
   );
 };
