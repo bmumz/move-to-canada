@@ -18,13 +18,17 @@
 .about__details {
   min-height: 100vh;
 }
-
 .about__certs {
+  div {
+    text-align: center;
+  }
+}
+.about__certs--logo {
+  margin: $xs-size;
 }
 
 .about__sectionCulture {
   padding: $m-size 0;
-  min-height: 80vh;
   @include flex-col(center);
   justify-content: center;
   background: $less-grey;
