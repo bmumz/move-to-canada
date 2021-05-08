@@ -7,8 +7,9 @@ import { useSiteMetadata } from "../hooks/use-site-metadata";
 import Heading from "../components/ui/Heading";
 import servicesData from "../data/services-data";
 import Layout from "../components/layout/Layout";
+import ServicesFirstRow from "../image-queries/services-queries/first-row";
+import ServicesSecondRow from "../image-queries/services-queries/second-row";
 //svg
-import ServicesSection from "../components/services/ServicesSection";
 import World from "../components/services/svg/World";
 
 const Services = () => {
@@ -50,7 +51,10 @@ const Services = () => {
           </div>
         </Layout>
       </section>
-      <ServicesSection />
+
+      <ServicesFirstRow />
+      <ServicesSecondRow hidden={false} />
+
       <Footer banner={true} />
     </div>
   );

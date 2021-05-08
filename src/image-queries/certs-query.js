@@ -2,9 +2,9 @@ import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 
-export default () => {
+const CertsImgs = () => {
   const data = useStaticQuery(graphql`
-    query Certs {
+    query CertsImgs {
       allFile(
         filter: {
           extension: { regex: "/(png)/" }
@@ -23,13 +23,16 @@ export default () => {
       }
     }
   `);
+
+  const getImgName = (img) => img.replace(/[0-9]/g, "");
+
   return (
     <div>
       {data.allFile.edges.map(({ node }, i) => (
         <React.Fragment key={i}>
           <GatsbyImage
             image={node.childImageSharp.gatsbyImageData}
-            alt={node.name}
+            alt={getImgName(node.name)}
             className='about__certs--logo'
           />
         </React.Fragment>
@@ -37,3 +40,5 @@ export default () => {
     </div>
   );
 };
+
+export default CertsImgs;
