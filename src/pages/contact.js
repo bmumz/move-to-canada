@@ -22,6 +22,7 @@ const Contact = () => {
     </p>
   );
   return (
+
     <>
       <Header pageName={pageTitle} />
       <PageIntro heading={heading} blurb={blurb} className='--contact'>
@@ -29,6 +30,7 @@ const Contact = () => {
       </PageIntro>
       <Footer banner={false} />
     </>
+
   );
 };
 

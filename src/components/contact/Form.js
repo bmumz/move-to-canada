@@ -143,7 +143,6 @@ const Form = ({ className }) => {
 };
 
 Form.propTypes = {
-  onSubmit: PropTypes.func,
   className: PropTypes.string,
 };
 
