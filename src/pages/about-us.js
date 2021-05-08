@@ -37,7 +37,7 @@ const About = () => {
           className='pageIntro__img'
         />
       </PageIntro>
-      <section className='about'>
+      <section className='about' id='about'>
         <AboutCulture />
         <Layout>
           <AboutDetails data={aboutData.details.section1} />

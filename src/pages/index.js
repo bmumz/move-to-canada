@@ -8,13 +8,14 @@ import Hero from "../components/contact/Hero";
 import WorkWithUs from "../components/work-with-us/WorkWithUs";
 import ServicesSection from "../components/services/ServicesSection";
 import Banner from "../components/ui/Banner";
-import Button from "../components/ui/Button";
 
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import homeData from "../data/home-data";
 
 import "../styles/app.scss";
 import Heading from "../components/ui/Heading";
+import HomeBlurb from "../components/home/HomeBlurb";
+import { Link } from "gatsby";
 
 const IndexPage = () => {
   const { phone } = useSiteMetadata();
@@ -28,6 +29,7 @@ const IndexPage = () => {
       <title>{pageTitle}</title>
       <Header pageName={pageTitle} />
       <Hero />
+      <HomeBlurb />
       <Layout>
         <section>
           <Heading title='Full-Service Immigration Advisory'>{phone}</Heading>
@@ -47,9 +49,9 @@ const IndexPage = () => {
       <Banner className='banner__col'>
         <h2>...thinking about moving to Canada?</h2>
 
-        <Button className='button__white' onClick={handleClick}>
+        <Link to='/contact' className='button__white'>
           Speak to us now!
-        </Button>
+        </Link>
       </Banner>
 
       <ServicesSection heading={true} />

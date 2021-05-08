@@ -4,30 +4,38 @@ import Dropdown from "../ui/formControls/Dropdown/Dropdown";
 import Inquiry from "../ui/formControls/Dropdown/inquiry";
 import Input from "../ui/formControls/Input";
 import Textarea from "../ui/formControls/Textarea";
+import PropTypes from "prop-types";
 
-const Contact = () => {
-  const handleSubmit = () => {
-    alert("Clicked");
-  };
+const Form = ({ onClick, onSubmit, className }) => {
+  const citizenship = `Applicant's Citizenship`;
+  const country = `Applicant's Current Country of Residence`;
   return (
-    <div className='contact'>
-      <h2 className='heading__white'>Contact Us!</h2>
-      <h3 className='heading__white'>for a free case evaluation!</h3>
+    <form
+      className={className ? `contact__form ${className}` : "contact__form"}
+      onSubmit={onSubmit}
+    >
       <Input type='text' title='Full Name' />
       <Input type='text' title='Email Address' />
       <Input type='tel' title='Phone Number' />
-      <Input type='text' title='Country' />
+      <Input type='text' title={citizenship} />
+      <Input type='text' title={country} />
       <Dropdown
         title='Inquiry Type'
         options={Inquiry}
         placeholder='Inquiry Type'
       />
       <Textarea title='Message' />
-      <Button onClick={handleSubmit} className='button__red'>
+      <Button onClick={onClick} className='button__red'>
         Submit!
       </Button>
-    </div>
+    </form>
   );
 };
 
-export default Contact;
+Form.propTypes = {
+  onClick: PropTypes.func,
+  onSubmit: PropTypes.func,
+  className: PropTypes.string,
+};
+
+export default Form;

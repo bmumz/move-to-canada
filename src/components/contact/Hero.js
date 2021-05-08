@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
-import Contact from "./Contact";
+import Contact from "./ContactHero";
 
 const Hero = () => {
   return (

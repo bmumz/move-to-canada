@@ -5,7 +5,7 @@ import { useSiteMetadata } from "../../../hooks/use-site-metadata";
 const FooterBanner = () => {
   const { phone } = useSiteMetadata();
   return (
-    <>
+    <div className='footer__banner'>
       <h2 className='heading__black '>Get the help you deserve!</h2>
       <Banner>
         <h1 className='heading__bold'>{phone}</h1>
@@ -17,7 +17,7 @@ const FooterBanner = () => {
         We might not be able to handle all types of cases due to expertise and
         other various reasons.
       </p>
-    </>
+    </div>
   );
 };
 

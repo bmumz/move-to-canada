@@ -16,6 +16,7 @@
   @include heading(#444);
 }
 .heading__grey {
+  padding-top: $m-size;
   @include heading(darken($darker-grey, 4));
 }
 

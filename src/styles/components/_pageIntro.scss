@@ -1,6 +1,9 @@
 .page-intro {
   @include flex-col(flex-start);
   flex-direction: column-reverse;
+  &.--contact {
+    flex-direction: column;
+  }
   h4 {
     font-weight: $bold;
     margin-bottom: $s-size;
@@ -12,6 +15,7 @@
   width: 80vw;
   min-height: 300px;
   margin: $l-size;
+  padding-left: $xl-size;
 
   span {
     padding: $m-size 0;
@@ -19,16 +23,16 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
-  .page-intro {
+  .page-intro,
+  .--contact {
     @include flex-row(flex-end);
     align-items: center;
-    height: auto;
   }
 
   .pageIntro__img {
     width: 55vw;
     height: 80vh;
-    min-height: 450px;
+    min-height: 500px;
   }
 
   .page-intro__blurb {
