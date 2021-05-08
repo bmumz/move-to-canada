@@ -25,16 +25,16 @@ const aboutData = {
     },
     paragraphs: {
       culture: {
-        example: `Our culture`,
+        example: `Our culture `,
         sentence: `is collaborative, inclusive, entrepreneurial, and flexible to each client requirement.`,
       },
       mission: {
-        example: `Our mission`,
+        example: `Our mission `,
         sentence: `is to deliver strategic and innovative legal and business solutions,
         no matter how complex our clients’ needs may be. `,
       },
       relationships: {
-        example: `Our deep industry relationships,`,
+        example: `Our deep industry relationships, `,
         sentence: `national resources and subject matter expertise result in an exceptional service experience that solves our clients’ most complex problems.`,
       },
     },
