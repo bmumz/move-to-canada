@@ -2,8 +2,7 @@
   position: absolute;
   @include flex-col(center);
   justify-content: center;
-  min-height: 500px;
-  height: 80vh;
+  height: 100%;
   right: 0;
   top: 0;
   z-index: 2;
@@ -17,14 +16,17 @@
   @include flex-col(center);
   justify-content: center;
   width: 100vw;
-  min-height: 500px;
-
   select,
   textarea,
-  input {
+  input[type="text"],
+  input[type="tel"] {
     width: 80vw;
     @include form-input;
     outline: none;
+  }
+
+  textarea {
+    max-width: 80vw;
   }
 
   &.--pg {
@@ -39,8 +41,13 @@
     width: 45vw;
     select,
     textarea,
-    input {
+    input[type="text"],
+    input[type="tel"] {
       width: 30vw;
+    }
+
+    textarea {
+      max-width: 30vw;
     }
   }
 }
