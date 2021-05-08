@@ -1,6 +1,4 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-
 import Footer from "../components/layout/footer/Footer";
 import Header from "../components/layout/Header";
 import Layout from "../components/layout/Layout";
@@ -21,9 +19,6 @@ const IndexPage = () => {
   const { phone } = useSiteMetadata();
   const pageTitle = "Home";
 
-  const handleClick = () => {
-    alert("clicked");
-  };
   return (
     <main>
       <title>{pageTitle}</title>
@@ -34,14 +29,6 @@ const IndexPage = () => {
         <section>
           <Heading title='Full-Service Immigration Advisory'>{phone}</Heading>
           <span className='svg__container'>{homeData.svg}</span>
-
-          {/* <StaticImage
-            src='../images/canada.jpeg'
-            alt='Skyscrapers in Canada forming a maple leaf.'
-            placeholder='dominantColor'
-            className='placeholder__img'
-            layout='constrained'
-          /> */}
 
           <p>{homeData.paragraphs}</p>
         </section>

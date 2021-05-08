@@ -1,5 +1,4 @@
 import React from "react";
-import ContactForm from "../components/contact/ContactHero";
 import Form from "../components/contact/Form";
 import Footer from "../components/layout/footer";
 import Header from "../components/layout/Header";
@@ -23,15 +22,13 @@ const Contact = () => {
     </p>
   );
   return (
-    <div className='test'>
+    <>
       <Header pageName={pageTitle} />
       <PageIntro heading={heading} blurb={blurb} className='--contact'>
-        <div className='contacttest'>
-          <Form onClick='test' onSubmit='test' className='--pg' />
-        </div>
+        <Form className='--pg' />
       </PageIntro>
       <Footer banner={false} />
-    </div>
+    </>
   );
 };
 
