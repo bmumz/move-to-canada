@@ -32,9 +32,8 @@ const Form = ({ className }) => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("name"),
         ...clientData,
-        [event.target.name]: event.target.value,
+        "form-name": form.getAttribute("name"),
       }),
     })
       .then(() => {
