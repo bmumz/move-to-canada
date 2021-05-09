@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { navigate } from "gatsby";
 import Dropdown from "../ui/formControls/Dropdown/Dropdown";
 import PropTypes from "prop-types";
 import formData from "../../data/form-data";
 
 const Form = ({ className }) => {
   const [clientData, setClientData] = useState({});
+  const [err, setErr] = useState("");
+
+  const errMsg = `There was an error! Please get in touch directly at info@movetocanada.com`;
 
   const encode = (data) => {
     return Object.keys(data)
@@ -24,8 +28,6 @@ const Form = ({ className }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log({ ...clientData });
-
     const form = event.target;
 
     fetch("/", {
@@ -37,15 +39,17 @@ const Form = ({ className }) => {
       }),
     })
       .then(() => {
-        form.getAttribute("action");
+        navigate(form.getAttribute("action"));
       })
       .catch((error) => {
         console.log(error);
+        setErr(errMsg);
       });
   };
 
   return (
-    <>
+    <div className="form">
+      <p className={err && "--err"}>{err}</p>
       <form
         name="move-to-canada-form"
         method="POST"
@@ -124,7 +128,7 @@ const Form = ({ className }) => {
         />
         <input type="submit" value="Submit" className="button__red" />
       </form>
-    </>
+    </div>
   );
 };
 
