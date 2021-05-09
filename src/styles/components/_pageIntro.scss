@@ -15,7 +15,7 @@
   @include flex-col(center);
   width: 80vw;
   min-height: 300px;
-  margin: $l-size;
+  margin-bottom: $l-size;
   p {
     padding-top: $m-size;
   }
@@ -26,16 +26,20 @@
     padding: $m-size 0;
   }
 }
+.--bio {
+  @include flex-col(center);
+  flex-direction: column-reverse;
+  .page-intro__img--bio {
+    width: 50%;
+    margin: $s-size;
+  }
+}
 
 @media (min-width: $desktop-breakpoint) {
   .page-intro,
   .--contact {
     @include flex-row(flex-end);
     align-items: center;
-  }
-  .--bio {
-    display: flex;
-    align-items: flex-start;
   }
 
   .pageIntro__img {
@@ -52,6 +56,14 @@
       a {
         margin-top: 0;
       }
+    }
+  }
+
+  .--bio {
+    flex-direction: row;
+    align-items: flex-start;
+    .page-intro__img--bio {
+      margin: 0;
     }
   }
 }

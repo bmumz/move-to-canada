@@ -50,6 +50,7 @@ textarea {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
+  background: $less-white;
 }
 
 h1,
@@ -106,7 +107,7 @@ input[type="submit"] {
 svg {
   @include flex-row(center);
   width: 65%;
-  height: auto;
+  height: 100%;
   min-width: 300px;
   margin: $l-size 0;
 }

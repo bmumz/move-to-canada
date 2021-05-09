@@ -53,6 +53,9 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
+  .team__bio {
+  }
+
   .team__cards {
     @include flex-row(space-between);
     flex-wrap: wrap;

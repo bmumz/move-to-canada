@@ -57,7 +57,6 @@ const Form = ({ className }) => {
       >
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
-          <label>Don't fill this out:</label>
           <input name="bot-field" onChange={onInputChange} />
         </p>
         <input

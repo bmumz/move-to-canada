@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Pages } from "../../../data/pages-data";
 import Banner from "../../ui/Banner";
-import BuildLinks from "./BuildLinks";
+import LinkBuilder from "./LinkBuilder";
 
 const Navbar = () => {
   const [navMenu, setNavMenu] = useState(false);
@@ -9,9 +9,9 @@ const Navbar = () => {
   const showNavMenu = () => {
     setNavMenu(!navMenu);
 
-    !navMenu && document.body.classList.add("navbar__lock");
+    // !navMenu && document.body.classList.add("navbar__lock");
 
-    navMenu && document.body.classList.remove("navbar__lock");
+    // navMenu && document.body.classList.remove("navbar__lock");
   };
 
   return (
@@ -27,7 +27,7 @@ const Navbar = () => {
       </div>
       <Banner className={`navbar__menu ${navMenu ? "mobile" : "desktop"}`}>
         <nav>
-          <BuildLinks collection={Pages} />
+          <LinkBuilder collection={Pages} />
         </nav>
       </Banner>
     </>

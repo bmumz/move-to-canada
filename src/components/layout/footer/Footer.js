@@ -1,7 +1,7 @@
 import React from "react";
 import FooterBanner from "./FooterBanner";
 import FooterCol from "./FooterCol";
-import BuildLinks from "../nav/BuildLinks";
+import BuildLinks from "../nav/LinkBuilder";
 import { useSiteMetadata } from "../../../hooks/use-site-metadata";
 import { LegalPages, Pages } from "../../../data/pages-data";
 import { StaticImage } from "gatsby-plugin-image";

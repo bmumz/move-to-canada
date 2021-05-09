@@ -21,6 +21,7 @@
   input[type="text"],
   input[type="tel"] {
     border: 1px solid $almost-black;
+    border-radius: 3px;
     width: 80vw;
     min-height: 3.5vh;
     @include form-input;
@@ -63,9 +64,6 @@
     input[type="text"],
     input[type="tel"] {
       width: 30vw;
-    }
-
-    textarea {
       max-width: 30vw;
     }
   }

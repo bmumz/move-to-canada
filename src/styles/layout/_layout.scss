@@ -41,6 +41,10 @@
 
 .heading__red {
   @include heading($red);
+  a {
+    @include heading($red);
+    text-decoration: none;
+  }
 }
 
 .heading__white {
@@ -59,7 +63,6 @@
 .svg__container {
   width: 100%;
   @include flex-row(center);
-  height: auto;
 }
 
 @media (min-width: $desktop-breakpoint) {
