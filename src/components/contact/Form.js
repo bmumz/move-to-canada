@@ -80,6 +80,7 @@ const Form = ({ className }) => {
           aria-label={formData.fields.name}
           placeholder={formData.fields.name}
           name={formData.fields.name}
+          onChange={handleChange}
           required
         />
         <input
@@ -87,6 +88,7 @@ const Form = ({ className }) => {
           aria-label={formData.fields.email}
           placeholder={formData.fields.email}
           name={formData.fields.email}
+          onChange={handleChange}
           required
         />
         <input
@@ -94,12 +96,14 @@ const Form = ({ className }) => {
           aria-label={formData.fields.phone}
           placeholder={formData.fields.phone}
           name={formData.fields.phone}
+          onChange={handleChange}
           required
         />
         <Dropdown
           title='Preferred Contact Method'
           options={formData.method}
           placeholder='Preferred Contact Method'
+          onBlur={handleChange}
           name='Preferred Contact Method'
         />
         <input
@@ -107,6 +111,7 @@ const Form = ({ className }) => {
           aria-label={formData.fields.citizenship}
           placeholder={formData.fields.citizenship}
           name={formData.fields.citizenship}
+          onChange={handleChange}
           required
         />
         <input
@@ -114,12 +119,14 @@ const Form = ({ className }) => {
           aria-label={formData.fields.currentCountry}
           placeholder={formData.fields.currentCountry}
           name={formData.fields.currentCountry}
+          onChange={handleChange}
           required
         />
         <Dropdown
           title='Inquiry Type'
           options={formData.inquiryType}
           placeholder='Inquiry Type'
+          onBlur={handleChange}
           name='Inquiry Type'
         />
         <textarea
@@ -128,6 +135,7 @@ const Form = ({ className }) => {
           rows={5}
           spellCheck='true'
           name='Message'
+          onChange={handleChange}
           required
         />
         <input type='submit' value='Submit' className='button__red' />

@@ -1,13 +1,14 @@
 import React from "react";
 import Footer from "../components/layout/footer/Footer";
 import Header from "../components/layout/Header";
-import PageIntro from "../components/layout/PageIntro";
 import Heading from "../components/ui/Heading";
-import { StaticImage } from "gatsby-plugin-image";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
+import Layout from "../components/layout/Layout";
+import ThanksVg from "../components/thanks/svg/thanks";
+import { Link } from "gatsby";
 
 const Thanks = () => {
-  const pageTitle = "Thank you for Contacting";
+  const pageTitle = "Thank You for Contacting Us";
   const { title } = useSiteMetadata();
 
   const heading = <Heading title={pageTitle}>{title}!</Heading>;
@@ -21,13 +22,17 @@ const Thanks = () => {
   return (
     <>
       <Header pageName={pageTitle} />
-      <PageIntro heading={heading} blurb={blurb} path='/' cta='Back home'>
-        <StaticImage
-          src='../images/toronto.jpg'
-          alt='CN Tower, Toronto'
-          className='pageIntro__img'
-        />
-      </PageIntro>
+
+      <Layout>
+        <section className='thanks'>
+          {heading}
+          <ThanksVg />
+          {blurb}
+          <Link to='/' className='button__red'>
+            Back home...
+          </Link>
+        </section>
+      </Layout>
 
       <Footer banner={true} />
     </>
