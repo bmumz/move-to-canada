@@ -22,6 +22,7 @@
   @include button-solid($less-grey, $almost-black, RGBA(0, 0, 0, 0.075));
   padding: 0.25rem 0.75rem;
   text-transform: uppercase;
+  margin: $s-size;
 }
 
 .button__hamburger {

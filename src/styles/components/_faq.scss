@@ -1,0 +1,37 @@
+.faq {
+  text-align: left;
+  width: 100%;
+}
+
+.faq__container {
+  width: 100%;
+  span {
+    @include flex-row(space-between);
+    padding: $m-size;
+    margin: $m-size 0;
+    background: $less-grey;
+    color: $red;
+    align-items: center;
+  }
+  h3,
+  h4 {
+    font-weight: $bold;
+    letter-spacing: 2;
+  }
+  button {
+    outline: none;
+    border: none;
+    font-size: $m-size;
+    color: $darker-grey;
+  }
+}
+
+.faq__qa {
+  margin: $s-size $xs-size;
+  h4 {
+    color: $darker-grey;
+  }
+  ul {
+    margin: $m-size $xl-size;
+  }
+}
