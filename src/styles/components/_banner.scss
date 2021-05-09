@@ -6,4 +6,7 @@
 .banner__col {
   @include flex-col(center);
   @include banner;
+  h2 {
+    line-height: 1.25;
+  }
 }
