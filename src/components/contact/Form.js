@@ -65,7 +65,7 @@ const Form = ({ className }) => {
           type='text'
           aria-label={formData.fields.name}
           placeholder={formData.fields.name}
-          name={formData.fields.name}
+          name='Full Name'
           onChange={onInputChange}
           required
         />
@@ -73,7 +73,7 @@ const Form = ({ className }) => {
           type='text'
           aria-label={formData.fields.email}
           placeholder={formData.fields.email}
-          name={formData.fields.email}
+          name='Email'
           onChange={onInputChange}
           required
         />
@@ -112,8 +112,8 @@ const Form = ({ className }) => {
           title='Inquiry Type'
           options={formData.inquiryType}
           placeholder='Inquiry Type'
-          onBlur={onInputChange}
           name='Inquiry Type'
+          onBlur={onInputChange}
         />
         <textarea
           title='Message'
