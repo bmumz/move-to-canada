@@ -1,21 +1,18 @@
 import React, { useState } from "react";
 import Dropdown from "../ui/formControls/Dropdown/Dropdown";
+import ReCAPTCHA from "react-google-recaptcha";
 import PropTypes from "prop-types";
 import formData from "../../data/form-data";
 
 const Form = ({ className }) => {
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [phone, setPhone] = useState("");
-  // const [contactPreference, setContactPreference] = useState();
-  // const [citizenship, setCitizenship] = useState("");
-  // const [inquiryType, setInquiryType] = useState();
-  // const [message, setMessage] = useState("");
-  const [clientData, setClientData] = useState({});
-  // const [status, setStatus] = useState("");
-  // err handling
-  // const success = `Your email has been sent! We'll be in touch shortly!`;
-  // const err = `There was an unfortunate error! Please email/call us directly.`;
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [contactPreference, setContactPreference] = useState();
+  const [citizenship, setCitizenship] = useState("");
+  const [country, setCountry] = useState("");
+  const [inquiryType, setInquiryType] = useState();
+  const [message, setMessage] = useState("");
 
   const encode = (data) => {
     return Object.keys(data)
@@ -25,17 +22,15 @@ const Form = ({ className }) => {
       .join("&");
   };
 
-  // const clientData = {
-  //   email,
-  //   phone,
-  //   contactPreference,
-  //   citizenship,
-  //   inquiryType,
-  //   message,
-  // };
-
-  const handleChange = (event) => {
-    setClientData({ ...clientData, [event.target.name]: event.target.value });
+  const clientData = {
+    name,
+    email,
+    phone,
+    contactPreference,
+    citizenship,
+    country,
+    inquiryType,
+    message,
   };
 
   const handleSubmit = (event) => {
@@ -72,15 +67,15 @@ const Form = ({ className }) => {
       >
         <input type='hidden' name='form-name' value='contact' />
         <p hidden>
-          <label>Don't fill this out:</label>{" "}
-          <input name='bot-field' onChange={handleChange} />
+          <label>Don't fill this out:</label>
+          <input name='bot-field' />
         </p>
         <input
           type='text'
           aria-label={formData.fields.name}
           placeholder={formData.fields.name}
           name={formData.fields.name}
-          onChange={handleChange}
+          onChange={(e) => setName(e.target.value)}
           required
         />
         <input
@@ -88,7 +83,7 @@ const Form = ({ className }) => {
           aria-label={formData.fields.email}
           placeholder={formData.fields.email}
           name={formData.fields.email}
-          onChange={handleChange}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
@@ -96,14 +91,14 @@ const Form = ({ className }) => {
           aria-label={formData.fields.phone}
           placeholder={formData.fields.phone}
           name={formData.fields.phone}
-          onChange={handleChange}
+          onChange={(e) => setPhone(e.target.value)}
           required
         />
         <Dropdown
           title='Preferred Contact Method'
           options={formData.method}
           placeholder='Preferred Contact Method'
-          onBlur={handleChange}
+          onBlur={(e) => setContactPreference(e.target.value)}
           name='Preferred Contact Method'
         />
         <input
@@ -111,7 +106,7 @@ const Form = ({ className }) => {
           aria-label={formData.fields.citizenship}
           placeholder={formData.fields.citizenship}
           name={formData.fields.citizenship}
-          onChange={handleChange}
+          onChange={(e) => setCitizenship(e.target.value)}
           required
         />
         <input
@@ -119,14 +114,14 @@ const Form = ({ className }) => {
           aria-label={formData.fields.currentCountry}
           placeholder={formData.fields.currentCountry}
           name={formData.fields.currentCountry}
-          onChange={handleChange}
+          onChange={(e) => setCountry(e.target.value)}
           required
         />
         <Dropdown
           title='Inquiry Type'
           options={formData.inquiryType}
           placeholder='Inquiry Type'
-          onBlur={handleChange}
+          onBlur={(e) => setInquiryType(e.target.value)}
           name='Inquiry Type'
         />
         <textarea
@@ -135,7 +130,7 @@ const Form = ({ className }) => {
           rows={5}
           spellCheck='true'
           name='Message'
-          onChange={handleChange}
+          onChange={(e) => setMessage(e.target.value)}
           required
         />
         <input type='submit' value='Submit' className='button__red' />
