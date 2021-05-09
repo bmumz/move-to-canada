@@ -1,7 +1,7 @@
 import React from "react";
 
 const ThanksVg = () => (
-  <span className="svg__container">
+  <span className="svg__container --smaller">
     <svg
       id="78bf026f-5d34-4e97-88cf-29aa2cfb8006"
       data-name="Layer 1"
