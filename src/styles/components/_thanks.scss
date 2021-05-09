@@ -1,0 +1,4 @@
+.thanks {
+  @include flex-col(center);
+  padding: $l-size;
+}

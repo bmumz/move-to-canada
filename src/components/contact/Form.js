@@ -1,95 +1,71 @@
 import React, { useState } from "react";
 import Dropdown from "../ui/formControls/Dropdown/Dropdown";
 import PropTypes from "prop-types";
-import { useInput } from "../../hooks/use-input";
 import formData from "../../data/form-data";
-import axios from "axios";
 
 const Form = ({ className }) => {
-  // const { value: name, bind: bindName, reset: resetName } = useInput("");
-  // const { value: email, bind: bindEmail, reset: resetEmail } = useInput("");
-  // const { value: phone, bind: bindPhone, reset: resetPhone } = useInput("");
-  // const {
-  //   value: citizenship,
-  //   bind: bindCitizenship,
-  //   reset: resetCitizenship,
-  // } = useInput("");
-  // const { value: country, bind: bindCountry, reset: resetCountry } = useInput(
-  //   ""
-  // );
-  // const { value: message, bind: bindMessage, reset: resetMessage } = useInput(
-  //   ""
-  // );
-  // state
-  const [status, setStatus] = useState("");
-  // const [contactPreference, setContactPreference] = useState();
-  // const [inquiryType, setInquiryType] = useState();
+  const [clientData, setClientData] = useState({});
 
-  // err handling
-  const success = `Your email has been sent! We'll be in touch shortly!`;
-  const err = `There was an unfortunate error! Please email/call us directly.`;
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
 
-  // const handleContactPreference = (event) => {
-  //   setContactPreference(event.target.value);
-  // };
+  const onInputChange = (event) => {
+    setClientData({
+      ...clientData,
+      [event.target.name]: event.target.value,
+    });
+  };
 
-  // const handleInquiryType = (event) => {
-  //   setInquiryType(event.target.value);
-  // };
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
+    console.log({ ...clientData });
 
-  //   axios
-  //     .post("http://localhost:8080/contact", {
-  //       headers: { "Content-Type": "application/json" },
-  //       data: {
-  //         name,
-  //         email,
-  //         phone,
-  //         contactPreference,
-  //         citizenship,
-  //         country,
-  //         inquiryType,
-  //         message,
-  //       },
-  //     })
-  //     .then((response) => {
-  //       if (response.data.status === "success") {
-  //         setStatus(success);
-  //         resetForm();
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //       setStatus(err);
-  //     });
-  // };
+    const form = event.target;
 
-  // const resetForm = () => {
-  //   resetName();
-  //   resetEmail();
-  //   resetPhone();
-  //   resetCitizenship();
-  //   resetCountry();
-  //   resetMessage();
-  // };
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        ...clientData,
+        "form-name": form.getAttribute("name"),
+      }),
+    })
+      .then(() => {
+        form.getAttribute("action");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <>
-      {status}
       <form
         name='Move to Canada Contact Form'
         method='POST'
-        data-netlify='true'
+        action='/thanks/'
+        data-netlify-recaptcha='true'
+        data-netlify-honeypot='bot-field'
+        onSubmit={handleSubmit}
         className={className ? `contact__form ${className}` : "contact__form"}
-        // onSubmit={handleSubmit}
       >
+        <input type='hidden' name='form-name' value='contact' />
+        <p hidden>
+          <label>Don't fill this out:</label>
+          <input name='bot-field' onChange={onInputChange} />
+        </p>
         <input
           type='text'
           aria-label={formData.fields.name}
           placeholder={formData.fields.name}
-          name='Name'
-          // {...bindName}
+          name='Full Name'
+          onChange={onInputChange}
           required
         />
         <input
@@ -97,7 +73,7 @@ const Form = ({ className }) => {
           aria-label={formData.fields.email}
           placeholder={formData.fields.email}
           name='Email'
-          // {...bindEmail}
+          onChange={onInputChange}
           required
         />
         <input
@@ -105,23 +81,22 @@ const Form = ({ className }) => {
           aria-label={formData.fields.phone}
           placeholder={formData.fields.phone}
           name={formData.fields.phone}
-          // {...bindPhone}
+          onChange={onInputChange}
           required
         />
         <Dropdown
           title='Preferred Contact Method'
           options={formData.method}
           placeholder='Preferred Contact Method'
+          onBlur={onInputChange}
           name='Preferred Contact Method'
-
-          // onBlur={handleContactPreference}
         />
         <input
           type='text'
           aria-label={formData.fields.citizenship}
           placeholder={formData.fields.citizenship}
           name={formData.fields.citizenship}
-          // {...bindCitizenship}
+          onChange={onInputChange}
           required
         />
         <input
@@ -129,15 +104,15 @@ const Form = ({ className }) => {
           aria-label={formData.fields.currentCountry}
           placeholder={formData.fields.currentCountry}
           name={formData.fields.currentCountry}
-          // {...bindCountry}
+          onChange={onInputChange}
           required
         />
         <Dropdown
           title='Inquiry Type'
           options={formData.inquiryType}
           placeholder='Inquiry Type'
-          name={formData.inquiryType}
-          // onBlur={handleInquiryType}
+          onBlur={onInputChange}
+          name='Inquiry Type'
         />
         <textarea
           title='Message'
@@ -145,7 +120,7 @@ const Form = ({ className }) => {
           rows={5}
           spellCheck='true'
           name='Message'
-          // {...bindMessage}
+          onChange={onInputChange}
           required
         />
         <input type='submit' value='Submit' className='button__red' />
