@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import Form from "../components/contact/Form";
 import Footer from "../components/layout/footer";
@@ -22,15 +23,24 @@ const Contact = () => {
     </p>
   );
   return (
-
     <>
       <Header pageName={pageTitle} />
       <PageIntro heading={heading} blurb={blurb} className='--contact'>
-        <Form className='--pg' />
+        <div className='contact__container'>
+          <StaticImage
+            src='../images/east.jpg'
+            alt='The Maritimes'
+            className='contact__img'
+          />
+
+          <div className='contact__overlay'> </div>
+          <div className='contact'>
+            <Form />
+          </div>
+        </div>
       </PageIntro>
       <Footer banner={false} />
     </>
-
   );
 };
 

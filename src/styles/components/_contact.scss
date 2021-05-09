@@ -35,7 +35,23 @@
   }
 }
 
+.contact__container {
+  position: relative;
+  @include flex-row(center);
+}
+
+.contact__img {
+  width: 100vw;
+  height: 80vh;
+  min-height: 500px;
+}
+
 @media (min-width: $desktop-breakpoint) {
+  .contact__img {
+    width: 45vw;
+    height: 80vh;
+  }
+
   .contact,
   .contact__form {
     width: 45vw;

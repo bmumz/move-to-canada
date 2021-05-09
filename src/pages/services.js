@@ -17,11 +17,7 @@ const Services = () => {
 
   const { title } = useSiteMetadata();
 
-  const heading = (
-    <Heading title={`${pageTitle} Offered by`} className='heading__start'>
-      {title}
-    </Heading>
-  );
+  const heading = <Heading title={`${pageTitle} Offered by`}>{title}</Heading>;
 
   const blurb = <p>{servicesData.blurb} </p>;
 
@@ -42,14 +38,15 @@ const Services = () => {
         />
       </PageIntro>
       <section className='services__details' id='services'>
-        <Layout>
-          <div className='service'>
+        <div className='service'>
+          <span>
             <World />
-            <span>
-              <h2>{servicesData.details}</h2>
-            </span>
-          </div>
-        </Layout>
+          </span>
+
+          <span>
+            <h2>{servicesData.details}</h2>
+          </span>
+        </div>
       </section>
 
       <ServicesFirstRow />

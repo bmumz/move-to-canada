@@ -56,7 +56,6 @@
   }
 }
 .services__details {
-  padding-top: $xl-size;
   background: $less-grey;
   border: 1px solid darken($less-grey, 4);
   height: auto;
@@ -64,9 +63,13 @@
 
 .service {
   @include flex-col(center);
+  span:first-child {
+    @include flex-row(center);
+  }
   h2 {
     line-height: 1.5;
     margin: $l-size;
+    font-size: 1.25rem;
   }
 }
 
@@ -75,6 +78,21 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
+  .service {
+    @include flex-row(space-evenly);
+    span {
+      margin: 4rem;
+    }
+
+    span:last-child {
+      width: 60vw;
+
+      h2 {
+        line-height: 2;
+        font-size: $m-size;
+      }
+    }
+  }
   .services__container-row {
     flex-direction: row;
   }
@@ -97,17 +115,6 @@
 }
 
 @media (min-width: 1000px) {
-  .service {
-    @include flex-row(space-between);
-    align-items: center;
-    padding: $xl-size 0;
-
-    h2 {
-      width: 40vw;
-      margin: $l-size;
-    }
-  }
-
   .services__img-container {
     img {
       aspect-ratio: 7/4;

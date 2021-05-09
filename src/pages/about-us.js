@@ -15,11 +15,7 @@ const About = () => {
   const pageTitle = "About";
   const { title } = useSiteMetadata();
 
-  const heading = (
-    <Heading title={pageTitle} className='heading__start'>
-      {title}
-    </Heading>
-  );
+  const heading = <Heading title={pageTitle}>{title}</Heading>;
 
   const blurb = (
     <div>
@@ -32,7 +28,7 @@ const About = () => {
       <Header pageName={pageTitle} />
       <PageIntro heading={heading} blurb={blurb} path='#about' cta='Learn more'>
         <StaticImage
-          src='../images/slideshow/toronto.jpg'
+          src='../images/toronto.jpg'
           alt='CN Tower, Toronto'
           className='pageIntro__img'
         />

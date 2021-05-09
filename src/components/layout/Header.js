@@ -4,6 +4,7 @@ import Seo from "../Seo";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 const Header = ({ pageName }) => {
   const { phone } = useSiteMetadata();
@@ -16,12 +17,14 @@ const Header = ({ pageName }) => {
 
         <div className='header__company-info'>
           <div className='header__logo'>
-            <StaticImage
-              src='../../images/move-to-canada.png'
-              alt='The Move to Canada Team Logo with maple leaf'
-              layout='fixed'
-              width={250}
-            />
+            <Link to='/'>
+              <StaticImage
+                src='../../images/move-to-canada.png'
+                alt='The Move to Canada Team Logo with maple leaf'
+                layout='fixed'
+                width={250}
+              />
+            </Link>
           </div>
 
           <div className='header__tel'>

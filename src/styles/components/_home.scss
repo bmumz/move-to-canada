@@ -1,12 +1,21 @@
 .home__blurb {
   line-height: 2;
   background: $less-grey;
-  padding: $m-size;
+  padding: $xl-size $l-size;
   border-bottom: 1px solid darken($less-grey, 4);
 
+  div:first-child {
+    h2 {
+      line-height: 1.5;
+    }
+    border-bottom: 1px solid darken($less-grey, 12);
+    margin-bottom: $m-size;
+    padding-bottom: $m-size;
+  }
   div:last-child {
     h2 {
       color: $red;
+      font-weight: $bold;
     }
   }
 }
@@ -16,11 +25,18 @@
     @include flex-row(center);
     padding: $xl-size $l-size;
     div:first-child {
+      h2 {
+        margin: 0 $s-size;
+        padding: $l-size;
+        text-align: center;
+      }
+      border-bottom: none;
       width: 65vw;
       color: $almost-black;
       font-weight: $bold;
     }
     div:last-child {
+      padding-left: $xl-size;
       width: 50vw;
     }
   }
