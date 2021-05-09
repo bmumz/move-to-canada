@@ -6,7 +6,6 @@ import Footer from "../components/layout/footer/Footer";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import Heading from "../components/ui/Heading";
 import servicesData from "../data/services-data";
-import Layout from "../components/layout/Layout";
 import ServicesFirstRow from "../image-queries/services-queries/first-row";
 import ServicesSecondRow from "../image-queries/services-queries/second-row";
 //svg

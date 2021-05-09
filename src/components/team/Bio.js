@@ -28,6 +28,7 @@ const Bio = () => {
         path='/contact'
         heading={heading}
         blurb={blurb}
+        className='--bio'
       >
         <StaticImage
           src='../../images/headshots/nick.jpeg'

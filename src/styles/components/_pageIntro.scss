@@ -1,10 +1,8 @@
 .page-intro {
-  // p {
-  //   text-align: left;
-  // }
   @include flex-col(center);
   flex-direction: column-reverse;
-  &.--contact {
+  &.--contact,
+  s {
     flex-direction: column;
   }
   h4 {
@@ -35,6 +33,10 @@
     @include flex-row(flex-end);
     align-items: center;
   }
+  .--bio {
+    display: flex;
+    align-items: flex-start;
+  }
 
   .pageIntro__img {
     width: 55vw;
@@ -45,7 +47,7 @@
   .page-intro__blurb {
     width: 50vw;
     margin: $xl-size;
-    p {
+    p:first-child {
       padding: $xl-size;
       a {
         margin-top: 0;

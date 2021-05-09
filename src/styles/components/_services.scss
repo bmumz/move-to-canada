@@ -115,9 +115,7 @@
 }
 
 @media (min-width: 1000px) {
-  .services__img-container {
-    img {
-      aspect-ratio: 7/4;
-    }
+  .services__img {
+    aspect-ratio: 7/4;
   }
 }
