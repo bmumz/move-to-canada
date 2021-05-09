@@ -1,10 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Dropdown = ({ title, options, placeholder, onBlur }) => {
+const Dropdown = ({ title, options, placeholder, name, onBlur }) => {
   return (
     <span className='form-input'>
-      <select aria-label={title} defaultValue={placeholder} onBlur={onBlur}>
+      <select
+        aria-label={title}
+        defaultValue={placeholder}
+        name={name}
+        onBlur={onBlur}
+      >
         <option disabled>{placeholder}</option>
         {options.map((option, index) => (
           <option key={index} value={option}>
