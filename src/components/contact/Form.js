@@ -47,10 +47,9 @@ const Form = ({ className }) => {
   return (
     <>
       <form
-        name='Move to Canada Contact Form'
+        name='move-to-canada-form'
         method='POST'
         action='/thanks/'
-        data-netlify-recaptcha='true'
         data-netlify-honeypot='bot-field'
         onSubmit={handleSubmit}
         className={className ? `contact__form ${className}` : "contact__form"}
@@ -111,14 +110,14 @@ const Form = ({ className }) => {
           title='Inquiry Type'
           options={formData.inquiryType}
           placeholder='Inquiry Type'
-          name='Inquiry Type'
           onBlur={onInputChange}
+          name='Inquiry Type'
         />
         <textarea
           title='Message'
           placeholder='Message'
           rows={5}
-          spellCheck='true'
+          spellCheck={true}
           name='Message'
           onChange={onInputChange}
           required
