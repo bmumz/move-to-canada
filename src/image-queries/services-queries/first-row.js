@@ -35,6 +35,7 @@ const ServicesFirstRow = () => {
             <GatsbyImage
               image={node.childImageSharp.gatsbyImageData}
               alt={getImgName(node.name)}
+              className='services__img'
             />
             <span className='services__overlay'></span>
           </div>

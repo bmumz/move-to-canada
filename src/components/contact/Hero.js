@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className='hero'>
       <StaticImage
-        src='../../images/slideshow/road.jpg'
+        src='../../images/road.jpg'
         alt='road'
         className='hero__img-container'
         imgClassName='hero__img'

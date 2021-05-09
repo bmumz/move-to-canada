@@ -2,7 +2,7 @@
   padding-top: 0;
   section {
     padding: $m-size 0;
-    @include flex-col(flex-start);
+    @include flex-col(center);
     height: auto;
   }
 
@@ -10,6 +10,7 @@
     margin: $xs-size 0;
   }
   h2 {
+    text-align: center;
     margin: $s-size 0;
     line-height: 1.25;
   }

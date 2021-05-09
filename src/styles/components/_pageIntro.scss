@@ -1,7 +1,8 @@
 .page-intro {
-  @include flex-col(flex-start);
+  @include flex-col(center);
   flex-direction: column-reverse;
-  &.--contact {
+  &.--contact,
+  s {
     flex-direction: column;
   }
   h4 {
@@ -11,12 +12,16 @@
 }
 
 .page-intro__blurb {
-  @include flex-col(flex-start);
+  @include flex-col(center);
   width: 80vw;
   min-height: 300px;
   margin: $l-size;
-  padding-left: $xl-size;
-
+  p {
+    padding-top: $m-size;
+  }
+  a {
+    text-align: center;
+  }
   span {
     padding: $m-size 0;
   }
@@ -28,6 +33,10 @@
     @include flex-row(flex-end);
     align-items: center;
   }
+  .--bio {
+    display: flex;
+    align-items: flex-start;
+  }
 
   .pageIntro__img {
     width: 55vw;
@@ -36,14 +45,10 @@
   }
 
   .page-intro__blurb {
-    h2 {
-      align-items: flex-start;
-    }
     width: 50vw;
     margin: $xl-size;
-    @include flex-col(flex-start);
-    p {
-      margin-top: $s-size;
+    p:first-child {
+      padding: $xl-size;
       a {
         margin-top: 0;
       }

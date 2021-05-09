@@ -5,6 +5,7 @@
   margin: 0;
   h2 {
     color: $almost-black;
+
     span {
       border-bottom: 1px solid $darker-grey;
       color: $red;
@@ -19,8 +20,9 @@
   margin: 1rem;
   background: lighten($mid-grey, 18);
   h4 {
-    letter-spacing: 0.5px;
-    margin-bottom: 0.25rem;
+    letter-spacing: 0.25px;
+    padding-bottom: $s-size;
+    font-weight: $bold;
   }
   p {
     line-height: 1.25;
@@ -35,6 +37,6 @@
     flex-wrap: wrap;
   }
   .work-with-us__card {
-    width: 25vw;
+    width: 20vw;
   }
 }

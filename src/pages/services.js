@@ -6,7 +6,6 @@ import Footer from "../components/layout/footer/Footer";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import Heading from "../components/ui/Heading";
 import servicesData from "../data/services-data";
-import Layout from "../components/layout/Layout";
 import ServicesFirstRow from "../image-queries/services-queries/first-row";
 import ServicesSecondRow from "../image-queries/services-queries/second-row";
 //svg
@@ -17,11 +16,7 @@ const Services = () => {
 
   const { title } = useSiteMetadata();
 
-  const heading = (
-    <Heading title={`${pageTitle} Offered by`} className='heading__start'>
-      {title}
-    </Heading>
-  );
+  const heading = <Heading title={`${pageTitle} Offered by`}>{title}</Heading>;
 
   const blurb = <p>{servicesData.blurb} </p>;
 
@@ -42,14 +37,15 @@ const Services = () => {
         />
       </PageIntro>
       <section className='services__details' id='services'>
-        <Layout>
-          <div className='service'>
+        <div className='service'>
+          <span>
             <World />
-            <span>
-              <h2>{servicesData.details}</h2>
-            </span>
-          </div>
-        </Layout>
+          </span>
+
+          <span>
+            <h2>{servicesData.details}</h2>
+          </span>
+        </div>
       </section>
 
       <ServicesFirstRow />
