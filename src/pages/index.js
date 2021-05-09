@@ -14,6 +14,7 @@ import "../styles/app.scss";
 import Heading from "../components/ui/Heading";
 import HomeBlurb from "../components/home/HomeBlurb";
 import { Link } from "gatsby";
+import Faq from "../components/faq/Faq";
 
 const IndexPage = () => {
   const { phone } = useSiteMetadata();
@@ -27,22 +28,22 @@ const IndexPage = () => {
       <HomeBlurb />
       <Layout>
         <section>
-          <Heading title='Full-Service Immigration Advisory'>{phone}</Heading>
-          <span className='svg__container'>{homeData.svg}</span>
+          <Heading title="Full-Service Immigration Advisory">{phone}</Heading>
+          <span className="svg__container">{homeData.svg}</span>
 
           <p>{homeData.paragraphs}</p>
         </section>
       </Layout>
-      <Banner className='banner__col'>
+      <Banner className="banner__col">
         <h2>...thinking about moving to Canada?</h2>
 
-        <Link to='/contact' className='button__white'>
+        <Link to="/contact" className="button__white">
           Speak to us now!
         </Link>
       </Banner>
 
       <ServicesSection heading={true} />
-
+      <Faq />
       <WorkWithUs />
 
       <Footer banner={true} />
