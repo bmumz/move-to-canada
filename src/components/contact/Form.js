@@ -4,14 +4,7 @@ import PropTypes from "prop-types";
 import formData from "../../data/form-data";
 
 const Form = ({ className }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [contactPreference, setContactPreference] = useState();
-  const [citizenship, setCitizenship] = useState("");
-  const [country, setCountry] = useState("");
-  const [inquiryType, setInquiryType] = useState();
-  const [message, setMessage] = useState("");
+  const [clientData, setClientData] = useState({});
 
   const encode = (data) => {
     return Object.keys(data)
@@ -21,19 +14,17 @@ const Form = ({ className }) => {
       .join("&");
   };
 
-  const clientData = {
-    name,
-    email,
-    phone,
-    contactPreference,
-    citizenship,
-    country,
-    inquiryType,
-    message,
+  const onInputChange = (event) => {
+    setClientData({
+      ...clientData,
+      [event.target.name]: event.target.value,
+    });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    console.log({ ...clientData });
 
     const form = event.target;
 
@@ -68,14 +59,14 @@ const Form = ({ className }) => {
         <input type='hidden' name='form-name' value='contact' />
         <p hidden>
           <label>Don't fill this out:</label>
-          <input name='bot-field' />
+          <input name='bot-field' onChange={onInputChange} />
         </p>
         <input
           type='text'
           aria-label={formData.fields.name}
           placeholder={formData.fields.name}
           name={formData.fields.name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={onInputChange}
           required
         />
         <input
@@ -83,7 +74,7 @@ const Form = ({ className }) => {
           aria-label={formData.fields.email}
           placeholder={formData.fields.email}
           name={formData.fields.email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={onInputChange}
           required
         />
         <input
@@ -91,14 +82,14 @@ const Form = ({ className }) => {
           aria-label={formData.fields.phone}
           placeholder={formData.fields.phone}
           name={formData.fields.phone}
-          onChange={(e) => setPhone(e.target.value)}
+          onChange={onInputChange}
           required
         />
         <Dropdown
           title='Preferred Contact Method'
           options={formData.method}
           placeholder='Preferred Contact Method'
-          onBlur={(e) => setContactPreference(e.target.value)}
+          onBlur={onInputChange}
           name='Preferred Contact Method'
         />
         <input
@@ -106,7 +97,7 @@ const Form = ({ className }) => {
           aria-label={formData.fields.citizenship}
           placeholder={formData.fields.citizenship}
           name={formData.fields.citizenship}
-          onChange={(e) => setCitizenship(e.target.value)}
+          onChange={onInputChange}
           required
         />
         <input
@@ -114,14 +105,14 @@ const Form = ({ className }) => {
           aria-label={formData.fields.currentCountry}
           placeholder={formData.fields.currentCountry}
           name={formData.fields.currentCountry}
-          onChange={(e) => setCountry(e.target.value)}
+          onChange={onInputChange}
           required
         />
         <Dropdown
           title='Inquiry Type'
           options={formData.inquiryType}
           placeholder='Inquiry Type'
-          onBlur={(e) => setInquiryType(e.target.value)}
+          onBlur={onInputChange}
           name='Inquiry Type'
         />
         <textarea
@@ -130,7 +121,7 @@ const Form = ({ className }) => {
           rows={5}
           spellCheck='true'
           name='Message'
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={onInputChange}
           required
         />
         <input type='submit' value='Submit' className='button__red' />
