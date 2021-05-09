@@ -41,6 +41,10 @@
 
 .heading__red {
   @include heading($red);
+  a {
+    @include heading($red);
+    text-decoration: none;
+  }
 }
 
 .heading__white {

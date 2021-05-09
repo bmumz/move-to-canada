@@ -1,6 +1,8 @@
 .legal {
   h1 {
     @include heading-underline($mid-grey);
+    padding-top: $l-size;
+    line-height: 1.5;
   }
   a {
     color: $darker-grey;

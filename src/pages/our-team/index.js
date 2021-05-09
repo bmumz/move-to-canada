@@ -22,16 +22,17 @@ const Team = () => {
             cities across Canada!
           </p>
 
-          <div className='team__cards'>
+          <div className="team__cards">
             <Card
               name={teamData.member.name}
               title={teamData.member.title}
               location={teamData.member.location}
             >
               <StaticImage
-                src='../../images/headshots/nick.jpeg'
+                src="../../images/headshots/nick.jpeg"
                 alt={teamData.member.name}
-                className='team__img-container'
+                className="team__img-container"
+                imgClassName="team__img"
               />
             </Card>
           </div>

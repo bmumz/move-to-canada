@@ -5,7 +5,7 @@ const homeData = {
   blurbTitle: `Immigrating to Canada is
   one of the most important
   decisions of your life. We
-  help make it a reality.`,
+  can help make it a reality.`,
   blurb: `Our full-service comprehensive team of
   Lawyers, Realtors, Bankers,
   Accountants and everyone in between,

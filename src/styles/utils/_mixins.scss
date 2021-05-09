@@ -15,7 +15,6 @@
   outline: none;
   border: none;
   font-size: 1rem;
-  margin-top: $s-size;
   letter-spacing: 0.5px;
 }
 
@@ -67,11 +66,7 @@
 @mixin form-input {
   padding: 0.25rem;
   margin: 0.25rem;
-  color: lighten($almost-black, 2);
-}
-
-@mixin form-input-focus {
-  border: 1px solid $almost-black;
+  color: $almost-black;
 }
 
 @mixin button-animation {

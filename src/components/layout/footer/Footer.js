@@ -1,7 +1,7 @@
 import React from "react";
 import FooterBanner from "./FooterBanner";
 import FooterCol from "./FooterCol";
-import BuildLinks from "../nav/BuildLinks";
+import BuildLinks from "../nav/LinkBuilder";
 import { useSiteMetadata } from "../../../hooks/use-site-metadata";
 import { LegalPages, Pages } from "../../../data/pages-data";
 import { StaticImage } from "gatsby-plugin-image";
@@ -12,11 +12,16 @@ const Footer = ({ banner }) => {
   const { title, copyright } = useSiteMetadata();
 
   const contactData = (
-    <div className='footer__contact'>
+    <div className="footer__contact">
       {Object.values(footerData).map((m, i) => (
         <span key={i}>
-          {m.icon}
-          {m.path ? <a href={m.path}>{m.title}</a> : <p>{m.title}</p>}
+          <span className="footer__contact-row1">
+            {m.icon}
+
+            {m.path ? <a href={m.path}>{m.title}</a> : <p>{m.title}</p>}
+          </span>
+
+          {m.subtitle && <p className="footer__contact-row2">{m.subtitle}</p>}
         </span>
       ))}
     </div>
@@ -25,18 +30,18 @@ const Footer = ({ banner }) => {
     <section>
       {banner && <FooterBanner />}
       <footer>
-        <div className='footer__content'>
+        <div className="footer__content">
           <FooterCol>
             <StaticImage
-              src='../../../images/move-to-canada.png'
-              alt='The Move to Canada Team Logo with maple leaf'
-              layout='fixed'
+              src="../../../images/move-to-canada.png"
+              alt="The Move to Canada Team Logo with maple leaf"
+              layout="fixed"
               width={250}
-              className='footer__img'
+              className="footer__img"
             />
           </FooterCol>
 
-          <FooterCol title='More about our company'>
+          <FooterCol title="More about our company">
             <p>
               {title} offers comprehensive, full service to help people from all
               around the world buy real estate and move to Canada.
@@ -44,19 +49,19 @@ const Footer = ({ banner }) => {
           </FooterCol>
           <FooterCol title={title}>{contactData}</FooterCol>
 
-          <FooterCol title='Page Directory'>
-            <div className='footer__directory'>
+          <FooterCol title="Page Directory">
+            <div className="footer__directory">
               <span>
                 <BuildLinks collection={Pages} />
               </span>
 
-              <span className='footer__legal'>
+              <span className="footer__legal">
                 <BuildLinks collection={LegalPages} />
               </span>
             </div>
           </FooterCol>
         </div>
-        <span className='footer__copyright'>
+        <span className="footer__copyright">
           © {copyright} {title} Inc., All Rights Reserved
         </span>
       </footer>

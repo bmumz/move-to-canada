@@ -67,12 +67,18 @@ footer {
 }
 .footer__banner {
   padding-top: $l-size;
+  a {
+    color: $less-white;
+  }
 }
 
 .footer__contact {
-  span {
+  .footer__contact-row1 {
     @include flex-row(flex-start);
     align-items: center;
+  }
+  .footer__contact-row2 {
+    margin-left: $m-size;
   }
 
   .footer__icon {
