@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Dropdown from "../ui/formControls/Dropdown/Dropdown";
-import ReCAPTCHA from "react-google-recaptcha";
 import PropTypes from "prop-types";
 import formData from "../../data/form-data";
 
@@ -44,6 +43,7 @@ const Form = ({ className }) => {
       body: encode({
         "form-name": form.getAttribute("name"),
         ...clientData,
+        [event.target.name]: event.target.value,
       }),
     })
       .then(() => {
