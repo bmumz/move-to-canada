@@ -23,7 +23,7 @@
     border: 1px solid $almost-black;
     border-radius: 3px;
     width: 80vw;
-    min-height: 3.5vh;
+    min-height: 3vh;
     @include form-input;
     outline: none;
   }
@@ -37,6 +37,18 @@
   &.--pg {
     background: $mid-grey;
     height: 75vh;
+  }
+}
+
+.form {
+  p {
+    height: 2rem;
+    padding: 0.25rem;
+    color: $less-white;
+
+    &.--err {
+      background: $red;
+    }
   }
 }
 
