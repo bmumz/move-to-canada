@@ -50,6 +50,7 @@ const Form = ({ className }) => {
         name='move-to-canada-form'
         method='POST'
         action='/thanks/'
+        data-netlify='true'
         data-netlify-honeypot='bot-field'
         onSubmit={handleSubmit}
         className={className ? `contact__form ${className}` : "contact__form"}
