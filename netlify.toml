@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://unruffled-johnson-440c1a.netlify.app/"
+  to = "https://www.movetocanada.com"
+  status = 301
+  force = true
