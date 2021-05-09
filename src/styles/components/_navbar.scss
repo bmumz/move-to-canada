@@ -9,6 +9,10 @@ nav {
   }
 }
 
+.navbar__lock {
+  overflow-y: hidden;
+}
+
 .navbar__menu {
   @include color-scheme($red, $less-white);
   visibility: hidden;

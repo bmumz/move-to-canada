@@ -44,10 +44,12 @@
 
 .team__img-container {
   margin: $m-size 0;
-  border-radius: 100%;
   min-width: 140px;
   width: 140px;
   height: auto;
+  .team__img {
+    border-radius: 100%;
+  }
 }
 
 @media (min-width: $desktop-breakpoint) {

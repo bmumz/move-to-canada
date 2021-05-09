@@ -34,14 +34,14 @@ const ServicesSecondRow = ({ hidden }) => {
         }
       >
         {secondRow.allFile.edges.map(({ node }, i) => (
-          <div key={i} className='services__img-container'>
-            <h3 className='services__title'>{getImgName(node.name)}</h3>
+          <div key={i} className="services__img-container">
+            <h3 className="services__title">{getImgName(node.name)}</h3>
             <GatsbyImage
               image={node.childImageSharp.gatsbyImageData}
               alt={getImgName(node.name)}
-              className='services__img'
+              className="services__img"
             />
-            <span className='services__overlay'></span>
+            <span className="services__overlay"></span>
           </div>
         ))}
       </div>

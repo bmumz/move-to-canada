@@ -47,37 +47,37 @@ const Form = ({ className }) => {
   return (
     <>
       <form
-        name='move-to-canada-form'
-        method='POST'
-        action='/thanks/'
-        data-netlify='true'
-        data-netlify-honeypot='bot-field'
+        name="move-to-canada-form"
+        method="POST"
+        action="/thanks/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
         className={className ? `contact__form ${className}` : "contact__form"}
       >
-        <input type='hidden' name='form-name' value='contact' />
+        <input type="hidden" name="form-name" value="contact" />
         <p hidden>
           <label>Don't fill this out:</label>
-          <input name='bot-field' onChange={onInputChange} />
+          <input name="bot-field" onChange={onInputChange} />
         </p>
         <input
-          type='text'
+          type="text"
           aria-label={formData.fields.name}
           placeholder={formData.fields.name}
-          name='Full Name'
+          name="Full Name"
           onChange={onInputChange}
           required
         />
         <input
-          type='text'
+          type="text"
           aria-label={formData.fields.email}
           placeholder={formData.fields.email}
-          name='Email'
+          name="Email"
           onChange={onInputChange}
           required
         />
         <input
-          type='tel'
+          type="tel"
           aria-label={formData.fields.phone}
           placeholder={formData.fields.phone}
           name={formData.fields.phone}
@@ -85,14 +85,14 @@ const Form = ({ className }) => {
           required
         />
         <Dropdown
-          title='Preferred Contact Method'
+          title="Preferred Contact Method"
           options={formData.method}
-          placeholder='Preferred Contact Method'
+          placeholder="Select Preferred Contact Method"
           onBlur={onInputChange}
-          name='Preferred Contact Method'
+          name="Preferred Contact Method"
         />
         <input
-          type='text'
+          type="text"
           aria-label={formData.fields.citizenship}
           placeholder={formData.fields.citizenship}
           name={formData.fields.citizenship}
@@ -100,7 +100,7 @@ const Form = ({ className }) => {
           required
         />
         <input
-          type='text'
+          type="text"
           aria-label={formData.fields.currentCountry}
           placeholder={formData.fields.currentCountry}
           name={formData.fields.currentCountry}
@@ -108,22 +108,22 @@ const Form = ({ className }) => {
           required
         />
         <Dropdown
-          title='Inquiry Type'
+          title="Inquiry Type"
           options={formData.inquiryType}
-          placeholder='Inquiry Type'
+          placeholder="Select Inquiry Type"
           onBlur={onInputChange}
-          name='Inquiry Type'
+          name="Inquiry Type"
         />
         <textarea
-          title='Message'
-          placeholder='Message'
+          title="Message"
+          placeholder="Message"
           rows={5}
           spellCheck={true}
-          name='Message'
+          name="Message"
           onChange={onInputChange}
           required
         />
-        <input type='submit' value='Submit' className='button__red' />
+        <input type="submit" value="Submit" className="button__red" />
       </form>
     </>
   );

@@ -59,6 +59,7 @@
 .svg__container {
   width: 100%;
   @include flex-row(center);
+  height: auto;
 }
 
 @media (min-width: $desktop-breakpoint) {

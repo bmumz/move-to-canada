@@ -47,14 +47,16 @@
   z-index: 1;
 }
 
+.services__img {
+  height: 25vh;
+}
+
 .services__img-container {
   @include flex-col(center);
   justify-content: center;
   position: relative;
-  img {
-    aspect-ratio: 8/3;
-  }
 }
+
 .services__details {
   background: $less-grey;
   border: 1px solid darken($less-grey, 4);
@@ -93,6 +95,11 @@
       }
     }
   }
+
+  .services__img {
+    height: 30vh;
+  }
+
   .services__container-row {
     flex-direction: row;
   }
@@ -111,11 +118,5 @@
     flex-direction: row;
     width: 25vw;
     height: auto;
-  }
-}
-
-@media (min-width: 1000px) {
-  .services__img {
-    aspect-ratio: 7/4;
   }
 }
