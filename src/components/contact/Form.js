@@ -111,8 +111,8 @@ const Form = ({ className }) => {
           title='Inquiry Type'
           options={formData.inquiryType}
           placeholder='Inquiry Type'
-          name='Inquiry Type'
           onBlur={onInputChange}
+          name='Inquiry Type'
         />
         <textarea
           title='Message'
