@@ -1,8 +1,8 @@
 .page-intro {
   @include flex-col(center);
   flex-direction: column-reverse;
-  &.--contact,
-  s {
+  margin: 0 auto;
+  &.--contact {
     flex-direction: column;
   }
   h4 {

@@ -61,6 +61,11 @@ h5 {
   font-weight: 500;
 }
 
+a {
+  text-decoration: none;
+  color: $darker-grey;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
