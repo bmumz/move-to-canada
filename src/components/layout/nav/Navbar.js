@@ -8,10 +8,6 @@ const Navbar = () => {
 
   const showNavMenu = () => {
     setNavMenu(!navMenu);
-
-    // !navMenu && document.body.classList.add("navbar__lock");
-
-    // navMenu && document.body.classList.remove("navbar__lock");
   };
 
   return (
@@ -26,7 +22,7 @@ const Navbar = () => {
         </div>
       </div>
       <Banner className={`navbar__menu ${navMenu ? "mobile" : "desktop"}`}>
-        <nav>
+        <nav id="navbar" className="header2">
           <LinkBuilder collection={Pages} />
         </nav>
       </Banner>

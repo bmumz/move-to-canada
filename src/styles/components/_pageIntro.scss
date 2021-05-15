@@ -26,14 +26,6 @@
     padding: $m-size 0;
   }
 }
-.--bio {
-  @include flex-col(center);
-  flex-direction: column-reverse;
-  .page-intro__img--bio {
-    width: 50%;
-    margin: $s-size;
-  }
-}
 
 @media (min-width: $desktop-breakpoint) {
   .page-intro,
@@ -44,25 +36,18 @@
 
   .pageIntro__img {
     width: 55vw;
-    height: 80vh;
-    min-height: 500px;
+    height: 50vh;
+    min-height: 300px;
   }
 
   .page-intro__blurb {
     width: 50vw;
-    margin: $xl-size;
+    margin: 0 5rem;
+
     p:first-child {
       a {
         margin-top: 0;
       }
-    }
-  }
-
-  .--bio {
-    flex-direction: row;
-    align-items: flex-start;
-    .page-intro__img--bio {
-      margin: 0;
     }
   }
 }

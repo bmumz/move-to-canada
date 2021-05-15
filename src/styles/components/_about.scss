@@ -16,13 +16,11 @@
   }
 }
 
-.about__details {
-  min-height: 100vh;
-}
 .about__certs {
-  div {
-    text-align: center;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .about__certs--logo {
   margin: $xs-size;

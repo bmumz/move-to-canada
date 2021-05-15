@@ -10,6 +10,7 @@ import ServicesFirstRow from "../image-queries/services-queries/first-row";
 import ServicesSecondRow from "../image-queries/services-queries/second-row";
 //svg
 import World from "../components/services/svg/World";
+import ServicesThirdRow from "../image-queries/services-queries/third-row";
 
 const Services = () => {
   const pageTitle = "Services";
@@ -21,23 +22,23 @@ const Services = () => {
   const blurb = <p>{servicesData.blurb} </p>;
 
   return (
-    <div className='servicesPg'>
+    <div className="servicesPg">
       <Header pageName={pageTitle} />
       <PageIntro
         heading={heading}
         blurbHeading={servicesData.blurbHeading}
         blurb={blurb}
-        path='#services'
-        cta='Learn more'
+        path="#services"
+        cta="Learn more"
       >
         <StaticImage
-          src='../images/lake-louise.jpeg'
-          alt='Lake Louise, Alberta'
-          className='pageIntro__img'
+          src="../images/lake-louise.jpeg"
+          alt="Lake Louise, Alberta"
+          className="pageIntro__img"
         />
       </PageIntro>
-      <section className='services__details' id='services'>
-        <div className='service'>
+      <section className="services__details" id="services">
+        <div className="service">
           <span>
             <World />
           </span>
@@ -49,7 +50,8 @@ const Services = () => {
       </section>
 
       <ServicesFirstRow />
-      <ServicesSecondRow hidden={false} />
+      <ServicesSecondRow />
+      <ServicesThirdRow />
 
       <Footer banner={true} />
     </div>

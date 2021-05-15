@@ -1,8 +1,8 @@
 //OVERALL LAYOUT
 .layout {
-  @include flex-col(flex-start);
+  @include flex-col(center);
   margin: 0 auto;
-  width: 85vw;
+  width: 70vw;
   p {
     padding: $xs-size 0;
   }
@@ -75,5 +75,6 @@
 
   .layout {
     width: 60vw;
+    align-items: flex-start;
   }
 }

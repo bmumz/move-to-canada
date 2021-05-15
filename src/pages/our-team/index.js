@@ -19,7 +19,7 @@ const Team = () => {
           <p>
             Partner with a professional who knows your goals, your culture and
             how you do business. Our experienced team is on-the-ground, in all
-            cities across Canada!
+            in all provinces across Canada!
           </p>
 
           <div className="team__cards">

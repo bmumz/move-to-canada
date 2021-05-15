@@ -2,8 +2,23 @@
   section {
     padding-top: 0;
   }
+  h6 {
+    text-transform: uppercase;
+    font-weight: $reg;
+    color: $darker-grey;
+  }
 }
-
+.team__bio {
+  margin: 0 auto;
+  width: 85vw;
+  p {
+    padding: $m-size 0;
+  }
+  .team__bio--blurb {
+    width: 60vw;
+    padding: $m-size;
+  }
+}
 .team__cards {
   @include flex-col(center);
 }

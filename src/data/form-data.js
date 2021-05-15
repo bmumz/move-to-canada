@@ -12,7 +12,6 @@ const formData = {
     "Real Estate Investment",
     "Other",
   ],
-  method: ["Email", "Text"],
 };
 
 export default formData;

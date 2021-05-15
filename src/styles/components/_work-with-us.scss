@@ -1,7 +1,9 @@
 .work-with-us {
   @include flex-col(center);
   margin: 0 auto;
-  background: lighten($mid-grey, 2);
+  background: $less-grey;
+  border-top: 1px solid darken($less-grey, 4);
+  border-bottom: 1px solid darken($less-grey, 4);
   margin: 0;
   h2 {
     color: $almost-black;
@@ -16,9 +18,10 @@
   @include flex-col(center);
 }
 .work-with-us__card {
-  padding: 2rem;
+  padding: $s-size;
   margin: 1rem;
-  background: lighten($mid-grey, 18);
+  background: lighten($mid-grey, 17);
+  border: 1px solid darken($less-grey, 4);
   h4 {
     letter-spacing: 0.25px;
     padding-bottom: $s-size;
@@ -32,12 +35,22 @@
 
 @media (min-width: $desktop-breakpoint) {
   .work-with-us__cards {
+    margin: 0 auto;
+    width: 80vw;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }
   .work-with-us__card {
     margin: $m-size;
-    width: 20vw;
+    width: 16vw;
+    height: 300px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .work-with-us__cards {
+    flex-wrap: nowrap;
+    width: 100vw;
   }
 }

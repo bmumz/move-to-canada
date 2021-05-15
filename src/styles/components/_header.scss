@@ -19,6 +19,12 @@
     color: $less-white;
     text-decoration: none;
   }
+
+  h2,
+  a {
+    color: darken($less-white, 5);
+    margin: $xs-size 0;
+  }
   h3 {
     font-weight: $reg;
     color: $less-white;
@@ -43,6 +49,9 @@
       background: transparent;
       h1 {
         color: $almost-black;
+      }
+      h2 {
+        color: lighten($almost-black, 5);
       }
       h3 {
         color: $red;
