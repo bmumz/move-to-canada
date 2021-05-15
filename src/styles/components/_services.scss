@@ -29,16 +29,10 @@
   margin-top: $m-size;
 }
 
-.services__container-row,
-.services__container-row--hide {
+.services__container-row {
   @include flex-row(center);
   flex-wrap: wrap;
   height: 100%;
-}
-
-.services__container-row--hide {
-  visibility: hidden;
-  height: 0;
 }
 
 .services__overlay {
@@ -111,17 +105,7 @@
   }
 
   .services__container-row {
-    flex-direction: row;
-  }
-  .services__container-row--hide {
-    visibility: visible;
-    height: 100%;
-  }
-
-  .services__container-mobile {
-    visibility: hidden;
-    height: 0;
-    padding: 0;
+    flex-direction: row-reverse;
   }
 
   .services__img-container {
