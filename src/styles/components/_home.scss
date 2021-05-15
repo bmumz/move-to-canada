@@ -6,8 +6,11 @@
 
   div:first-child {
     h2 {
+      padding: $xs-size 0;
       line-height: 1.5;
     }
+    margin-bottom: $xs-size;
+    padding-bottom: $xs-size;
     border-bottom: 1px solid darken($less-grey, 12);
   }
   div:last-child {

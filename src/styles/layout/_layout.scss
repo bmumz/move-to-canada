@@ -23,7 +23,7 @@
 .heading__underline {
   @include heading-underline($mid-grey);
   padding-bottom: $s-size;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .heading__bold {
