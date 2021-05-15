@@ -30,7 +30,7 @@ const ServicesFirstRow = () => {
 
   return (
     <>
-      <div className="services__container-row">
+      <div className="services__ind--container">
         {files.map(({ node }, i) => {
           console.log(node.name);
           return (

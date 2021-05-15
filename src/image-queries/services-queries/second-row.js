@@ -28,7 +28,7 @@ const ServicesSecondRow = () => {
 
   return (
     <>
-      <div className="services__container-row">
+      <div className="services__ind--container">
         {secondRow.allFile.edges.map(({ node }, i) => (
           <div key={i} className="services__img-container">
             <h3 className="services__title">{getImgName(node.name)}</h3>
