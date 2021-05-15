@@ -1,4 +1,6 @@
 .work-with-us {
+  visibility: hidden;
+  height: 0;
   @include flex-col(center);
   margin: 0 auto;
   background: $less-grey;
@@ -34,6 +36,10 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
+  .work-with-us {
+    visibility: visible;
+    height: auto;
+  }
   .work-with-us__cards {
     margin: 0 auto;
     width: 80vw;

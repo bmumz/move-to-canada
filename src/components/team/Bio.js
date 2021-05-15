@@ -2,10 +2,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import teamData from "../../data/team-data";
 import Header from "../layout/Header";
-import PageIntro from "../layout/PageIntro";
 import Heading from "../ui/Heading";
 import Footer from "../layout/footer";
-import Layout from "../layout/Layout";
 
 const Bio = () => {
   const pageName = `${teamData.member.name} + 'Bio'`;

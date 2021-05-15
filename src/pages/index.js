@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
 import Footer from "../components/layout/footer/Footer";
 import Header from "../components/layout/Header";
 import Layout from "../components/layout/Layout";
@@ -16,7 +15,6 @@ import Heading from "../components/ui/Heading";
 import HomeBlurb from "../components/home/HomeBlurb";
 import { Link } from "gatsby";
 import Faq from "../components/faq/Faq";
-import Navbar from "../components/layout/nav/Navbar";
 
 const IndexPage = () => {
   const { phone } = useSiteMetadata();
