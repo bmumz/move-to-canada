@@ -1,7 +1,8 @@
 .work-with-us {
+  display: none;
   visibility: hidden;
   height: 0;
-  @include flex-col(center);
+  // @include flex-col(center);
   margin: 0 auto;
   background: $less-grey;
   border-top: 1px solid darken($less-grey, 4);
@@ -37,8 +38,9 @@
 
 @media (min-width: $desktop-breakpoint) {
   .work-with-us {
+    display: block;
     visibility: visible;
-    height: auto;
+    height: 100%;
   }
   .work-with-us__cards {
     margin: 0 auto;

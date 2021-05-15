@@ -5,20 +5,6 @@ import Heading from "../ui/Heading";
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 import Layout from "../layout/Layout";
 
-// TO DO:
-// - QUERY images from graphql
-// - pass data in as an object.
-// - map over data
-// {Objects.entries(WWUD).map(item, index =>
-
-/* <div className='work-with-us__card'>
-        <img src={WWUD.img} */
-
-//   />
-//   <h4>{WorkWithUsData.immigration.title}</h4>
-//   <p>{WorkWithUsData.immigration.blurb}</p>
-// </div>)}
-
 const WorkWithUs = () => {
   const { title } = useSiteMetadata();
   return (
