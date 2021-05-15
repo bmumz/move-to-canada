@@ -2,15 +2,22 @@
   section {
     padding-top: 0;
   }
+  section:last-child {
+    padding-top: $m-size;
+  }
   h6 {
     text-transform: uppercase;
     font-weight: $reg;
     color: $darker-grey;
   }
+  .button__red {
+    margin-bottom: $xl-size;
+  }
 }
 .team__bio {
   margin: 0 auto;
-  width: 85vw;
+  width: 70vw;
+
   p {
     padding: $m-size 0;
   }

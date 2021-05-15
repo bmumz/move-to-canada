@@ -4,17 +4,20 @@ import PropTypes from "prop-types";
 
 const PageIntro = ({ blurb, heading, path, cta, children, className }) => (
   <div className={className ? `'page-intro ${className}` : "page-intro"}>
-    <div className='page-intro__blurb'>
-      {heading}
+    <div className="page-intro__container">
+      <div className="page-intro__blurb">
+        {heading}
 
-      {blurb}
+        {blurb}
 
-      {cta && (
-        <a className='button__red' href={path}>
-          {cta}
-        </a>
-      )}
+        {cta && (
+          <a className="button__red" href={path}>
+            {cta}
+          </a>
+        )}
+      </div>
     </div>
+
     {children}
   </div>
 );

@@ -35,18 +35,12 @@ const Bio = () => {
           height={350}
         />
         <span>{blurb}</span>
+        <a className="button__red" href="/contact">
+          Get in touch!
+        </a>
       </div>
 
-      {/* <PageIntro
-        cta="Get in touch"
-        path="/contact"
-        heading={heading}
-        blurb={blurb}
-        className="--bio"
-      > */}
-
-      {/* </PageIntro> */}
-      <Footer banner={false} />
+      <Footer banner={true} />
     </div>
   );
 };

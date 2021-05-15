@@ -39,11 +39,16 @@
     height: 50vh;
     min-height: 300px;
   }
-
-  .page-intro__blurb {
+  .page-intro__container {
     width: 50vw;
+    @include flex-row(center);
+  }
+  .page-intro__blurb {
+    width: 35vw;
     margin: 0 5rem;
-
+    p {
+      padding: $m-size;
+    }
     p:first-child {
       a {
         margin-top: 0;
