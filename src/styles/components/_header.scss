@@ -1,6 +1,5 @@
 .header__company-info {
   @include flex-col(center);
-  // padding-top: 3.5rem;
 }
 
 .header__logo {
@@ -18,6 +17,12 @@
     font-weight: $bold;
     color: $less-white;
     text-decoration: none;
+  }
+
+  h2,
+  a {
+    color: darken($less-white, 5);
+    margin: $xs-size 0;
   }
   h3 {
     font-weight: $reg;
@@ -43,6 +48,9 @@
       background: transparent;
       h1 {
         color: $almost-black;
+      }
+      h2 {
+        color: lighten($almost-black, 5);
       }
       h3 {
         color: $red;

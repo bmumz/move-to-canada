@@ -12,8 +12,9 @@
 
 .page-intro__blurb {
   @include flex-col(center);
+  justify-content: center;
   width: 80vw;
-  min-height: 300px;
+  min-height: 500px;
   margin: 0 auto;
   margin-bottom: $l-size;
   p {
@@ -26,14 +27,6 @@
     padding: $m-size 0;
   }
 }
-.--bio {
-  @include flex-col(center);
-  flex-direction: column-reverse;
-  .page-intro__img--bio {
-    width: 50%;
-    margin: $s-size;
-  }
-}
 
 @media (min-width: $desktop-breakpoint) {
   .page-intro,
@@ -44,25 +37,23 @@
 
   .pageIntro__img {
     width: 55vw;
-    height: 80vh;
+    height: 50vh;
     min-height: 500px;
   }
-
-  .page-intro__blurb {
+  .page-intro__container {
     width: 50vw;
-    margin: $xl-size;
+    @include flex-row(center);
+  }
+  .page-intro__blurb {
+    width: 35vw;
+    margin: 0 5rem;
+    p {
+      padding: $m-size;
+    }
     p:first-child {
       a {
         margin-top: 0;
       }
-    }
-  }
-
-  .--bio {
-    flex-direction: row;
-    align-items: flex-start;
-    .page-intro__img--bio {
-      margin: 0;
     }
   }
 }

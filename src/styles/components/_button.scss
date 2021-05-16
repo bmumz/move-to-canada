@@ -26,14 +26,15 @@
 }
 
 .button__hamburger {
+  padding: $xs-size;
   @include flex-row(flex-end);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   visibility: visible;
   border-radius: 100%;
   transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-  z-index: 2;
+  z-index: 5;
   margin: $s-size $xs-size;
 }
 

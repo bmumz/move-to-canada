@@ -1,5 +1,6 @@
 nav {
   width: 100vw;
+
   a {
     @include color-scheme(transparent, $less-white);
     text-decoration: none;
@@ -30,6 +31,8 @@ nav {
     opacity: 1;
     width: 100vw;
     height: 100vh;
+    position: fixed;
+    z-index: 3;
   }
 }
 
@@ -65,11 +68,22 @@ nav {
     }
     nav {
       @include flex-row(flex-end);
+
       a:hover {
         -webkit-box-shadow: inset 0px -3px 0px 0px $less-white;
         -moz-box-shadow: inset 0px -3px 0px 0px $less-white;
         box-shadow: inset 0px -3px 0px 0px $less-white;
       }
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 5;
+      background: $red;
+      overflow: hidden;
     }
   }
 }

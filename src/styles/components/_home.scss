@@ -6,11 +6,12 @@
 
   div:first-child {
     h2 {
+      padding: $xs-size 0;
       line-height: 1.5;
     }
+    margin-bottom: $xs-size;
+    padding-bottom: $xs-size;
     border-bottom: 1px solid darken($less-grey, 12);
-    margin-bottom: $m-size;
-    padding-bottom: $m-size;
   }
   div:last-child {
     h2 {
@@ -25,15 +26,18 @@
     @include flex-row(center);
     padding: $xl-size $l-size;
     div:first-child {
+      padding-top: $xs-size;
       h2 {
         margin: 0 $s-size;
-        padding: $l-size;
         text-align: center;
       }
       border-bottom: none;
       width: 65vw;
       color: $almost-black;
       font-weight: $bold;
+      h2:last-child {
+        padding-top: $m-size;
+      }
     }
     div:last-child {
       padding-left: $xl-size;

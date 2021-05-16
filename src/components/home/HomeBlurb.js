@@ -6,9 +6,11 @@ const HomeBlurb = () => {
   const { title } = useSiteMetadata();
 
   return (
-    <div className='home__blurb'>
+    <div className="home__blurb">
       <div>
-        <h2>{homeData.blurbTitle}</h2>
+        {Object.values(homeData.blurbTitle).map((p, i) => (
+          <h2 key={i}>{p}</h2>
+        ))}
       </div>
 
       <div>

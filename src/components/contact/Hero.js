@@ -4,15 +4,15 @@ import Contact from "./ContactHero";
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <div className="hero" id="--hero">
       <StaticImage
-        src='../../images/road.jpg'
-        alt='road'
-        className='hero__img-container'
-        imgClassName='hero__img'
+        src="../../images/road.jpg"
+        alt="road"
+        className="hero__img-container"
+        imgClassName="hero__img"
       />
 
-      <div className='hero__overlay'> </div>
+      <div className="hero__overlay"> </div>
 
       <Contact />
     </div>

@@ -2,18 +2,21 @@ import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import teamData from "../../data/team-data";
 import Header from "../layout/Header";
-import PageIntro from "../layout/PageIntro";
 import Heading from "../ui/Heading";
 import Footer from "../layout/footer";
 
 const Bio = () => {
   const pageName = `${teamData.member.name} + 'Bio'`;
 
-  const heading = <Heading title="About">{teamData.member.name}</Heading>;
+  const heading = (
+    <>
+      <Heading title="About">{teamData.member.name}</Heading>
+      <h6>{teamData.member.title}</h6>
+    </>
+  );
 
   const blurb = (
     <div className="team__bio">
-      <h3>{teamData.member.title}</h3>
       {Object.values(teamData.member.paragraphs).map((p, i) => (
         <p key={i}>{p}</p>
       ))}
@@ -23,20 +26,21 @@ const Bio = () => {
     <div className="team">
       <Header pageName={pageName} />
 
-      <PageIntro
-        cta="Get in touch"
-        path="/contact"
-        heading={heading}
-        blurb={blurb}
-        className="--bio"
-      >
+      <div className="team__bio">
+        <Heading>{heading}</Heading>
         <StaticImage
           src="../../images/headshots/nick.jpeg"
           alt={teamData.member.name}
-          className="page-intro__img--bio"
+          className="team__bio-pic"
+          height={350}
         />
-      </PageIntro>
-      <Footer banner={false} />
+        <span>{blurb}</span>
+        <a className="button__red" href="/contact">
+          Get in touch!
+        </a>
+      </div>
+
+      <Footer banner={true} />
     </div>
   );
 };

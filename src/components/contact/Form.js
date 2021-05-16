@@ -87,13 +87,6 @@ const Form = ({ className }) => {
           onChange={onInputChange}
           required
         />
-        <Dropdown
-          title="Preferred Contact Method"
-          options={formData.method}
-          placeholder="Select Preferred Contact Method"
-          onBlur={onInputChange}
-          name="Preferred Contact Method"
-        />
         <input
           type="text"
           aria-label={formData.fields.citizenship}

@@ -2,7 +2,7 @@ import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 
-const ServicesSecondRow = ({ hidden }) => {
+const ServicesSecondRow = () => {
   const secondRow = useStaticQuery(graphql`
     query ServicesImgs2 {
       allFile(
@@ -28,11 +28,7 @@ const ServicesSecondRow = ({ hidden }) => {
 
   return (
     <>
-      <div
-        className={
-          hidden ? "services__container-row--hide" : "services__container-row"
-        }
-      >
+      <div className="services__ind--container">
         {secondRow.allFile.edges.map(({ node }, i) => (
           <div key={i} className="services__img-container">
             <h3 className="services__title">{getImgName(node.name)}</h3>

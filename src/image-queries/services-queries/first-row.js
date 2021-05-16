@@ -26,20 +26,24 @@ const ServicesFirstRow = () => {
 
   const getImgName = (img) => img.replace(/[0-9]/g, "");
 
+  const files = firstRow.allFile.edges;
+
   return (
     <>
-      <div className="services__container-row">
-        {firstRow.allFile.edges.map(({ node }, i) => (
-          <div key={i} className="services__img-container">
-            <h3 className="services__title">{getImgName(node.name)}</h3>
-            <GatsbyImage
-              image={node.childImageSharp.gatsbyImageData}
-              alt={getImgName(node.name)}
-              className="services__img"
-            />
-            <span className="services__overlay"></span>
-          </div>
-        ))}
+      <div className="services__ind--container">
+        {files.map(({ node }, i) => {
+          return (
+            <div key={i} className="services__img-container">
+              <h3 className="services__title">{getImgName(node.name)}</h3>
+              <GatsbyImage
+                image={node.childImageSharp.gatsbyImageData}
+                alt={getImgName(node.name)}
+                className="services__img"
+              />
+              <span className="services__overlay"></span>
+            </div>
+          );
+        })}
       </div>
     </>
   );

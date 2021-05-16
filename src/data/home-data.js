@@ -2,10 +2,13 @@ import { map } from "../components/home/svg/map";
 
 const homeData = {
   svg: map,
-  blurbTitle: `Immigrating to Canada is
+  blurbTitle: [
+    `Immigrating to Canada is
   one of the most important
-  decisions of your life. We
+  decisions of your life.`,
+    `We
   can help make it a reality.`,
+  ],
   blurb: `Our full-service comprehensive team of
   Lawyers, Realtors, Bankers,
   Accountants and everyone in between,
