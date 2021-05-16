@@ -12,6 +12,7 @@ export const useSiteMetadata = () => {
             siteUrl
             copyright
             description
+            keywords
           }
         }
       }

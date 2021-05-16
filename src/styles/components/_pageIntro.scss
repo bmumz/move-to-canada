@@ -12,8 +12,9 @@
 
 .page-intro__blurb {
   @include flex-col(center);
+  justify-content: center;
   width: 80vw;
-  min-height: 300px;
+  min-height: 500px;
   margin: 0 auto;
   margin-bottom: $l-size;
   p {
@@ -37,7 +38,7 @@
   .pageIntro__img {
     width: 55vw;
     height: 50vh;
-    min-height: 300px;
+    min-height: 500px;
   }
   .page-intro__container {
     width: 50vw;

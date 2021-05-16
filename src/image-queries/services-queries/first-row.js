@@ -32,7 +32,6 @@ const ServicesFirstRow = () => {
     <>
       <div className="services__ind--container">
         {files.map(({ node }, i) => {
-          console.log(node.name);
           return (
             <div key={i} className="services__img-container">
               <h3 className="services__title">{getImgName(node.name)}</h3>

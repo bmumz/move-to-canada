@@ -52,7 +52,7 @@
   .work-with-us__card {
     margin: $m-size;
     width: 16vw;
-    height: 300px;
+    min-height: 300px;
   }
 }
 
@@ -60,5 +60,8 @@
   .work-with-us__cards {
     flex-wrap: nowrap;
     width: 100vw;
+  }
+  .work-with-us-card {
+    min-height: 325px;
   }
 }
