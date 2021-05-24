@@ -12,6 +12,7 @@ const Header = ({ pageName }) => {
   useEffect(() => {
     const header = document.getElementById("navbar");
 
+
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 70) {
         header.classList.add("sticky");
@@ -19,6 +20,7 @@ const Header = ({ pageName }) => {
         header.classList.remove("sticky");
       }
     });
+
   }, []);
   return (
     <>
