@@ -54,6 +54,7 @@ nav {
 
 @media (min-width: $desktop-breakpoint) {
   .navbar__menu {
+    z-index: 999;
     visibility: visible;
     transition: none;
     &.desktop {
@@ -80,10 +81,9 @@ nav {
       position: fixed;
       top: 0;
       left: 0;
+      z-index: 999;
       width: 100%;
-      z-index: 5;
       background: $red;
-      overflow: hidden;
     }
   }
 }
