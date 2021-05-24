@@ -11,17 +11,14 @@ const Header = ({ pageName }) => {
 
   useEffect(() => {
     const header = document.getElementById("navbar");
-    const sticky = header.offsetTop;
-    const scrollCallBack = window.addEventListener("scroll", () => {
-      if (window.pageYOffset > sticky) {
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 70) {
         header.classList.add("sticky");
       } else {
         header.classList.remove("sticky");
       }
     });
-    return () => {
-      window.removeEventListener("scroll", scrollCallBack);
-    };
   }, []);
   return (
     <>
