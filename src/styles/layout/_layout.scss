@@ -23,7 +23,6 @@
 .heading__underline {
   @include heading-underline($mid-grey);
   padding-bottom: $s-size;
-  font-size: 0.8rem;
 }
 
 .heading__bold {
@@ -69,10 +68,6 @@
 }
 
 @media (min-width: $desktop-breakpoint) {
-  .heading__underline {
-    font-size: 1.5rem;
-  }
-
   .layout {
     width: 60vw;
     align-items: flex-start;

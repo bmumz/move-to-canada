@@ -5,11 +5,14 @@
   section:last-child {
     padding-top: $m-size;
   }
-  h6 {
+  h4 {
     text-transform: uppercase;
     font-weight: $reg;
     color: $darker-grey;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
   }
+
   .button__red {
     margin-bottom: $xl-size;
   }
@@ -25,65 +28,75 @@
     width: 60vw;
     padding: $m-size;
   }
-}
-.team__cards {
-  @include flex-col(center);
-}
 
-.team__card {
-  @include flex-col(center);
-  margin: $l-size 0;
-  width: 80vw;
-  text-transform: uppercase;
-  h4 {
-    color: $darker-grey;
-    letter-spacing: 1px;
+  .team__template {
+    width: 70vw;
+    margin: 0 auto;
   }
-  button:hover {
-    background: $mid-grey;
-  }
-}
-.team__bio {
-  h3 {
-    @include flex-row(center);
-    text-transform: uppercase;
-    color: $darker-grey;
-    margin-bottom: $s-size;
-  }
-}
-.team__title {
-  @include heading-underline($mid-grey);
-}
-
-.team__location {
-  margin-top: $m-size;
-}
-
-.team__info {
-  @include flex-col(center);
-  color: $red;
-}
-
-.team__img-container {
-  margin: $m-size 0;
-  min-width: 140px;
-  width: 140px;
-  height: auto;
-  .team__img {
-    border-radius: 100%;
-  }
-}
-
-@media (min-width: $desktop-breakpoint) {
   .team__cards {
-    @include flex-row(space-between);
-    flex-wrap: wrap;
+    @include flex-col(center);
   }
+
   .team__card {
-    @include flex-row(flex-start);
-    width: 30vw;
+    @include flex-col(center);
+    margin: $s-size 0;
+    text-transform: uppercase;
+    a {
+      margin: 0;
+    }
+    h4 {
+      color: $darker-grey;
+      letter-spacing: 1px;
+    }
+    button:hover {
+      background: $mid-grey;
+    }
   }
+
+  .team__bio {
+    h3 {
+      @include flex-row(center);
+      text-transform: uppercase;
+      color: $darker-grey;
+      margin-bottom: $s-size;
+    }
+  }
+  .team__title {
+    @include heading-underline($mid-grey);
+  }
+
+  .team__info {
+    @include flex-col(center);
+    color: $red;
+  }
+
   .team__img-container {
-    margin-right: $xl-size;
+    margin: $m-size 0;
+    min-width: 140px;
+    width: 140px;
+    height: auto;
+    .team__img {
+      border-radius: 100%;
+    }
+  }
+
+  .team__pg {
+    section {
+      width: 70vw;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 950px) {
+    .team__cards {
+      @include flex-row(center);
+    }
+    .team__card {
+      @include flex-row(center);
+      width: 40vw;
+    }
+    .team__img-container {
+      margin-right: 1.5rem;
+    }
   }
 }
