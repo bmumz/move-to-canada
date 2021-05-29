@@ -8,6 +8,7 @@ export const useSiteMetadata = () => {
           siteMetadata {
             title
             phone
+            phoneAlt
             email
             siteUrl
             copyright
