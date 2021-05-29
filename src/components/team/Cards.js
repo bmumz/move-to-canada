@@ -17,7 +17,7 @@ const Cards = () => {
               location
               featuredImage {
                 childImageSharp {
-                  gatsbyImageData(width: 175)
+                  gatsbyImageData(width: 150)
                 }
               }
             }
@@ -30,7 +30,7 @@ const Cards = () => {
   const teamQuery = data.allMarkdownRemark.edges;
 
   return (
-    <>
+    <div className="cards">
       {teamQuery.map((member, i) => {
         const {
           name,
@@ -40,39 +40,38 @@ const Cards = () => {
         } = member.node.frontmatter;
 
         return (
-          <section className="team">
-            <div className="team__card" key={i}>
-              <GatsbyImage
-                image={featuredImage.childImageSharp.gatsbyImageData}
-                alt={name}
-                className="team__img-container"
-                imgClassName="team__img"
-              />
-              <div className="team__info">
-                <h2>{name}</h2>
-                <h4 className="team__title">
-                  <span>{jobTitle}</span>
-                </h4>
+          <div className="card" key={i}>
+            <GatsbyImage
+              image={featuredImage.childImageSharp.gatsbyImageData}
+              alt={name}
+              imgStyle={{ borderRadius: "100%" }}
+              className="card__img"
+            />
 
-                <h4 className="team__location">
-                  <span role="img" aria-label="location pin">
-                    📍
-                  </span>
-                  {location}
-                </h4>
+            <div className="card__info">
+              <h2>{name}</h2>
+              <h4 className="card__jobTitle">
+                <span>{jobTitle}</span>
+              </h4>
 
-                <Link
-                  to={`/our-team/${member.node.fields.slug}`}
-                  className="button__grey"
-                >
-                  More info...
-                </Link>
-              </div>
+              <h4 className="team__location">
+                <span role="img" aria-label="location pin">
+                  📍
+                </span>
+                {location}
+              </h4>
+
+              <Link
+                to={`/our-team/${member.node.fields.slug}`}
+                className="button__grey"
+              >
+                More info...
+              </Link>
             </div>
-          </section>
+          </div>
         );
       })}
-    </>
+    </div>
   );
 };
 

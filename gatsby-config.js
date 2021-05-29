@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "The Move to Canada Team",
-    phone: "1-844-226-6683",
+    phone: "1-833-832-6683",
+    phoneAlt: "1-833-TEAM-MTC",
     email: "info@movetocanada.com",
     siteUrl: "https://movetocanada.com",
     copyright: 2021,

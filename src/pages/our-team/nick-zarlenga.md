@@ -4,6 +4,7 @@ name: "Nick Zarlenga"
 jobTitle: "Real Estate Broker"
 location: "Toronto, ON"
 featuredImage: '../../images/headshots/nick.jpeg'
+tags: ['Nick Zarlenga', 'Nick Zarlenga Real Estate', 'Real Estate Toronto', 'Toronto Realtors', 'Ontario Realtors']
 ---
 
    Nick Zarlenga is a Toronto Real Estate Broker, with over 8 years managing the Ontario

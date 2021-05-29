@@ -14,6 +14,7 @@ export const query = graphql`
         name
         jobTitle
         location
+        tags
         featuredImage {
           childImageSharp {
             gatsbyImageData(height: 350)
@@ -31,7 +32,7 @@ const TeamBio = ({ data }) => {
 
   return (
     <div className="team">
-      <Header pageName={pageName} />
+      <Header pageName={pageName} tags={bioData.tags} />
       <div className="team__template">
         <Heading title="About">{bioData.name}</Heading>
         <h4>{bioData.jobTitle}</h4>
@@ -40,6 +41,7 @@ const TeamBio = ({ data }) => {
           <GatsbyImage
             image={bioData.featuredImage.childImageSharp.gatsbyImageData}
             alt={bioData.name}
+            className="team__img"
           />
         )}
 
