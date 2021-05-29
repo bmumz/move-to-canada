@@ -1,89 +1,69 @@
-.team {
-  section {
-    padding-top: 0;
-  }
-  section:last-child {
-    padding-top: $m-size;
-  }
-  h6 {
-    text-transform: uppercase;
-    font-weight: $reg;
-    color: $darker-grey;
-  }
-  .button__red {
-    margin-bottom: $xl-size;
-  }
-}
-.team__bio {
-  margin: 0 auto;
-  width: 70vw;
-
-  p {
-    padding: $m-size 0;
-  }
-  .team__bio--blurb {
-    width: 60vw;
-    padding: $m-size;
-  }
-}
-.team__cards {
+.card__info {
   @include flex-col(center);
-}
-
-.team__card {
-  @include flex-col(center);
-  margin: $l-size 0;
-  width: 80vw;
   text-transform: uppercase;
+  h2 {
+    color: $red;
+  }
   h4 {
     color: $darker-grey;
-    letter-spacing: 1px;
-  }
-  button:hover {
-    background: $mid-grey;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
   }
 }
+.team__pg {
+  p {
+    width: 70vw;
+    margin: 0 auto;
+  }
+}
+
 .team__bio {
-  h3 {
-    @include flex-row(center);
-    text-transform: uppercase;
+  width: 70vw;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.team {
+  .button__red {
+    margin-top: 1rem;
+  }
+}
+
+.team__template {
+  h4 {
     color: $darker-grey;
-    margin-bottom: $s-size;
+    text-transform: uppercase;
+    letter-spacing: 2;
+    padding-bottom: 2rem;
   }
 }
-.team__title {
-  @include heading-underline($mid-grey);
+.cards {
+  display: flex;
+  flex-direction: column;
 }
 
-.team__location {
-  margin-top: $m-size;
-}
-
-.team__info {
-  @include flex-col(center);
-  color: $red;
-}
-
-.team__img-container {
-  margin: $m-size 0;
-  min-width: 140px;
-  width: 140px;
-  height: auto;
-  .team__img {
-    border-radius: 100%;
+.card {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  margin: 1rem;
+  .card__jobTitle {
+    text-decoration: underline;
   }
 }
 
-@media (min-width: $desktop-breakpoint) {
-  .team__cards {
-    @include flex-row(space-between);
-    flex-wrap: wrap;
+.card__img {
+  margin: 0.5rem;
+}
+
+@media (min-width: 750px) {
+  .cards {
+    flex-direction: row;
+    justify-content: center;
   }
-  .team__card {
-    @include flex-row(flex-start);
-    width: 30vw;
-  }
-  .team__img-container {
-    margin-right: $xl-size;
+  .card {
+    flex-direction: row;
+    justify-content: center;
+    width: 40vw;
   }
 }
