@@ -8,7 +8,7 @@ const CertsImgs = () => {
       allFile(
         filter: {
           extension: { regex: "/(png)/" }
-          relativeDirectory: { eq: "certs" }
+          relativeDirectory: { eq: "images/certs" }
         }
       ) {
         edges {
