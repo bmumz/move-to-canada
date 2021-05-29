@@ -33,7 +33,7 @@ const CertsImgs = () => {
           <GatsbyImage
             image={node.childImageSharp.gatsbyImageData}
             alt={getImgName(node.name)}
-            className='about__certs--logo'
+            className="about__certs--logo"
           />
         </React.Fragment>
       ))}

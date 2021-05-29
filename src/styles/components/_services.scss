@@ -18,7 +18,7 @@
 
 .services__ind--container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .services__overlay {
@@ -86,7 +86,7 @@
   }
 
   .services__ind--container {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 
   .services__img-container {
