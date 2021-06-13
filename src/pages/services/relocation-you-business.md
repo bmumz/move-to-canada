@@ -1,5 +1,6 @@
 ---
 date: 2021-06-13
+pageType: 'service'
 title: 'Relocating Your Business'
 subtitle: 'Corporate Law'
 tags:

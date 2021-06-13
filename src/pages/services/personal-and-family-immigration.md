@@ -1,5 +1,6 @@
 ---
 date: 2021-06-13
+pageType: 'service'
 title: 'Personal & Family Immigration'
 subtitle: 'Moving to Canada'
 tags:

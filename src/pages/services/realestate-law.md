@@ -1,5 +1,6 @@
 ---
 date: 2021-06-13
+pageType: 'service'
 title: 'Real Estate Law'
 subtitle: 'Buying a Home in Canada'
 tags:
