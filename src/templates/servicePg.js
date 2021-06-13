@@ -11,32 +11,29 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        name
-        jobTitle
-        location
+        title
+        subtitle
+        listTitle
+        list
         tags
-        featuredImage {
-          childImageSharp {
-            gatsbyImageData(height: 350)
-          }
-        }
       }
     }
   }
 `;
 
 const ServicePg = ({ data }) => {
-  const bio = data.markdownRemark;
-  const bioData = bio.frontmatter;
-  const pageName = bio.frontmatter.name;
+  const service = data.markdownRemark;
+  const { title, subtitle, list, listTitle } = service.frontmatter;
+  const listMidPoint = Math.ceil(list.length / 2);
+  const listLeft = list.slice(0, listMidPoint);
+  const listRight = list.slice(listMidPoint, list.length);
 
   return (
     <div className="servicesPg">
-      <Header pageName={pageName} />
+      <Header pageName={title} />
       <PageIntro
-        // heading={heading}
-        blurbHeading={servicesData.blurbHeading}
-        // blurb={blurb}
+        heading={title}
+        blurb={subtitle}
         path="#services"
         cta="Learn more"
       >
@@ -46,7 +43,26 @@ const ServicePg = ({ data }) => {
           className="pageIntro__img"
         />
       </PageIntro>
-      <section className="services__details" id="services"></section>
+      <div
+        className="services__template"
+        id="services"
+        dangerouslySetInnerHTML={{ __html: service.html }}
+      />
+      <div className="services__list">
+        <h3>{listTitle}</h3>
+        <span>
+          <ul>
+            {listLeft.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+          <ul>
+            {listRight.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </span>
+      </div>
     </div>
   );
 };

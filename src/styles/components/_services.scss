@@ -32,6 +32,34 @@
   z-index: 1;
 }
 
+.services__template {
+  min-height: 40vh;
+  margin: 0 auto;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services__list {
+  background-color: $less-grey;
+  span {
+    display: flex;
+    justify-content: center;
+  }
+  ul {
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  li {
+    padding-left: 1rem;
+    list-style: circle;
+  }
+}
+
 .services__img {
   height: 25vh;
 }

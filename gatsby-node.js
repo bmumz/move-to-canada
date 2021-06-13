@@ -19,8 +19,6 @@ module.exports.onCreateNode = ({ node, actions }) => {
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-
-
   const response = await graphql(`
     query {
       allMarkdownRemark {
@@ -44,21 +42,24 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const pageType = node.frontmatter.pageType;
     const slug = node.fields.slug;
     let component;
+    let pagePath;
 
-    switch(pageType){
-      case 'service':
+    switch (pageType) {
+      case "service":
         component = path.resolve(`./src/templates/servicePg.js`);
+        pagePath = `services/${slug}`;
         break;
-      case 'team':
+      case "team":
         component = path.resolve(`./src/templates/teamBio.js`);
+        pagePath = `our-team/${slug}`;
         break;
       default:
-        throw '@@@@@@@@@@ Page Type missing from MD file! @@@@@@@@@@';
+        throw "@@@@@@@@@@ Page Type missing from MD file! @@@@@@@@@@";
     }
 
     createPage({
-      component: component,
-      path: `/our-team/${slug}`,
+      component,
+      path: pagePath,
       context: {
         slug,
       },
