@@ -14,9 +14,11 @@
   @include flex-col(center);
   justify-content: center;
   width: 80vw;
-  min-height: 500px;
   margin: 0 auto;
   margin-bottom: $l-size;
+  h2 {
+    padding-bottom: 0;
+  }
   p {
     padding: $m-size 0;
   }
@@ -47,6 +49,7 @@
   .page-intro__blurb {
     width: 35vw;
     margin: 0 5rem;
+
     p {
       padding: $m-size;
     }

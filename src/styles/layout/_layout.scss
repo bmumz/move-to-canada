@@ -21,7 +21,6 @@
 }
 
 .heading__underline {
-  @include heading-underline($mid-grey);
   padding-bottom: $s-size;
 }
 
@@ -71,5 +70,9 @@
   .layout {
     width: 60vw;
     align-items: flex-start;
+  }
+
+  .heading__underline {
+    @include heading-underline($mid-grey);
   }
 }

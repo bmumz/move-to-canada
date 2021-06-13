@@ -5,7 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 const Cards = () => {
   const data = useStaticQuery(graphql`
     query memberData {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { frontmatter: { pageType: { eq: "team" } } }) {
         edges {
           node {
             fields {
