@@ -1,9 +1,17 @@
 ---
 date: 2021-06-13
+pageType: 'service'
 title: 'Real Estate'
 subtitle: 'Buying a Home in Canada'
-featuredImage: ''
-tags: []
+tags:
+  [
+    'help buy home in canada',
+    'help buy real estate in canada',
+    'real estate canada',
+    'realestate',
+    'home canada',
+    'canada rental',
+  ]
 ---
 
 The advantage of working with The Move to Canada Team is that we assist you with every step of your move, from applying for a visa to finding a home; and that’s where our Real Estate services come in.

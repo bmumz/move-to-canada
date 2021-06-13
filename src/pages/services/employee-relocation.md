@@ -1,9 +1,16 @@
 ---
 date: 2021-06-13
+pageType: 'service'
 title: 'Employee Relocation'
 subtitle: 'Moving Employees to Canada'
-featuredImage: ''
-tags: []
+tags:
+  [
+    'employee relocation',
+    'employee moving to canada',
+    'canada employee',
+    'employee canada visa',
+    'move to canada',
+  ]
 ---
 
 As businesses from around the world expand to Canada, it is often a preferred choice for them to relocate existing and trusted employees who know their operations, instead of recruiting new local talent. We make sure your people are ready to hit the ground running when they arrive.  

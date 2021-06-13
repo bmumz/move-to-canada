@@ -1,9 +1,16 @@
 ---
 date: 2021-06-13
+pageType: 'service'
 title: 'Additional Relocation Services'
 subtitle: 'Adapting to your New Life'
-featuredImage: ''
-tags: []
+tags:
+  [
+    'relocating',
+    'moving to canada',
+    'international moving',
+    'help moving canada',
+    'canada rental',
+  ]
 ---
 
 Moving to a new country is much more than getting your papers in order and finding a place to live – it also involves adapting to a new environment and building a new network.

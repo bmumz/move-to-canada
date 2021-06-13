@@ -2,8 +2,14 @@
 date: 2021-06-13
 title: 'Relocating Your Business'
 subtitle: 'Corporate Law'
-featuredImage: ''
-tags: []
+tags:
+  [
+    'relocate business to canada',
+    'canada work permits',
+    'business lawyer canada',
+    'move company to canada',
+    'incorporation canada',
+  ]
 ---
 
 Relocating your existing company abroad can be both challenging and rewarding. Canada, as an immigration destination, remains an attractive choice for entrepreneurs, business immigrants, and workers. Canada is the world’s 2nd largest country by land area and the 10th largest economy. Entering Canada comes with many benefits, such as the ability to explore new markets, take advantage of the government’s incentives, and enjoy business-friendly laws and regulations.

@@ -2,8 +2,17 @@
 date: 2021-06-13
 title: 'Personal & Family Immigration'
 subtitle: 'Moving to Canada'
-featuredImage: ''
-tags: []
+tags:
+  [
+    'personal immigration canada',
+    'family immigration canada',
+    'help move to canada',
+    'canadian visa help',
+    'canadian permanent residency',
+    'live in canada help',
+    'work in canada',
+    'study in canada',
+  ]
 ---
 
 Consistently ranked among the top 3 countries in the world to live, Canada is an excellent choice when starting a new life. As the second largest country in the world, there are many beautiful cities to choose from, and regardless of where you decide to go, The Move to Canada Team has relocation advisors to help with every step of the way.

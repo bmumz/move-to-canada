@@ -2,8 +2,16 @@
 date: 2021-06-13
 title: 'Real Estate Law'
 subtitle: 'Buying a Home in Canada'
-featuredImage: ''
-tags: []
+tags:
+  [
+    'help buy home in canada',
+    'help buy real estate in canada',
+    'real estate canada',
+    'realestate',
+    'home canada',
+    'real estate law canada',
+    'real estate lawyer canada',
+  ]
 ---
 
 Purchasing a home in Canada just like in any country is a complicated process that requires many legally binding agreements. Real Estate lawyers are used to confirm that all agreements are properly completed, that the funds to be used in the transaction are kept safe and transferred properly, and that ultimately property ownership is successfully transferred upon completion of the transaction.  
