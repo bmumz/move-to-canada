@@ -1,5 +1,6 @@
 ---
 date: 2021-01-16
+pageType: "team"
 name: "Nick Zarlenga"
 jobTitle: "Real Estate Broker"
 location: "Toronto, ON"
