@@ -1,7 +1,3 @@
-import { useSiteMetadata } from "../hooks/use-site-metadata";
-
-const { phone, phoneAlt } = useSiteMetadata();
-
 const WorkWithUsData = {
   immigration: {
     title: "National Immigration Consultancy",
