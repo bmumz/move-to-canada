@@ -18,13 +18,15 @@ module.exports.onCreateNode = ({ node, actions }) => {
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const teamBioTemplate = path.resolve(`./src/templates/teamBio.js`);
 
   const response = await graphql(`
     query {
       allMarkdownRemark {
         edges {
           node {
+            frontmatter {
+              pageType
+            }
             fields {
               slug
             }
@@ -37,12 +39,29 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const pages = response.data.allMarkdownRemark.edges;
 
   pages.forEach(({ node }) => {
-    // const slug = edge.node.fields.slug;
+    const pageType = node.frontmatter.pageType;
+    const slug = node.fields.slug;
+    let component;
+    let pagePath;
+
+    switch (pageType) {
+      case "service":
+        component = path.resolve(`./src/templates/servicePg.js`);
+        pagePath = `services/${slug}`;
+        break;
+      case "team":
+        component = path.resolve(`./src/templates/teamBio.js`);
+        pagePath = `our-team/${slug}`;
+        break;
+      default:
+        throw "@@@@@@@@@@ Page Type missing from MD file! @@@@@@@@@@";
+    }
+
     createPage({
-      component: teamBioTemplate,
-      path: `/our-team/${node.fields.slug}`,
+      component,
+      path: pagePath,
       context: {
-        slug: node.fields.slug,
+        slug,
       },
     });
   });
