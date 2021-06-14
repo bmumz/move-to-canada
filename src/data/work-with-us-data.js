@@ -1,3 +1,7 @@
+import { useSiteMetadata } from "../hooks/use-site-metadata";
+
+const { phone, phoneAlt } = useSiteMetadata();
+
 const WorkWithUsData = {
   immigration: {
     title: "National Immigration Consultancy",
@@ -18,8 +22,8 @@ const WorkWithUsData = {
   },
   consultation: {
     title: "Free Initial Consultations",
-    blurb: `It costs nothing to talk to us. Call us at 1-844-CAN-MOVE
-      (1-844-226-6683) for your free consultation!`,
+    blurb: `It costs nothing to talk to us. Call us at 1-833-TEAM-MTC
+      (1-833-832-6683) for your free consultation!`,
   },
   team: {
     title: "30+ Professionals Across Canada!",

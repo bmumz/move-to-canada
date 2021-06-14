@@ -5,8 +5,8 @@ import { GrPersonalComputer } from "@react-icons/all-files/gr/GrPersonalComputer
 
 const footerData = {
   phone: {
-    title: `1-844-CAN-MOVE`,
-    subtitle: `(1-844-226-6683)`,
+    title: `1-833-TEAM-MTC`,
+    subtitle: `(1-833-832-6683)`,
     icon: <FaPhone className="footer__icon" />,
   },
   email: {

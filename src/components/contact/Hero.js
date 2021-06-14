@@ -11,7 +11,9 @@ const Hero = () => {
         className="hero__img-container"
         imgClassName="hero__img"
       />
-
+      <h1 className="hero__overlayText">
+        Canadian Immigration and Real Estate Advisory
+      </h1>
       <div className="hero__overlay"> </div>
 
       <Contact />
