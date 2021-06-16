@@ -22,6 +22,7 @@ tags:
     'home canada',
     'canada rental',
   ]
+featuredImage: '../../images/services/first-row/1 Buying a Home.jpg'
 ---
 The advantage of working with The Move to Canada Team is that we assist you with every step of your move, from applying for a visa to finding a home; and that’s where our Real Estate services come in. 
 <br/>  

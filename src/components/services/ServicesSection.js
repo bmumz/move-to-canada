@@ -77,7 +77,7 @@ const ServicesSection = ({ heading }) => {
           <span className="services__overlay"></span>
         </div>
         <div className="services__img-container">
-          <a href="/additional-services" className="services__title">
+          <a href="/services/additional-services" className="services__title">
             <h3>Additional Services</h3>
           </a>
 

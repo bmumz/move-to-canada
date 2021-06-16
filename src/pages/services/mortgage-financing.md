@@ -21,6 +21,7 @@ tags:
     'help buy real estate canada',
     'mortgage canada',
   ]
+featuredImage: '../../images/services/second-row/1 Mortgage Financing.jpg'
 ---
 
 Mortgage financing is available for foreign buyers of real estate in Canada – the typical down payment requirement is 35% of the value of the home, though this will vary according to province and client. Thankfully, interest rates for foreign buyers are very similar to the rates available for Canadian residents.

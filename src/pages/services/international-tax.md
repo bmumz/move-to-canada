@@ -22,6 +22,7 @@ tags:
     'tax law help',
     'moving to canada',
   ]
+featuredImage: '../../images/services/second-row/2 International Taxation.jpg'
 ---
 
 In Canada, depending on the province and city within each province, international purchasers of real estate may be subject to a Non-Resident Speculation Tax. Purchasers of real estate will also be subject to a sales tax upon purchase, as well as ongoing property taxes during their ownership of the property, which will vary by city.
