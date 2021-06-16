@@ -23,6 +23,7 @@ tags:
     'work in canada',
     'study in canada',
   ]
+featuredImage: '../../images/services/first-row/2 Personal & Family Immigration.jpg'
 ---
 
 Consistently ranked among the top 3 countries in the world to live, Canada is an excellent choice when starting a new life. As the second largest country in the world, there are many beautiful cities to choose from, and regardless of where you decide to go, The Move to Canada Team has relocation advisors to help with every step of the way.

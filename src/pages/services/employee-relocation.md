@@ -21,6 +21,7 @@ tags:
     'employee canada visa',
     'move to canada',
   ]
+featuredImage: '../../images/services/first-row/3 Business Relocation.jpg'
 ---
 
 As businesses from around the world expand to Canada, it is often a preferred choice for them to relocate existing and trusted employees who know their operations, instead of recruiting new local talent. We make sure your people are ready to hit the ground running when they arrive.  

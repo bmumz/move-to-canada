@@ -18,6 +18,7 @@ tags:
     'transfer money to canada',
     'open canadian bank',
   ]
+featuredImage: '../../images/services/third-row/2 Moving Money to Canada.jpg'
 ---
 
 Transferring money to Canada is often an overlooked requirement of moving to Canada, but is in fact one of the most important steps to beginning a life here. Its is recommended that a Canadian bank be used, and if a Canadian bank has a branch location in your country of origin, it is recommended that you open an account with them first, as transferring large amount of capital across borders within the same financial institution is much simpler than transferring from one institution to another.

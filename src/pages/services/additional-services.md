@@ -23,6 +23,8 @@ tags:
     'help moving canada',
     'canada rental',
   ]
+featuredImage: '../../images/services/third-row/3 Other Services.jpg'
+
 ---
 
 Moving to a new country is much more than getting your papers in order and finding a place to live – it also involves adapting to a new environment and building a new network.
