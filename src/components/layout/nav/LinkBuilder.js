@@ -15,13 +15,11 @@ const LinkBuilder = ({ collection }) =>
 
       {page.path === "/services" && (
         <div className="navbar__services">
-          <ul>
-            {serviceRoutes.map((s, i) => (
-              <Link to={s.path} key={i}>
-                <li>{s.page}</li>
-              </Link>
-            ))}
-          </ul>
+          {serviceRoutes.map((s, i) => (
+            <Link to={s.path} key={i}>
+              {s.page}
+            </Link>
+          ))}
         </div>
       )}
     </div>
