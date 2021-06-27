@@ -6,7 +6,7 @@ nav {
     text-decoration: none;
     padding: 2rem;
     letter-spacing: 1.5px;
-    @include flex-row(center);
+    display: flex;
   }
 }
 
@@ -52,6 +52,16 @@ nav {
   background: $less-white;
 }
 
+.navbar__services--anchor {
+  position: relative;
+  .navbar__services {
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
 @media (min-width: $desktop-breakpoint) {
   .navbar__menu {
     z-index: 999;
@@ -84,6 +94,44 @@ nav {
       z-index: 999;
       width: 100%;
       background: $red;
+    }
+  }
+  .navbar__services--anchor:hover {
+    position: relative;
+    .navbar__services {
+      visibility: visible;
+      position: absolute;
+      width: 200%;
+      height: auto;
+      ul {
+        text-align: left;
+      }
+
+      li {
+        width: 200%;
+        display: flex;
+        align-items: flex-start;
+        text-align: "left";
+        background: $less-grey;
+        color: $almost-black;
+        list-style: none;
+        padding: 1rem;
+        border-bottom: 1px solid lighten($darker-grey, 20);
+      }
+
+      a {
+        @include color-scheme(transparent, $less-white);
+        text-decoration: none;
+        padding: 0;
+        letter-spacing: 1.5px;
+        width: auto;
+        flex-wrap: nowrap;
+      }
+      a:hover {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+      }
     }
   }
 }
