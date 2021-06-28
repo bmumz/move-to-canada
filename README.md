@@ -32,7 +32,6 @@ Start the server
 ```
 
 ## Creating Pages Dynamically
----
 ## Team Pages
 ### Step 1: Adding images...
 
@@ -106,8 +105,6 @@ Be mindful not to delete any ---'s or "s in the template! They are very importan
 <br>
 `featuredImage:` 
 '../../images/headshots/**change-this-to-image-path.jpg**'
-<br>
-scroll to see how to add images...
 <br>
 `tags:` ['ideal for SEO', 'can be a few words long', 'must be separated by commas', 'and between square brackets']
 <br>
