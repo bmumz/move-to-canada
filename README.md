@@ -32,7 +32,6 @@ Start the server
 ```
 
 ## Creating Pages Dynamically
----
 ## Team Pages
 ### Step 1: Adding images...
 
@@ -54,7 +53,7 @@ Simply click `Add File`, and `create new file` to get started!
 
 
 ### Adding Markdown File To Pass in Data
-1. You can create pages dynamically by simply adding a Markdown file titled `firstName-lastName.md` to [this folder](https://github.com/bmumz/move-to-canada/tree/main/src/pages/our-team)
+1. You can create pages dynamically by simply adding a Markdown file titled `firstName-lastName.md` to [this folder](https://github.com/movetocan/move-to-canada/tree/main/src/pages/our-team)
 2. Click `Add File`, and `create new file` to get started! ![Add File](https://i.ibb.co/G0gYnB9/Screen-Shot-2021-06-27-at-7-14-48-PM.png)
 
 3. Write your file name. This should ALWAYS be `firstName-lastName.md`. e.g. `nick-zarlenga.md` will create a page accessible at **movetocanada.com/nick-zarlenga**
@@ -106,8 +105,6 @@ Be mindful not to delete any ---'s or "s in the template! They are very importan
 <br>
 `featuredImage:` 
 '../../images/headshots/**change-this-to-image-path.jpg**'
-<br>
-scroll to see how to add images...
 <br>
 `tags:` ['ideal for SEO', 'can be a few words long', 'must be separated by commas', 'and between square brackets']
 <br>

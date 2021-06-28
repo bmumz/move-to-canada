@@ -19,7 +19,7 @@ const WorkWithUsData = {
   consultation: {
     title: "Free Initial Consultations",
     blurb: `It costs nothing to talk to us. Call us at 1-833-TEAM-MTC
-      (1-833-832-6683) for your free consultation!`,
+      (1-833-832-6682) for your free consultation!`,
   },
   team: {
     title: "30+ Professionals Across Canada!",
